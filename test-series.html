@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,562 +15,546 @@
 <style>
 
 *{
-  box-sizing:border-box;
+box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-  margin:0;
-  font-family:Inter,"Noto Sans Devanagari",sans-serif;
-  background:#080808;
-  color:#fff;
+margin:0;
+font-family:Inter,"Noto Sans Devanagari",sans-serif;
+background:#080808;
+color:#fff;
 }
 
 button{
-  font-family:inherit;
+font-family:inherit;
 }
 
 .container{
-  width:min(1150px,92%);
-  margin:auto;
+width:min(1150px,92%);
+margin:auto;
 }
 
 /* HEADER */
 
 .header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:#0d0d0d;
-  border-bottom:1px solid #292929;
+position:sticky;
+top:0;
+z-index:1000;
+background:#0d0d0d;
+border-bottom:1px solid #292929;
 }
 
 .nav{
-  min-height:72px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
+min-height:72px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
 }
 
 .brand{
-  color:#fff;
-  text-decoration:none;
-  display:flex;
-  flex-direction:column;
-  font-weight:800;
+color:#fff;
+text-decoration:none;
+display:flex;
+flex-direction:column;
+font-weight:800;
 }
 
 .brand-max{
-  color:#f4c542;
-  font-size:25px;
-  line-height:1;
+color:#f4c542;
+font-size:25px;
+line-height:1;
 }
 
 .brand small{
-  color:#aaa;
-  font-size:9px;
-  letter-spacing:1.5px;
-  margin-top:4px;
+color:#aaa;
+font-size:9px;
+letter-spacing:1.5px;
+margin-top:4px;
 }
 
 .nav-links{
-  display:flex;
-  gap:18px;
+display:flex;
+gap:18px;
 }
 
 .nav-links a{
-  color:#ddd;
-  text-decoration:none;
-  font-weight:600;
+color:#ddd;
+text-decoration:none;
+font-weight:600;
 }
 
 .nav-links a:hover{
-  color:#f4c542;
+color:#f4c542;
 }
 
 /* HERO */
 
 .hero{
-  text-align:center;
-  padding:65px 15px 45px;
-  background:
-  radial-gradient(circle at top right,rgba(244,197,66,.15),transparent 35%),
-  #080808;
+text-align:center;
+padding:65px 15px 45px;
+background:
+radial-gradient(circle at top right,rgba(244,197,66,.15),transparent 35%),
+#080808;
 }
 
 .label{
-  color:#f4c542;
-  letter-spacing:3px;
-  font-size:12px;
-  font-weight:800;
+color:#f4c542;
+letter-spacing:3px;
+font-size:12px;
+font-weight:800;
 }
 
 .hero h1{
-  font-family:Georgia,serif;
-  font-size:clamp(38px,7vw,68px);
-  margin:15px 0;
+font-family:Georgia,serif;
+font-size:clamp(38px,7vw,68px);
+margin:15px 0;
 }
 
 .hero h1 span{
-  color:#f4c542;
+color:#f4c542;
 }
 
 .hero p{
-  max-width:720px;
-  margin:auto;
-  color:#bbb;
-  line-height:1.8;
+max-width:720px;
+margin:auto;
+color:#bbb;
+line-height:1.8;
 }
 
 /* HOME */
 
 .home-panel{
-  padding:25px;
-  margin:25px 0;
-  border:1px solid #303030;
-  border-radius:22px;
-  background:#111;
+padding:25px;
+margin:25px 0;
+border:1px solid #303030;
+border-radius:22px;
+background:#111;
 }
 
 .home-panel h2{
-  margin-top:0;
+margin-top:0;
 }
 
 .category-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
 }
 
 .category-card{
-  padding:25px;
-  background:#171717;
-  border:1px solid #353535;
-  border-radius:18px;
-  cursor:pointer;
-  transition:.2s;
+padding:25px;
+background:#171717;
+border:1px solid #353535;
+border-radius:18px;
+cursor:pointer;
+transition:.2s;
 }
 
 .category-card:hover{
-  transform:translateY(-4px);
-  border-color:#f4c542;
+transform:translateY(-4px);
+border-color:#f4c542;
 }
 
 .category-card h3{
-  margin:0 0 8px;
-  color:#f4c542;
+margin:0 0 8px;
+color:#f4c542;
 }
 
 .category-card p{
-  color:#bbb;
-  line-height:1.6;
+color:#bbb;
+line-height:1.6;
 }
 
-/* EXAM SELECT */
+/* EXAM */
 
-.exam-panel{
-  display:none;
-  margin:25px 0;
-  padding:25px;
-  background:#111;
-  border:1px solid #303030;
-  border-radius:22px;
+.exam-panel,
+.language-panel,
+.test-panel{
+display:none;
+margin:25px 0;
+padding:25px;
+background:#111;
+border:1px solid #303030;
+border-radius:22px;
 }
 
-.exam-panel.active{
-  display:block;
+.exam-panel.active,
+.language-panel.active,
+.test-panel.active{
+display:block;
 }
 
 .exam-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:12px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:12px;
 }
 
 .exam-btn{
-  padding:17px;
-  border:1px solid #444;
-  border-radius:13px;
-  background:#191919;
-  color:#fff;
-  cursor:pointer;
-  font-weight:700;
+padding:17px;
+border:1px solid #444;
+border-radius:13px;
+background:#191919;
+color:#fff;
+cursor:pointer;
+font-weight:700;
 }
 
 .exam-btn:hover{
-  border-color:#f4c542;
-  color:#f4c542;
+border-color:#f4c542;
+color:#f4c542;
 }
 
 /* LANGUAGE */
 
-.language-panel{
-  display:none;
-  margin:25px 0;
-  padding:25px;
-  background:#111;
-  border:1px solid #303030;
-  border-radius:22px;
-}
-
-.language-panel.active{
-  display:block;
-}
-
 .language-buttons{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
+display:flex;
+gap:12px;
+flex-wrap:wrap;
 }
 
 .lang-btn{
-  padding:13px 22px;
-  border-radius:10px;
-  border:1px solid #555;
-  background:#191919;
-  color:#fff;
-  cursor:pointer;
-  font-weight:700;
+padding:13px 22px;
+border-radius:10px;
+border:1px solid #555;
+background:#191919;
+color:#fff;
+cursor:pointer;
+font-weight:700;
 }
 
 .lang-btn:hover{
-  border-color:#f4c542;
+border-color:#f4c542;
 }
 
 .lang-btn.active{
-  background:#f4c542;
-  color:#111;
-  border-color:#f4c542;
+background:#f4c542;
+color:#111;
+border-color:#f4c542;
 }
 
-/* TEST SET */
-
-.test-panel{
-  display:none;
-  margin:25px 0;
-  padding:25px;
-  background:#111;
-  border:1px solid #303030;
-  border-radius:22px;
-}
-
-.test-panel.active{
-  display:block;
-}
+/* TEST */
 
 .test-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:15px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
 }
 
 .test-card{
-  background:#181818;
-  border:1px solid #393939;
-  padding:20px;
-  border-radius:15px;
+background:#181818;
+border:1px solid #393939;
+padding:20px;
+border-radius:15px;
 }
 
 .test-card h3{
-  margin-top:0;
+margin-top:0;
 }
 
 .test-card p{
-  color:#aaa;
+color:#aaa;
 }
 
 .start-btn{
-  width:100%;
-  border:0;
-  padding:13px;
-  border-radius:9px;
-  background:#f4c542;
-  color:#111;
-  font-weight:800;
-  cursor:pointer;
+width:100%;
+border:0;
+padding:13px;
+border-radius:9px;
+background:#f4c542;
+color:#111;
+font-weight:800;
+cursor:pointer;
+}
+
+.start-btn:hover{
+background:#ffd75a;
 }
 
 /* TEST SCREEN */
 
 #testScreen{
-  display:none;
+display:none;
 }
 
 .test-header{
-  position:sticky;
-  top:72px;
-  z-index:500;
-  background:#101010;
-  border:1px solid #333;
-  border-radius:15px;
-  padding:15px;
-  margin:20px 0;
+position:sticky;
+top:72px;
+z-index:500;
+background:#101010;
+border:1px solid #333;
+border-radius:15px;
+padding:15px;
+margin:20px 0;
 }
 
 .test-info{
-  display:flex;
-  justify-content:space-between;
-  gap:15px;
-  flex-wrap:wrap;
+display:flex;
+justify-content:space-between;
+gap:15px;
+flex-wrap:wrap;
 }
 
 .timer{
-  color:#f4c542;
-  font-size:22px;
-  font-weight:800;
+color:#f4c542;
+font-size:22px;
+font-weight:800;
 }
 
 .progress{
-  height:8px;
-  background:#292929;
-  border-radius:20px;
-  overflow:hidden;
-  margin-top:12px;
+height:8px;
+background:#292929;
+border-radius:20px;
+overflow:hidden;
+margin-top:12px;
 }
 
 .progress-bar{
-  height:100%;
-  width:0%;
-  background:#f4c542;
-  transition:.2s;
+height:100%;
+width:0%;
+background:#f4c542;
+transition:.2s;
 }
 
 /* QUESTION */
 
 .question-box{
-  background:#111;
-  border:1px solid #333;
-  border-radius:20px;
-  padding:25px;
+background:#111;
+border:1px solid #333;
+border-radius:20px;
+padding:25px;
 }
 
 .question-number{
-  color:#f4c542;
-  font-weight:800;
+color:#f4c542;
+font-weight:800;
 }
 
 .question-text{
-  font-size:21px;
-  line-height:1.6;
-  margin:15px 0 22px;
+font-size:21px;
+line-height:1.6;
+margin:15px 0 22px;
 }
 
 .options{
-  display:grid;
-  gap:12px;
+display:grid;
+gap:12px;
 }
 
 .option{
-  border:1px solid #3b3b3b;
-  background:#191919;
-  color:#fff;
-  padding:15px;
-  border-radius:12px;
-  cursor:pointer;
-  text-align:left;
-  transition:.2s;
+border:1px solid #3b3b3b;
+background:#191919;
+color:#fff;
+padding:15px;
+border-radius:12px;
+cursor:pointer;
+text-align:left;
+transition:.2s;
 }
 
 .option:hover{
-  border-color:#f4c542;
+border-color:#f4c542;
 }
 
 .option.selected{
-  border-color:#f4c542;
-  background:#2b2410;
+border-color:#f4c542;
+background:#2b2410;
 }
 
 .navigation{
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
-  margin-top:20px;
+display:flex;
+justify-content:space-between;
+gap:12px;
+margin-top:20px;
+flex-wrap:wrap;
 }
 
 .nav-btn{
-  padding:13px 22px;
-  border:1px solid #555;
-  background:#191919;
-  color:#fff;
-  border-radius:10px;
-  cursor:pointer;
-  font-weight:700;
+padding:13px 22px;
+border:1px solid #555;
+background:#191919;
+color:#fff;
+border-radius:10px;
+cursor:pointer;
+font-weight:700;
 }
 
 .nav-btn:hover{
-  border-color:#f4c542;
+border-color:#f4c542;
 }
 
 .submit-btn{
-  padding:13px 22px;
-  border:0;
-  background:#f4c542;
-  color:#111;
-  border-radius:10px;
-  cursor:pointer;
-  font-weight:800;
+padding:13px 22px;
+border:0;
+background:#f4c542;
+color:#111;
+border-radius:10px;
+cursor:pointer;
+font-weight:800;
 }
 
-/* QUESTION NAVIGATOR */
+/* NAVIGATOR */
 
 .navigator{
-  margin-top:20px;
-  padding:18px;
-  background:#111;
-  border:1px solid #333;
-  border-radius:18px;
+margin-top:20px;
+padding:18px;
+background:#111;
+border:1px solid #333;
+border-radius:18px;
 }
 
 .question-buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-top:12px;
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-top:12px;
 }
 
 .q-btn{
-  width:40px;
-  height:40px;
-  border-radius:8px;
-  border:1px solid #444;
-  background:#191919;
-  color:#fff;
-  cursor:pointer;
+width:40px;
+height:40px;
+border-radius:8px;
+border:1px solid #444;
+background:#191919;
+color:#fff;
+cursor:pointer;
 }
 
 .q-btn.answered{
-  background:#183b20;
-  border-color:#3ca854;
+background:#183b20;
+border-color:#3ca854;
 }
 
 .q-btn.current{
-  outline:2px solid #f4c542;
+outline:2px solid #f4c542;
 }
 
 /* RESULT */
 
 #resultScreen{
-  display:none;
+display:none;
 }
 
 .result-box{
-  margin:30px 0;
-  padding:30px;
-  border-radius:22px;
-  background:#111;
-  border:1px solid #333;
-  text-align:center;
+margin:30px 0;
+padding:30px;
+border-radius:22px;
+background:#111;
+border:1px solid #333;
+text-align:center;
 }
 
 .score{
-  font-size:50px;
-  color:#f4c542;
-  font-weight:800;
+font-size:50px;
+color:#f4c542;
+font-weight:800;
 }
 
 .result-stats{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-  margin:25px 0;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin:25px 0;
 }
 
 .stat{
-  background:#191919;
-  padding:18px;
-  border-radius:12px;
+background:#191919;
+padding:18px;
+border-radius:12px;
 }
 
 .stat strong{
-  display:block;
-  font-size:25px;
-  color:#f4c542;
+display:block;
+font-size:25px;
+color:#f4c542;
 }
 
 .review{
-  text-align:left;
-  margin-top:25px;
+text-align:left;
+margin-top:25px;
 }
 
 .review-item{
-  padding:18px;
-  margin:12px 0;
-  border-radius:13px;
-  border:1px solid #333;
-  background:#171717;
+padding:18px;
+margin:12px 0;
+border-radius:13px;
+border:1px solid #333;
+background:#171717;
 }
 
 .review-item.correct{
-  border-left:5px solid #39b54a;
+border-left:5px solid #39b54a;
 }
 
 .review-item.wrong{
-  border-left:5px solid #e74c3c;
+border-left:5px solid #e74c3c;
 }
 
 .review-item.unattempted{
-  border-left:5px solid #777;
+border-left:5px solid #777;
 }
 
 .correct-text{
-  color:#4bd463;
+color:#4bd463;
 }
 
 .wrong-text{
-  color:#ff6257;
+color:#ff6257;
 }
 
 .back-home{
-  text-align:center;
-  padding:35px 0;
+text-align:center;
+padding:35px 0;
 }
 
 .back-home a{
-  color:#f4c542;
-  text-decoration:none;
-  font-weight:800;
+color:#f4c542;
+text-decoration:none;
+font-weight:800;
 }
 
 /* MOBILE */
 
 @media(max-width:700px){
 
-  .nav{
-    flex-direction:column;
-    padding:12px 0;
-  }
+.nav{
+flex-direction:column;
+padding:12px 0;
+}
 
-  .nav-links{
-    display:none;
-  }
+.nav-links{
+display:none;
+}
 
-  .category-grid{
-    grid-template-columns:1fr;
-  }
+.category-grid{
+grid-template-columns:1fr;
+}
 
-  .hero{
-    padding-top:45px;
-  }
+.hero{
+padding-top:45px;
+}
 
-  .question-text{
-    font-size:18px;
-  }
+.question-text{
+font-size:18px;
+}
 
-  .result-stats{
-    grid-template-columns:1fr;
-  }
+.result-stats{
+grid-template-columns:1fr;
+}
 
-  .test-header{
-    top:0;
-  }
+.test-header{
+top:0;
+}
 
 }
 
 </style>
+
 </head>
 
 <body>
@@ -579,16 +564,25 @@ button{
 <div class="container nav">
 
 <a href="index.html" class="brand">
+
 <span class="brand-max">MAX</span>
+
 <span>COACHING CLASSES</span>
+
 <small>ODAR • VARANASI</small>
+
 </a>
 
 <nav class="nav-links">
+
 <a href="index.html">Home</a>
+
 <a href="index.html#courses">Courses</a>
+
 <a href="index.html#faculty">Faculty</a>
+
 <a href="index.html#contact">Contact</a>
+
 </nav>
 
 </div>
@@ -725,6 +719,7 @@ onclick="selectLanguage('en',this)">
 <div class="test-info">
 
 <div>
+
 <strong id="testName">
 Test
 </strong>
@@ -736,16 +731,21 @@ Question 1
 </div>
 
 <div>
+
 ⏱️
+
 <span class="timer" id="timer">
 10:00
 </span>
+
 </div>
 
 </div>
 
 <div class="progress">
+
 <div class="progress-bar" id="progressBar"></div>
+
 </div>
 
 </div>
@@ -766,6 +766,7 @@ Question
 <div class="options"
 id="options">
 </div>
+
 
 <div class="navigation">
 
@@ -824,21 +825,39 @@ id="score">
 <div class="result-stats">
 
 <div class="stat">
-<strong id="correctCount">0</strong>
+
+<strong id="correctCount">
+0
+</strong>
+
 Correct
+
 </div>
 
+
 <div class="stat">
-<strong id="wrongCount">0</strong>
+
+<strong id="wrongCount">
+0
+</strong>
+
 Wrong
+
 </div>
+
 
 <div class="stat">
-<strong id="skipCount">0</strong>
+
+<strong id="skipCount">
+0
+</strong>
+
 Unattempted
+
 </div>
 
 </div>
+
 
 <button class="submit-btn"
 onclick="showReview()">
@@ -854,6 +873,7 @@ onclick="retryTest()">
 onclick="location.reload()">
 🏠 Test Series Home
 </button>
+
 
 <div class="review"
 id="review">
@@ -879,45 +899,68 @@ id="review">
 
 <script>
 
-/* =====================================================
+/* =========================================================
    TEST DATA
-   ===================================================== */
+   =========================================================
+
+   IMPORTANT:
+
+   आगे Test 3 / Test 4 / Test 5 जोड़ने के लिए
+   इसी tests: [ ... ] के अंदर नया object डालना है।
+
+   हर test में questions की संख्या अलग हो सकती है।
+   10, 20, 26, 50, 100 आदि।
+*/
+
 
 const testData = {
 
 school: {
 
 "6-8":{
+
 title:"Class 6–8",
+
 tests:[
+
+/* ================= TEST 1 ================= */
+
 {
+
 name:"Maths Practice Test 1",
+
 time:10,
+
 questions:[
+
 {
 hi:"20% of 250 कितना है?",
 en:"What is 20% of 250?",
 options:["25","40","50","60"],
 answer:2
 },
+
 {
 hi:"एक त्रिभुज के कोणों का योग कितना होता है?",
 en:"What is the sum of angles of a triangle?",
 options:["90°","180°","270°","360°"],
 answer:1
 },
+
 {
 hi:"5 + (-2) = ?",
 en:"5 + (-2) = ?",
 options:["2","3","7","-3"],
 answer:1
 },
+
 {
 hi:"0.5 किसके बराबर है?",
 en:"0.5 is equal to?",
 options:["1/2","1/3","2/3","3/4"],
 answer:0
 },
+
 {
 hi:"Rectangle का area क्या है?",
 en:"What is the area of a rectangle?",
@@ -929,13 +972,229 @@ options:[
 ],
 answer:1
 }
+
 ]
+
+},
+
+
+/* ================= TEST 2 : 26 QUESTIONS ================= */
+
+{
+
+name:"Maths Practice Test 2 — 26 Questions",
+
+time:30,
+
+questions:[
+
+{
+hi:"1 + 1 = ?",
+en:"1 + 1 = ?",
+options:["1","2","3","4"],
+answer:1
 },
 
 {
+hi:"5 × 6 = ?",
+en:"5 × 6 = ?",
+options:["20","25","30","35"],
+answer:2
+},
+
+{
+hi:"100 ÷ 10 = ?",
+en:"100 ÷ 10 = ?",
+options:["5","10","20","100"],
+answer:1
+},
+
+{
+hi:"25 का 20% कितना है?",
+en:"What is 20% of 25?",
+options:["2","5","10","20"],
+answer:1
+},
+
+{
+hi:"3² का मान क्या है?",
+en:"What is the value of 3²?",
+options:["6","8","9","12"],
+answer:2
+},
+
+{
+hi:"√16 का मान क्या है?",
+en:"What is √16?",
+options:["2","4","6","8"],
+answer:1
+},
+
+{
+hi:"एक दर्जन में कितनी वस्तुएँ होती हैं?",
+en:"How many items are in a dozen?",
+options:["10","12","15","20"],
+answer:1
+},
+
+{
+hi:"1 किलोमीटर में कितने मीटर होते हैं?",
+en:"How many metres are in 1 kilometre?",
+options:["100","500","1000","1500"],
+answer:2
+},
+
+{
+hi:"1 घंटे में कितने मिनट होते हैं?",
+en:"How many minutes are in 1 hour?",
+options:["30","45","60","90"],
+answer:2
+},
+
+{
+hi:"समकोण कितने डिग्री का होता है?",
+en:"How many degrees is a right angle?",
+options:["45°","90°","180°","360°"],
+answer:1
+},
+
+{
+hi:"एक वर्ग की सभी भुजाएँ कैसी होती हैं?",
+en:"How are the sides of a square?",
+options:[
+"समान",
+"असमान",
+"दो समान",
+"कोई नहीं"
+],
+answer:0
+},
+
+{
+hi:"त्रिभुज में कितनी भुजाएँ होती हैं?",
+en:"How many sides does a triangle have?",
+options:["2","3","4","5"],
+answer:1
+},
+
+{
+hi:"वर्ग का perimeter का सूत्र क्या है?",
+en:"What is the formula for the perimeter of a square?",
+options:[
+"side × side",
+"4 × side",
+"2 × side",
+"side + 2"
+],
+answer:1
+},
+
+{
+hi:"यदि x + 5 = 10, तो x = ?",
+en:"If x + 5 = 10, then x = ?",
+options:["2","3","5","15"],
+answer:2
+},
+
+{
+hi:"2/4 को सरल रूप में क्या लिखेंगे?",
+en:"What is 2/4 in simplest form?",
+options:["1/2","1/3","2/3","3/4"],
+answer:0
+},
+
+{
+hi:"0.25 किसके बराबर है?",
+en:"0.25 is equal to?",
+options:["1/2","1/4","3/4","1/5"],
+answer:1
+},
+
+{
+hi:"10 का 50% कितना है?",
+en:"What is 50% of 10?",
+options:["2","5","10","15"],
+answer:1
+},
+
+{
+hi:"7 + 8 = ?",
+en:"7 + 8 = ?",
+options:["13","14","15","16"],
+answer:2
+},
+
+{
+hi:"20 - 7 = ?",
+en:"20 - 7 = ?",
+options:["11","12","13","14"],
+answer:2
+},
+
+{
+hi:"9 × 9 = ?",
+en:"9 × 9 = ?",
+options:["72","81","90","99"],
+answer:1
+},
+
+{
+hi:"81 का वर्गमूल क्या है?",
+en:"What is the square root of 81?",
+options:["7","8","9","10"],
+answer:2
+},
+
+{
+hi:"एक आयत की लंबाई 5 cm और चौड़ाई 3 cm है। क्षेत्रफल कितना होगा?",
+en:"A rectangle has length 5 cm and width 3 cm. What is its area?",
+options:["8 cm²","15 cm²","16 cm²","20 cm²"],
+answer:1
+},
+
+{
+hi:"2, 4, 6, 8 के बाद कौन सी संख्या आएगी?",
+en:"Which number comes after 2, 4, 6, 8?",
+options:["9","10","11","12"],
+answer:1
+},
+
+{
+hi:"15 और 20 का HCF क्या है?",
+en:"What is the HCF of 15 and 20?",
+options:["3","5","10","15"],
+answer:1
+},
+
+{
+hi:"2, 3 और 4 का LCM क्या है?",
+en:"What is the LCM of 2, 3 and 4?",
+options:["6","8","12","24"],
+answer:2
+},
+
+{
+hi:"यदि एक वस्तु की कीमत ₹100 है और 10% discount है, तो discount कितना होगा?",
+en:"If an item costs ₹100 and has a 10% discount, what is the discount?",
+options:["₹5","₹10","₹15","₹20"],
+answer:1
+}
+
+]
+
+},
+
+
+/* ================= TEST 3 ================= */
+
+{
+
 name:"Science Practice Test 1",
+
 time:10,
+
 questions:[
+
 {
 hi:"जीवन की मूल इकाई क्या है?",
 en:"What is the basic unit of life?",
@@ -947,18 +1206,21 @@ options:[
 ],
 answer:2
 },
+
 {
 hi:"Oxygen का symbol क्या है?",
 en:"What is the symbol of Oxygen?",
 options:["O","Ox","Og","O2"],
 answer:0
 },
+
 {
 hi:"बल की SI unit क्या है?",
 en:"What is the SI unit of force?",
 options:["Joule","Newton","Watt","Pascal"],
 answer:1
 },
+
 {
 hi:"ध्वनि किससे उत्पन्न होती है?",
 en:"Sound is produced by?",
@@ -970,6 +1232,7 @@ options:[
 ],
 answer:1
 },
+
 {
 hi:"मानव शरीर में रक्त पंप करने वाला अंग कौन सा है?",
 en:"Which organ pumps blood in the human body?",
@@ -981,36 +1244,55 @@ options:[
 ],
 answer:2
 }
+
 ]
+
 }
+
 ]
+
 },
 
+
+/* =========================================================
+   CLASS 9–10
+   ========================================================= */
+
 "9-10":{
+
 title:"Class 9–10",
+
 tests:[
+
 {
+
 name:"Mathematics Practice Test 1",
+
 time:15,
+
 questions:[
+
 {
 hi:"√5 का वर्ग क्या होगा?",
 en:"What is the square of √5?",
 options:["5","10","25","√25"],
 answer:0
 },
+
 {
 hi:"2x = 10 में x का मान क्या है?",
 en:"What is the value of x in 2x = 10?",
 options:["2","5","8","10"],
 answer:1
 },
+
 {
 hi:"त्रिभुज के तीनों कोणों का योग?",
 en:"Sum of angles of a triangle?",
 options:["90°","180°","270°","360°"],
 answer:1
 },
+
 {
 hi:"(a+b)² का विस्तार क्या है?",
 en:"Expansion of (a+b)²?",
@@ -1022,154 +1304,223 @@ options:[
 ],
 answer:1
 },
+
 {
 hi:"यदि x=3, तो x² कितना होगा?",
 en:"If x=3, what is x²?",
 options:["6","9","12","15"],
 answer:1
 }
+
 ]
+
 }
+
 ]
+
 },
 
+
+/* =========================================================
+   CLASS 11–12
+   ========================================================= */
+
 "11-12":{
+
 title:"Class 11–12",
+
 tests:[
+
 {
+
 name:"General Practice Test 1",
+
 time:15,
+
 questions:[
+
 {
 hi:"यदि x=2, तो x³ कितना है?",
 en:"If x=2, what is x³?",
 options:["4","6","8","10"],
 answer:2
 },
+
 {
 hi:"गति की SI unit क्या है?",
 en:"What is the SI unit of speed?",
 options:["m/s","kg","N","J"],
 answer:0
 },
+
 {
 hi:"जल का chemical formula क्या है?",
 en:"What is the chemical formula of water?",
 options:["CO2","H2O","O2","NaCl"],
 answer:1
 },
+
 {
 hi:"मानव शरीर का सबसे बड़ा अंग?",
 en:"Largest organ of the human body?",
 options:["Heart","Skin","Liver","Brain"],
 answer:1
 },
+
 {
 hi:"2 + 3 × 4 का मान?",
 en:"Value of 2 + 3 × 4?",
 options:["20","14","24","9"],
 answer:1
 }
+
 ]
+
 }
+
 ]
+
 }
 
 },
 
-competitive: {
+
+/* =========================================================
+   COMPETITIVE
+   ========================================================= */
+
+competitive:{
 
 "SSC":{
+
 title:"SSC",
+
 tests:[
+
 {
+
 name:"SSC General Practice 1",
+
 time:15,
+
 questions:[
+
 {
 hi:"भारत की राजधानी क्या है?",
 en:"What is the capital of India?",
 options:["Mumbai","New Delhi","Kolkata","Chennai"],
 answer:1
 },
+
 {
 hi:"15 × 4 = ?",
 en:"15 × 4 = ?",
 options:["40","50","60","70"],
 answer:2
 },
+
 {
 hi:"भारत का राष्ट्रीय पशु कौन है?",
 en:"What is the national animal of India?",
 options:["Lion","Tiger","Elephant","Peacock"],
 answer:1
 },
+
 {
 hi:"100 का 25% कितना है?",
 en:"What is 25% of 100?",
 options:["20","25","30","40"],
 answer:1
 },
+
 {
 hi:"यदि 2+3=5 तो 5+7=?",
 en:"If 2+3=5, then 5+7=?",
 options:["10","11","12","13"],
 answer:2
 }
+
 ]
+
 }
+
 ]
+
 },
 
+
 "Railway":{
+
 title:"Railway",
+
 tests:[
+
 {
+
 name:"Railway Practice Test 1",
+
 time:15,
+
 questions:[
+
 {
 hi:"भारत में पहली रेल कब चली?",
 en:"When did the first railway run in India?",
 options:["1853","1947","1950","1885"],
 answer:0
 },
+
 {
 hi:"60 km/h की speed से 2 घंटे में दूरी?",
 en:"Distance covered at 60 km/h in 2 hours?",
 options:["60 km","100 km","120 km","150 km"],
 answer:2
 },
+
 {
 hi:"भारत का राष्ट्रीय पशु?",
 en:"National animal of India?",
 options:["Lion","Tiger","Elephant","Horse"],
 answer:1
 },
+
 {
 hi:"10 का square?",
 en:"Square of 10?",
 options:["20","50","100","1000"],
 answer:2
 },
+
 {
 hi:"भारत में कुल कितने केंद्र शासित प्रदेश हैं?",
 en:"How many Union Territories are there in India?",
 options:["6","8","10","12"],
 answer:1
 }
+
 ]
+
 }
+
 ]
+
 },
 
+
 "Banking":{
+
 title:"Banking",
+
 tests:[
+
 {
+
 name:"Banking Practice Test 1",
+
 time:15,
+
 questions:[
+
 {
 hi:"RBI का full form क्या है?",
 en:"What is the full form of RBI?",
@@ -1181,24 +1532,28 @@ options:[
 ],
 answer:0
 },
+
 {
 hi:"1000 का 10%?",
 en:"10% of 1000?",
 options:["10","50","100","200"],
 answer:2
 },
+
 {
 hi:"भारत की currency?",
 en:"Currency of India?",
 options:["Dollar","Rupee","Euro","Pound"],
 answer:1
 },
+
 {
 hi:"1 lakh में कितने होते हैं?",
 en:"How much is 1 lakh?",
 options:["10,000","50,000","1,00,000","10,00,000"],
 answer:2
 },
+
 {
 hi:"ATM का full form?",
 en:"Full form of ATM?",
@@ -1210,18 +1565,30 @@ options:[
 ],
 answer:0
 }
+
 ]
+
 }
+
 ]
+
 },
 
+
 "State Exams":{
+
 title:"State Exams",
+
 tests:[
+
 {
+
 name:"State Exam Practice 1",
+
 time:15,
+
 questions:[
+
 {
 hi:"भारत का संविधान कब लागू हुआ?",
 en:"When did the Constitution of India come into effect?",
@@ -1233,12 +1600,14 @@ options:[
 ],
 answer:1
 },
+
 {
 hi:"भारत का राष्ट्रीय फूल?",
 en:"National flower of India?",
 options:["Rose","Lotus","Lily","Sunflower"],
 answer:1
 },
+
 {
 hi:"गंगा नदी का उद्गम किस क्षेत्र से माना जाता है?",
 en:"Where is the source of the Ganga traditionally identified?",
@@ -1250,12 +1619,14 @@ options:[
 ],
 answer:0
 },
+
 {
 hi:"भारत का सबसे बड़ा राज्य क्षेत्रफल से?",
 en:"Largest Indian state by area?",
 options:["UP","Rajasthan","Maharashtra","MP"],
 answer:1
 },
+
 {
 hi:"भारत में लोकतंत्र का आधार क्या है?",
 en:"What is a foundation of democracy in India?",
@@ -1267,18 +1638,30 @@ options:[
 ],
 answer:0
 }
+
 ]
+
 }
+
 ]
+
 },
 
+
 "UPSC":{
+
 title:"UPSC",
+
 tests:[
+
 {
+
 name:"UPSC Foundation Practice 1",
+
 time:20,
+
 questions:[
+
 {
 hi:"भारतीय संविधान की प्रस्तावना किससे शुरू होती है?",
 en:"How does the Preamble of the Indian Constitution begin?",
@@ -1290,18 +1673,21 @@ options:[
 ],
 answer:0
 },
+
 {
 hi:"भारत का सर्वोच्च न्यायालय कहाँ है?",
 en:"Where is the Supreme Court of India located?",
 options:["Mumbai","New Delhi","Kolkata","Lucknow"],
 answer:1
 },
+
 {
 hi:"मौलिक अधिकार संविधान के किस भाग में हैं?",
 en:"Fundamental Rights are in which Part of the Constitution?",
 options:["Part I","Part II","Part III","Part IV"],
 answer:2
 },
+
 {
 hi:"भारत का राष्ट्रीय ध्वज किस रंगों से बना है?",
 en:"The Indian national flag consists of which main colours?",
@@ -1313,48 +1699,65 @@ options:[
 ],
 answer:0
 },
+
 {
 hi:"लोकसभा का सामान्य कार्यकाल कितना है?",
 en:"What is the normal term of the Lok Sabha?",
 options:["3 years","4 years","5 years","6 years"],
 answer:2
 }
+
 ]
+
 }
+
 ]
+
 },
 
+
 "Entrance Exams":{
+
 title:"Entrance Exams",
+
 tests:[
+
 {
-name:"Entrance Practice Test 1",
+
+name:"Entrance Practice 1",
+
 time:15,
+
 questions:[
+
 {
 hi:"2² + 3² = ?",
 en:"2² + 3² = ?",
 options:["10","11","12","13"],
 answer:3
 },
+
 {
 hi:"H2O किसका formula है?",
 en:"H2O is the formula of?",
 options:["Oxygen","Water","Hydrogen","Salt"],
 answer:1
 },
+
 {
 hi:"भारत की राजधानी?",
 en:"Capital of India?",
 options:["Delhi","Mumbai","Kolkata","Chennai"],
 answer:0
 },
+
 {
 hi:"यदि x+5=10 तो x=?",
 en:"If x+5=10, then x=?",
 options:["2","3","5","10"],
 answer:2
 },
+
 {
 hi:"पौधे भोजन किस प्रक्रिया से बनाते हैं?",
 en:"Plants make food through which process?",
@@ -1366,9 +1769,13 @@ options:[
 ],
 answer:1
 }
+
 ]
+
 }
+
 ]
+
 }
 
 }
@@ -1376,9 +1783,9 @@ answer:1
 };
 
 
-/* =====================================================
+/* =========================================================
    VARIABLES
-   ===================================================== */
+========================================================= */
 
 let currentCategory="";
 let currentExam="";
@@ -1392,20 +1799,20 @@ let userAnswers=[];
 let timerInterval=null;
 let timeLeft=0;
 
+let testSubmitted=false;
 
-/* =====================================================
+
+/* =========================================================
    CATEGORY
-   ===================================================== */
+========================================================= */
 
 function selectCategory(category){
 
 currentCategory=category;
 
-const examPanel=
-document.getElementById("examPanel");
+const examPanel=document.getElementById("examPanel");
 
-const examGrid=
-document.getElementById("examGrid");
+const examGrid=document.getElementById("examGrid");
 
 examGrid.innerHTML="";
 
@@ -1450,9 +1857,9 @@ behavior:"smooth"
 }
 
 
-/* =====================================================
+/* =========================================================
    EXAM
-   ===================================================== */
+========================================================= */
 
 function selectExam(exam){
 
@@ -1476,9 +1883,9 @@ behavior:"smooth"
 }
 
 
-/* =====================================================
+/* =========================================================
    LANGUAGE
-   ===================================================== */
+========================================================= */
 
 function selectLanguage(language,button){
 
@@ -1486,7 +1893,9 @@ currentLanguage=language;
 
 document.querySelectorAll(".lang-btn")
 .forEach(function(btn){
+
 btn.classList.remove("active");
+
 });
 
 button.classList.add("active");
@@ -1496,17 +1905,15 @@ renderTests();
 }
 
 
-/* =====================================================
+/* =========================================================
    TEST LIST
-   ===================================================== */
+========================================================= */
 
 function renderTests(){
 
-const panel=
-document.getElementById("testPanel");
+const panel=document.getElementById("testPanel");
 
-const grid=
-document.getElementById("testGrid");
+const grid=document.getElementById("testGrid");
 
 grid.innerHTML="";
 
@@ -1515,8 +1922,7 @@ testData[currentCategory][currentExam].tests;
 
 tests.forEach(function(test,index){
 
-const card=
-document.createElement("div");
+const card=document.createElement("div");
 
 card.className="test-card";
 
@@ -1553,9 +1959,9 @@ panel.classList.add("active");
 }
 
 
-/* =====================================================
+/* =========================================================
    START TEST
-   ===================================================== */
+========================================================= */
 
 function startTest(index){
 
@@ -1570,6 +1976,8 @@ new Array(currentTest.questions.length)
 .fill(null);
 
 timeLeft=currentTest.time*60;
+
+testSubmitted=false;
 
 document.getElementById("testName")
 .textContent=currentTest.name;
@@ -1593,6 +2001,7 @@ document.getElementById("testScreen")
 .style.display="block";
 
 renderQuestion();
+
 startTimer();
 
 window.scrollTo({
@@ -1603,9 +2012,9 @@ behavior:"smooth"
 }
 
 
-/* =====================================================
+/* =========================================================
    TIMER
-   ===================================================== */
+========================================================= */
 
 function startTimer(){
 
@@ -1625,7 +2034,7 @@ clearInterval(timerInterval);
 
 alert("⏰ समय समाप्त हो गया!");
 
-submitTest();
+submitTest(true);
 
 }
 
@@ -1636,11 +2045,9 @@ submitTest();
 
 function updateTimer(){
 
-let minutes=
-Math.floor(timeLeft/60);
+let minutes=Math.floor(timeLeft/60);
 
-let seconds=
-timeLeft%60;
+let seconds=timeLeft%60;
 
 document.getElementById("timer")
 .textContent=
@@ -1653,11 +2060,13 @@ String(seconds).padStart(2,"0");
 }
 
 
-/* =====================================================
+/* =========================================================
    QUESTION
-   ===================================================== */
+========================================================= */
 
 function renderQuestion(){
+
+if(!currentTest) return;
 
 const question=
 currentTest.questions[currentQuestion];
@@ -1688,8 +2097,7 @@ options.innerHTML="";
 
 question.options.forEach(function(option,index){
 
-const button=
-document.createElement("button");
+const button=document.createElement("button");
 
 button.className="option";
 
@@ -1725,9 +2133,9 @@ document.getElementById("progressBar")
 }
 
 
-/* =====================================================
+/* =========================================================
    NAVIGATOR
-   ===================================================== */
+========================================================= */
 
 function renderQuestionButtons(){
 
@@ -1738,8 +2146,7 @@ box.innerHTML="";
 
 currentTest.questions.forEach(function(q,index){
 
-const button=
-document.createElement("button");
+const button=document.createElement("button");
 
 button.className="q-btn";
 
@@ -1772,9 +2179,9 @@ box.appendChild(button);
 }
 
 
-/* =====================================================
+/* =========================================================
    NEXT
-   ===================================================== */
+========================================================= */
 
 function nextQuestion(){
 
@@ -1794,9 +2201,9 @@ alert("यह आखिरी question है।");
 }
 
 
-/* =====================================================
+/* =========================================================
    PREVIOUS
-   ===================================================== */
+========================================================= */
 
 function previousQuestion(){
 
@@ -1811,15 +2218,17 @@ renderQuestion();
 }
 
 
-/* =====================================================
+/* =========================================================
    SUBMIT
-   ===================================================== */
+========================================================= */
 
-function submitTest(){
+function submitTest(autoSubmit=false){
 
 if(!currentTest) return;
 
-clearInterval(timerInterval);
+if(testSubmitted) return;
+
+if(!autoSubmit){
 
 let confirmSubmit=
 confirm(
@@ -1834,8 +2243,16 @@ return;
 
 }
 
+}
+
+testSubmitted=true;
+
+clearInterval(timerInterval);
+
 let correct=0;
+
 let wrong=0;
+
 let skip=0;
 
 currentTest.questions.forEach(function(question,index){
@@ -1886,6 +2303,10 @@ document.getElementById("skipCount")
 document.getElementById("review")
 .innerHTML="";
 
+document.getElementById("resultTitle")
+.textContent=
+currentTest.name+" Completed";
+
 window.scrollTo({
 top:0,
 behavior:"smooth"
@@ -1894,9 +2315,9 @@ behavior:"smooth"
 }
 
 
-/* =====================================================
+/* =========================================================
    REVIEW
-   ===================================================== */
+========================================================= */
 
 function showReview(){
 
@@ -1908,14 +2329,11 @@ review.innerHTML=
 
 currentTest.questions.forEach(function(question,index){
 
-const user=
-userAnswers[index];
+const user=userAnswers[index];
 
-const correct=
-question.answer;
+const correct=question.answer;
 
-const item=
-document.createElement("div");
+const item=document.createElement("div");
 
 let className="";
 
@@ -1986,9 +2404,9 @@ behavior:"smooth"
 }
 
 
-/* =====================================================
+/* =========================================================
    RETRY
-   ===================================================== */
+========================================================= */
 
 function retryTest(){
 
@@ -2005,6 +2423,8 @@ new Array(currentTest.questions.length)
 .fill(null);
 
 timeLeft=currentTest.time*60;
+
+testSubmitted=false;
 
 renderQuestion();
 
