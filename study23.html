@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="MAX Coaching Classes - Class 2 and 3 Study Material">
+
+  <title>Class 2 & 3 | MAX Coaching Classes</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <style>
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#080808;
+      color:#f5f1e8;
+      font-family:Inter,"Noto Sans Devanagari",sans-serif;
+      line-height:1.6;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(8,8,8,.95);
+      border-bottom:1px solid #302d27;
+      backdrop-filter:blur(12px);
+    }
+
+    .nav{
+      max-width:1150px;
+      margin:auto;
+      min-height:70px;
+      padding:12px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand{
+      display:flex;
+      flex-direction:column;
+      line-height:1.05;
+      font-weight:700;
+      letter-spacing:1px;
+    }
+
+    .brand-max{
+      color:#e5b84b;
+      font-size:22px;
+      font-weight:800;
+    }
+
+    .brand small{
+      color:#888;
+      font-size:8px;
+      letter-spacing:2px;
+      margin-top:4px;
+    }
+
+    .back{
+      border:1px solid #4a4030;
+      padding:9px 14px;
+      border-radius:10px;
+      color:#e5b84b;
+      font-weight:700;
+      font-size:14px;
+    }
+
+    .hero{
+      padding:55px 20px 45px;
+      text-align:center;
+      background:
+        radial-gradient(circle at 50% 20%,#30240b 0,#100e09 35%,#080808 70%);
+      border-bottom:1px solid #302d27;
+    }
+
+    .eyebrow{
+      color:#e5b84b;
+      font-size:12px;
+      letter-spacing:2px;
+      font-weight:800;
+      margin-bottom:12px;
+    }
+
+    h1{
+      font-size:clamp(35px,8vw,65px);
+      line-height:1.05;
+      font-weight:800;
+      margin-bottom:15px;
+    }
+
+    h1 span,
+    h2 span{
+      color:#e5b84b;
+    }
+
+    .hero p{
+      max-width:650px;
+      margin:auto;
+      color:#bdb8ad;
+      font-size:16px;
+    }
+
+    .container{
+      max-width:1150px;
+      margin:auto;
+      padding:0 20px;
+    }
+
+    .study-menu{
+      padding:25px 0;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+
+    .menu-card{
+      background:#11110f;
+      border:1px solid #39352d;
+      border-radius:14px;
+      padding:18px 12px;
+      text-align:center;
+      transition:.2s;
+    }
+
+    .menu-card:hover{
+      border-color:#e5b84b;
+      transform:translateY(-2px);
+    }
+
+    .menu-card .emoji{
+      font-size:28px;
+      display:block;
+      margin-bottom:5px;
+    }
+
+    .menu-card strong{
+      display:block;
+      color:#f5f1e8;
+    }
+
+    .menu-card small{
+      color:#99958c;
+    }
+
+    .section{
+      padding:55px 0;
+      border-bottom:1px solid #292722;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:30px;
+    }
+
+    .section-title small{
+      color:#e5b84b;
+      font-weight:800;
+      letter-spacing:2px;
+    }
+
+    .section-title h2{
+      font-size:clamp(28px,6vw,42px);
+      line-height:1.15;
+      margin:8px 0;
+    }
+
+    .section-title p{
+      color:#aaa69d;
+    }
+
+    .box{
+      background:#11110f;
+      border:1px solid #39352d;
+      border-radius:18px;
+      padding:20px;
+      margin-bottom:20px;
+    }
+
+    .box h3{
+      color:#e5b84b;
+      font-size:23px;
+      margin-bottom:6px;
+    }
+
+    .box-intro{
+      color:#aaa69d;
+      margin-bottom:18px;
+    }
+
+    /* TABLES */
+
+    .tables-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+    }
+
+    .table-card{
+      background:#171612;
+      border:1px solid #3c382f;
+      border-radius:12px;
+      padding:14px;
+    }
+
+    .table-card h4{
+      color:#e5b84b;
+      text-align:center;
+      margin-bottom:8px;
+      font-size:18px;
+    }
+
+    .table-card p{
+      color:#ddd8ce;
+      font-size:13px;
+      line-height:1.8;
+    }
+
+    /* MATH */
+
+    .math-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+    }
+
+    .math-card{
+      background:#171612;
+      border:1px solid #3c382f;
+      border-radius:15px;
+      padding:20px;
+    }
+
+    .math-card h4{
+      color:#e5b84b;
+      font-size:21px;
+      margin-bottom:10px;
+    }
+
+    .example{
+      background:#0b0b0a;
+      border-left:3px solid #e5b84b;
+      padding:10px 12px;
+      margin:8px 0;
+      font-size:17px;
+    }
+
+    .answer{
+      color:#a9d18e;
+      font-weight:700;
+    }
+
+    /* DIVISION */
+
+    .division{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:15px;
+    }
+
+    .division-card{
+      background:#171612;
+      border:1px solid #3c382f;
+      border-radius:14px;
+      padding:18px;
+    }
+
+    .division-card strong{
+      color:#e5b84b;
+      font-size:20px;
+    }
+
+    .division-card p{
+      margin-top:8px;
+      font-size:17px;
+    }
+
+    /* HINDI */
+
+    .barahkhadi{
+      overflow-x:auto;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      min-width:650px;
+    }
+
+    th,
+    td{
+      border:1px solid #454037;
+      padding:10px;
+      text-align:center;
+    }
+
+    th{
+      background:#272116;
+      color:#e5b84b;
+    }
+
+    td{
+      background:#11110f;
+    }
+
+    .letter{
+      font-size:21px;
+      font-weight:800;
+      color:#e5b84b;
+    }
+
+    .word-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+    }
+
+    .word-card{
+      background:#171612;
+      border:1px solid #3c382f;
+      border-radius:12px;
+      padding:16px;
+      text-align:center;
+    }
+
+    .word-card .big{
+      font-size:26px;
+      font-weight:800;
+      color:#fff;
+    }
+
+    .word-card .meaning{
+      color:#aaa69d;
+      margin-top:4px;
+    }
+
+    /* ENGLISH */
+
+    .alphabet{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+    }
+
+    .alpha-card{
+      background:#171612;
+      border:1px solid #3c382f;
+      border-radius:12px;
+      padding:15px;
+      text-align:center;
+    }
+
+    .capital{
+      color:#e5b84b;
+      font-size:28px;
+      font-weight:800;
+    }
+
+    .small{
+      font-size:22px;
+      font-weight:700;
+    }
+
+    .alpha-word{
+      color:#aaa69d;
+      margin-top:4px;
+    }
+
+    /* COUNTING */
+
+    .counting{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:12px;
+    }
+
+    .count-card{
+      background:#171612;
+      border:1px solid #3c382f;
+      border-radius:14px;
+      padding:18px 8px;
+      text-align:center;
+    }
+
+    .count-card strong{
+      display:block;
+      color:#e5b84b;
+      font-size:30px;
+    }
+
+    .count-card .fingers{
+      font-size:27px;
+      margin:4px 0;
+    }
+
+    .count-card .objects{
+      font-size:20px;
+      min-height:35px;
+    }
+
+    .count-card b{
+      display:block;
+      margin-top:5px;
+    }
+
+    /* BUTTON */
+
+    .btn{
+      display:inline-block;
+      padding:11px 17px;
+      border-radius:10px;
+      font-weight:700;
+      margin-top:10px;
+    }
+
+    .btn-gold{
+      background:#e5b84b;
+      color:#090909;
+    }
+
+    .btn-outline{
+      border:1px solid #e5b84b;
+      color:#e5b84b;
+    }
+
+    .top{
+      text-align:center;
+      padding:30px 0 50px;
+    }
+
+    footer{
+      padding:25px 20px;
+      text-align:center;
+      color:#77736b;
+      border-top:1px solid #292722;
+    }
+
+    @media(max-width:800px){
+
+      .study-menu{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .tables-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .word-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .alphabet{
+        grid-template-columns:repeat(3,1fr);
+      }
+
+      .counting{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .math-grid,
+      .division{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+    @media(max-width:500px){
+
+      .study-menu{
+        grid-template-columns:1fr;
+      }
+
+      .tables-grid{
+        grid-template-columns:1fr;
+      }
+
+      .alphabet{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .word-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .counting{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .box{
+        padding:15px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+<!-- HEADER -->
+
+<header class="header">
+
+  <div class="nav">
+
+    <a class="brand" href="index.html">
+      <span class="brand-max">MAX</span>
+      <span>COACHING CLASSES</span>
+      <small>ODAR • VARANASI</small>
+    </a>
+
+    <a class="back" href="index.html">
+      ← Home
+    </a>
+
+  </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="eyebrow">
+    MAX KIDS LEARNING ZONE
+  </div>
+
+  <h1>
+    CLASS 2 & 3
+    <br>
+    <span>Study Material</span>
+  </h1>
+
+  <p>
+    Maths • Hindi • English • Tables • Counting
+    <br>
+    आसान तरीके से पढ़ें और अभ्यास करें 📚
+  </p>
+
+</section>
+
+
+<!-- QUICK MENU -->
+
+<div class="container">
+
+  <div class="study-menu">
+
+    <a class="menu-card" href="#tables">
+      <span class="emoji">🔢</span>
+      <strong>Tables</strong>
+      <small>1 से 100</small>
+    </a>
+
+    <a class="menu-card" href="#maths">
+      <span class="emoji">➕</span>
+      <strong>Maths</strong>
+      <small>जोड़ घटाना गुणा</small>
+    </a>
+
+    <a class="menu-card" href="#division">
+      <span class="emoji">➗</span>
+      <strong>Division</strong>
+      <small>भाग करना</small>
+    </a>
+
+    <a class="menu-card" href="#hindi">
+      <span class="emoji">🇮🇳</span>
+      <strong>Hindi</strong>
+      <small>बारहखड़ी और शब्द</small>
+    </a>
+
+    <a class="menu-card" href="#english">
+      <span class="emoji">🔤</span>
+      <strong>English</strong>
+      <small>A to Z & Words</small>
+    </a>
+
+    <a class="menu-card" href="#counting">
+      <span class="emoji">🔢</span>
+      <strong>Counting</strong>
+      <small>1 से 100</small>
+    </a>
+
+  </div>
+
+</div>
+
+
+<!-- TABLES -->
+
+<section id="tables" class="section">
+
+  <div class="container">
+
+    <div class="section-title">
+      <small>MATHS</small>
+
+      <h2>
+        🔢 Tables
+        <span>1 से 100</span>
+      </h2>
+
+      <p>
+        रोज थोड़ा-थोड़ा पहाड़ा पढ़ें।
+      </p>
+    </div>
+
+    <div class="box">
+
+      <h3>📚 1 से 100 तक पहाड़े</h3>
+
+      <p class="box-intro">
+        किसी भी Table को देखकर बच्चे अभ्यास कर सकते हैं।
+      </p>
+
+      <div id="tablesGrid" class="tables-grid"></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MATHS -->
+
+<section id="maths" class="section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <small>EASY MATHEMATICS</small>
+
+      <h2>
+        ➕ जोड़ • घटाना • गुणा
+      </h2>
+
+      <p>
+        3 से 5 अंकों की संख्याओं के आसान उदाहरण।
+      </p>
+
+    </div>
+
+
+    <div class="math-grid">
+
+
+      <!-- ADDITION -->
+
+      <div class="math-card">
+
+        <h4>➕ जोड़</h4>
+
+        <div class="example">
+          7524 + 1284 =
+          <span class="answer">8808</span>
+        </div>
+
+        <div class="example">
+          3245 + 2156 =
+          <span class="answer">5401</span>
+        </div>
+
+        <div class="example">
+          12543 + 23421 =
+          <span class="answer">35964</span>
+        </div>
+
+        <div class="example">
+          45231 + 12345 =
+          <span class="answer">57576</span>
+        </div>
+
+      </div>
+
+
+      <!-- SUBTRACTION -->
+
+      <div class="math-card">
+
+        <h4>➖ घटाना</h4>
+
+        <div class="example">
+          1459 − 1245 =
+          <span class="answer">214</span>
+        </div>
+
+        <div class="example">
+          7524 − 1284 =
+          <span class="answer">6240</span>
+        </div>
+
+        <div class="example">
+          25000 − 12543 =
+          <span class="answer">12457</span>
+        </div>
+
+        <div class="example">
+          54321 − 23456 =
+          <span class="answer">30865</span>
+        </div>
+
+      </div>
+
+
+      <!-- MULTIPLICATION -->
+
+      <div class="math-card">
+
+        <h4>✖️ गुणा</h4>
+
+        <div class="example">
+          249 × 5 =
+          <span class="answer">1245</span>
+        </div>
+
+        <div class="example">
+          1245 × 12 =
+          <span class="answer">14940</span>
+        </div>
+
+        <div class="example">
+          325 × 24 =
+          <span class="answer">7800</span>
+        </div>
+
+        <div class="example">
+          1254 × 15 =
+          <span class="answer">18810</span>
+        </div>
+
+      </div>
+
+
+      <!-- PLACE VALUE -->
+
+      <div class="math-card">
+
+        <h4>🔢 Place Value</h4>
+
+        <div class="example">
+          7,524
+          <br>
+          हजार = 7
+          <br>
+          सैकड़ा = 5
+          <br>
+          दहाई = 2
+          <br>
+          इकाई = 4
+        </div>
+
+        <div class="example">
+          12,345
+          <br>
+          दस हजार = 1
+          <br>
+          हजार = 2
+          <br>
+          सैकड़ा = 3
+          <br>
+          दहाई = 4
+          <br>
+          इकाई = 5
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- DIVISION -->
+
+<section id="division" class="section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <small>DIVISION</small>
+
+      <h2>
+        ➗ भाग करना
+      </h2>
+
+      <p>
+        भागफल और शेषफल को आसान तरीके से समझें।
+      </p>
+
+    </div>
+
+
+    <div class="division">
+
+
+      <div class="division-card">
+
+        <strong>125 ÷ 3</strong>
+
+        <p>
+          3 × 41 = 123
+          <br>
+          125 − 123 = 2
+          <br><br>
+          <b>भागफल = 41</b>
+          <br>
+          <b>शेषफल = 2</b>
+        </p>
+
+      </div>
+
+
+      <div class="division-card">
+
+        <strong>245 ÷ 5</strong>
+
+        <p>
+          5 × 49 = 245
+          <br><br>
+          <b>भागफल = 49</b>
+          <br>
+          <b>शेषफल = 0</b>
+        </p>
+
+      </div>
+
+
+      <div class="division-card">
+
+        <strong>864 ÷ 8</strong>
+
+        <p>
+          8 × 108 = 864
+          <br><br>
+          <b>भागफल = 108</b>
+          <br>
+          <b>शेषफल = 0</b>
+        </p>
+
+      </div>
+
+
+      <div class="division-card">
+
+        <strong>1250 ÷ 5</strong>
+
+        <p>
+          5 × 250 = 1250
+          <br><br>
+          <b>भागफल = 250</b>
+          <br>
+          <b>शेषफल = 0</b>
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HINDI -->
+
+<section id="hindi" class="section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <small>हिंदी</small>
+
+      <h2>
+        🇮🇳 बारहखड़ी
+        <span>और शब्द</span>
+      </h2>
+
+      <p>
+        अक्षर जोड़कर शब्द पढ़ना सीखें।
+      </p>
+
+    </div>
+
+
+    <!-- BARAHKHADI -->
+
+    <div class="box">
+
+      <h3>🔤 क की बारहखड़ी</h3>
+
+      <div class="barahkhadi">
+
+        <table>
+
+          <tr>
+            <th>अक्षर</th>
+            <th>आ</th>
+            <th>इ</th>
+            <th>ई</th>
+            <th>उ</th>
+            <th>ऊ</th>
+            <th>ए</th>
+            <th>ऐ</th>
+            <th>ओ</th>
+            <th>औ</th>
+            <th>अं</th>
+            <th>अः</th>
+          </tr>
+
+          <tr>
+
+            <td class="letter">क</td>
+
+            <td>का</td>
+            <td>कि</td>
+            <td>की</td>
+            <td>कु</td>
+            <td>कू</td>
+            <td>के</td>
+            <td>कै</td>
+            <td>को</td>
+            <td>कौ</td>
+            <td>कं</td>
+            <td>कः</td>
+
+          </tr>
+
+        </table>
+
+      </div>
+
+    </div>
+
+
+    <!-- MORE LETTERS -->
+
+    <div class="box">
+
+      <h3>📖 अक्षर पढ़ें</h3>
+
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="big">का</div>
+          <div class="meaning">का-गज</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">कि</div>
+          <div class="meaning">किताब</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">की</div>
+          <div class="meaning">कीड़ा</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">कु</div>
+          <div class="meaning">कुर्सी</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">के</div>
+          <div class="meaning">केला</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">को</div>
+          <div class="meaning">कोयल</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">कौ</div>
+          <div class="meaning">कौआ</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">कै</div>
+          <div class="meaning">कैसा</div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- WORD MAKING -->
+
+    <div class="box">
+
+      <h3>📝 शब्द बनाना</h3>
+
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="big">रा + म</div>
+          <div class="meaning">राम</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">का + म</div>
+          <div class="meaning">काम</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">ना + म</div>
+          <div class="meaning">नाम</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">घ + र</div>
+          <div class="meaning">घर</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">क + म + ल</div>
+          <div class="meaning">कमल</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">ब + त + ख</div>
+          <div class="meaning">बतख</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">प + तं + ग</div>
+          <div class="meaning">पतंग</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">कि + ता + ब</div>
+          <div class="meaning">किताब</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ENGLISH -->
+
+<section id="english" class="section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <small>ENGLISH</small>
+
+      <h2>
+        🔤 A to Z
+        <span>Capital + Small</span>
+      </h2>
+
+      <p>
+        Capital letter, small letter और आसान word।
+      </p>
+
+    </div>
+
+
+    <div class="box">
+
+      <div id="alphabet" class="alphabet"></div>
+
+    </div>
+
+
+    <div class="box">
+
+      <h3>📝 Word Making</h3>
+
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="big">R + A + M</div>
+          <div class="meaning">RAM</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">C + A + T</div>
+          <div class="meaning">CAT 🐱</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">D + O + G</div>
+          <div class="meaning">DOG 🐶</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">S + U + N</div>
+          <div class="meaning">SUN ☀️</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">B + O + Y</div>
+          <div class="meaning">BOY</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">G + I + R + L</div>
+          <div class="meaning">GIRL</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">B + O + O + K</div>
+          <div class="meaning">BOOK 📖</div>
+        </div>
+
+        <div class="word-card">
+          <div class="big">S + C + H + O + O + L</div>
+          <div class="meaning">SCHOOL 🏫</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- COUNTING -->
+
+<section id="counting" class="section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <small>COUNTING</small>
+
+      <h2>
+        🔢 1 से
+        <span>100 तक गिनती</span>
+      </h2>
+
+      <p>
+        Number और Hindi नाम के साथ।
+      </p>
+
+    </div>
+
+
+    <div class="box">
+
+      <div id="countingGrid" class="counting"></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BACK -->
+
+<div class="top">
+
+  <a class="btn btn-gold" href="index.html">
+    🏠 वापस Home पर जाएँ
+  </a>
+
+</div>
+
+
+<footer>
+
+  <div>
+    <strong>MAX COACHING CLASSES</strong>
+  </div>
+
+  <div>
+    Odar • Pindra • Varanasi
+  </div>
+
+  <div>
+    © <span id="year"></span> Max Coaching Classes
+  </div>
+
+</footer>
+
+
+<script>
+
+/* ================= TABLES 1-100 ================= */
+
+const tablesGrid =
+document.getElementById("tablesGrid");
+
+for(let n=1;n<=100;n++){
+
+  const card=document.createElement("div");
+
+  card.className="table-card";
+
+  let html=`<h4>${n} का पहाड़ा</h4>`;
+
+  for(let i=1;i<=10;i++){
+
+    html += `<p>${n} × ${i} = ${n*i}</p>`;
+
+  }
+
+  card.innerHTML=html;
+
+  tablesGrid.appendChild(card);
+
+}
+
+
+/* ================= ENGLISH A-Z ================= */
+
+const alphabetGrid =
+document.getElementById("alphabet");
+
+const words = [
+
+  ["A","a","Apple 🍎"],
+  ["B","b","Ball ⚽"],
+  ["C","c","Cat 🐱"],
+  ["D","d","Dog 🐶"],
+  ["E","e","Elephant 🐘"],
+  ["F","f","Fish 🐟"],
+  ["G","g","Grapes 🍇"],
+  ["H","h","Hen 🐔"],
+  ["I","i","Ice Cream 🍦"],
+  ["J","j","Jug 🏺"],
+  ["K","k","Kite 🪁"],
+  ["L","l","Lion 🦁"],
+  ["M","m","Mango 🥭"],
+  ["N","n","Nest 🪺"],
+  ["O","o","Orange 🍊"],
+  ["P","p","Parrot 🦜"],
+  ["Q","q","Queen 👑"],
+  ["R","r","Rabbit 🐇"],
+  ["S","s","Sun ☀️"],
+  ["T","t","Tiger 🐯"],
+  ["U","u","Umbrella ☂️"],
+  ["V","v","Van 🚐"],
+  ["W","w","Watch ⌚"],
+  ["X","x","X-ray"],
+  ["Y","y","Yak"],
+  ["Z","z","Zebra 🦓"]
+
+];
+
+words.forEach(item => {
+
+  const card=document.createElement("div");
+
+  card.className="alpha-card";
+
+  card.innerHTML=`
+
+    <div class="capital">${item[0]}</div>
+
+    <div class="small">${item[1]}</div>
+
+    <div class="alpha-word">
+      ${item[2]}
+    </div>
+
+  `;
+
+  alphabetGrid.appendChild(card);
+
+});
+
+
+/* ================= HINDI COUNTING 1-100 ================= */
+
+const hindiNumbers = [
+
+"एक","दो","तीन","चार","पाँच",
+"छह","सात","आठ","नौ","दस",
+
+"ग्यारह","बारह","तेरह","चौदह","पंद्रह",
+"सोलह","सत्रह","अठारह","उन्नीस","बीस",
+
+"इक्कीस","बाईस","तेईस","चौबीस","पच्चीस",
+"छब्बीस","सत्ताईस","अट्ठाईस","उनतीस","तीस",
+
+"इकतीस","बत्तीस","तैंतीस","चौंतीस","पैंतीस",
+"छत्तीस","सैंतीस","अड़तीस","उनतालीस","चालीस",
+
+"इकतालीस","बयालीस","तैंतालीस","चवालीस","पैंतालीस",
+"छियालीस","सैंतालीस","अड़तालीस","उनचास","पचास",
+
+"इक्यावन","बावन","तिरेपन","चौवन","पचपन",
+"छप्पन","सत्तावन","अट्ठावन","उनसठ","साठ",
+
+"इकसठ","बासठ","तिरसठ","चौंसठ","पैंसठ",
+"छियासठ","सड़सठ","अड़सठ","उनहत्तर","सत्तर",
+
+"इकहत्तर","बहत्तर","तिहत्तर","चौहत्तर","पचहत्तर",
+"छिहत्तर","सतहत्तर","अठहत्तर","उनासी","अस्सी",
+
+"इक्यासी","बयासी","तिरासी","चौरासी","पचासी",
+"छियासी","सतासी","अट्ठासी","नवासी","नब्बे",
+
+"इक्यानवे","बानवे","तिरानवे","चौरानवे","पंचानवे",
+"छियानवे","सत्तानवे","अट्ठानवे","निन्यानवे","सौ"
+
+];
+
+const objects = [
+"🍎","🍌","⭐","⚽","🌸",
+"🍓","🐟","🧸","🍊","🎈"
+];
+
+const countingGrid =
+document.getElementById("countingGrid");
+
+for(let i=1;i<=100;i++){
+
+  const card=document.createElement("div");
+
+  card.className="count-card";
+
+  const object =
+    objects[(i-1)%objects.length];
+
+  card.innerHTML=`
+
+    <strong>${i}</strong>
+
+    <div class="fingers">☝️</div>
+
+    <div class="objects">${object}</div>
+
+    <b>${hindiNumbers[i-1]}</b>
+
+  `;
+
+  countingGrid.appendChild(card);
+
+}
+
+
+/* YEAR */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
+</body>
+  </html>
