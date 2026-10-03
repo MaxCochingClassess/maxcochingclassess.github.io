@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="MAX Coaching Classes - Class 12 NCERT Study Material">
+
+  <title>Class 12 Study | MAX Coaching Classes</title>
+
+  <style>
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      background:#f4f6f9;
+      color:#172033;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:min(1100px,92%);
+      margin:auto;
+    }
+
+    /* HEADER */
+
+    header{
+      background:#111827;
+      color:white;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 4px 20px rgba(0,0,0,.15);
+    }
+
+    .nav{
+      min-height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:15px;
+    }
+
+    .brand{
+      display:flex;
+      flex-direction:column;
+      line-height:1.05;
+      font-weight:bold;
+    }
+
+    .brand-max{
+      font-size:28px;
+      color:#f5b942;
+      font-weight:900;
+    }
+
+    .brand small{
+      color:#aaa;
+      font-size:10px;
+      margin-top:5px;
+    }
+
+    .home-btn{
+      background:#f5b942;
+      color:#111827;
+      padding:10px 16px;
+      border-radius:10px;
+      font-weight:bold;
+    }
+
+    /* HERO */
+
+    .hero{
+      background:linear-gradient(135deg,#111827,#26344d);
+      color:white;
+      padding:65px 0;
+    }
+
+    .badge{
+      display:inline-block;
+      padding:7px 14px;
+      border-radius:30px;
+      background:rgba(245,185,66,.15);
+      border:1px solid rgba(245,185,66,.4);
+      color:#f5b942;
+      font-size:13px;
+      font-weight:bold;
+    }
+
+    .hero h1{
+      font-size:clamp(40px,8vw,70px);
+      line-height:1.1;
+      margin:12px 0;
+    }
+
+    .hero h1 span{
+      color:#f5b942;
+    }
+
+    .hero p{
+      max-width:750px;
+      color:#d1d5db;
+      font-size:17px;
+    }
+
+    /* SUBJECT AREA */
+
+    .study{
+      padding:55px 0;
+    }
+
+    .heading{
+      margin-bottom:28px;
+    }
+
+    .heading small{
+      color:#a06d00;
+      font-weight:800;
+      letter-spacing:1.5px;
+    }
+
+    .heading h2{
+      font-size:35px;
+      margin-top:5px;
+    }
+
+    .subject-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:22px;
+    }
+
+    .subject-card{
+      background:white;
+      border:1px solid #e4e7ec;
+      border-radius:18px;
+      padding:25px;
+      box-shadow:0 8px 25px rgba(0,0,0,.07);
+    }
+
+    .subject-icon{
+      font-size:38px;
+    }
+
+    .subject-card h3{
+      font-size:25px;
+      margin:7px 0;
+    }
+
+    .subject-card > p{
+      color:#667085;
+      margin-bottom:18px;
+    }
+
+    /* CHAPTER */
+
+    .chapter-list{
+      display:flex;
+      flex-direction:column;
+      gap:9px;
+    }
+
+    .chapter{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      background:#f7f8fa;
+      border:1px solid #e8eaee;
+      padding:12px 14px;
+      border-radius:10px;
+      font-weight:600;
+    }
+
+    .chapter:hover{
+      background:#fff8e8;
+      border-color:#f5b942;
+    }
+
+    .number{
+      width:29px;
+      height:29px;
+      min-width:29px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:#111827;
+      color:white;
+      font-size:12px;
+      font-weight:bold;
+    }
+
+    .future{
+      margin-top:18px;
+      padding:13px;
+      background:#fff9e9;
+      border-left:4px solid #f5b942;
+      color:#765600;
+      border-radius:6px;
+      font-size:14px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#111827;
+      color:#d1d5db;
+      text-align:center;
+      padding:30px 15px;
+      margin-top:10px;
+    }
+
+    footer strong{
+      display:block;
+      color:#f5b942;
+      margin-bottom:5px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:700px){
+
+      .subject-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding:48px 0;
+      }
+
+      .study{
+        padding:40px 0;
+      }
+
+      .heading h2{
+        font-size:29px;
+      }
+
+      .subject-card{
+        padding:19px;
+      }
+
+      .chapter{
+        font-size:14px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+  <div class="container nav">
+
+    <a href="index.html" class="brand">
+
+      <span class="brand-max">
+        MAX
+      </span>
+
+      <span>
+        COACHING CLASSES
+      </span>
+
+      <small>
+        ODAR • VARANASI
+      </small>
+
+    </a>
+
+
+    <a href="index.html" class="home-btn">
+      ← Home
+    </a>
+
+  </div>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+  <div class="container">
+
+    <span class="badge">
+      NCERT • CLASS 12
+    </span>
+
+    <h1>
+      Class 12<br>
+      <span>Study Zone</span>
+    </h1>
+
+    <p>
+      Class 12 के लिए Mathematics, Physics, Chemistry,
+      Biology, Hindi और English की chapter-wise
+      study material. आगे Notes, Questions, MCQ,
+      Formula और Test Series भी जोड़ी जा सकती है।
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= STUDY ================= -->
+
+<main class="study">
+
+<div class="container">
+
+  <div class="heading">
+
+    <small>
+      CLASS 12 • NCERT
+    </small>
+
+    <h2>
+      अपना Subject चुनें 📚
+    </h2>
+
+  </div>
+
+
+  <div class="subject-grid">
+
+
+
+<!-- ================= MATHEMATICS ================= -->
+
+<article class="subject-card">
+
+  <div class="subject-icon">
+    📐
+  </div>
+
+  <h3>
+    Mathematics
+  </h3>
+
+  <p>
+    NCERT Class 12 Mathematics
+  </p>
+
+
+  <div class="chapter-list">
+
+    <div class="chapter">
+      <span class="number">1</span>
+      Relations and Functions
+    </div>
+
+    <div class="chapter">
+      <span class="number">2</span>
+      Inverse Trigonometric Functions
+    </div>
+
+    <div class="chapter">
+      <span class="number">3</span>
+      Matrices
+    </div>
+
+    <div class="chapter">
+      <span class="number">4</span>
+      Determinants
+    </div>
+
+    <div class="chapter">
+      <span class="number">5</span>
+      Continuity and Differentiability
+    </div>
+
+    <div class="chapter">
+      <span class="number">6</span>
+      Application of Derivatives
+    </div>
+
+    <div class="chapter">
+      <span class="number">7</span>
+      Integrals
+    </div>
+
+    <div class="chapter">
+      <span class="number">8</span>
+      Application of Integrals
+    </div>
+
+    <div class="chapter">
+      <span class="number">9</span>
+      Differential Equations
+    </div>
+
+    <div class="chapter">
+      <span class="number">10</span>
+      Vector Algebra
+    </div>
+
+    <div class="chapter">
+      <span class="number">11</span>
+      Three Dimensional Geometry
+    </div>
+
+    <div class="chapter">
+      <span class="number">12</span>
+      Linear Programming
+    </div>
+
+    <div class="chapter">
+      <span class="number">13</span>
+      Probability
+    </div>
+
+  </div>
+
+
+  <div class="future">
+    💡 बाद में Formula, Examples, NCERT Questions,
+    MCQ और Practice Test जोड़ सकते हैं।
+  </div>
+
+</article>
+
+
+
+<!-- ================= PHYSICS ================= -->
+
+<article class="subject-card">
+
+  <div class="subject-icon">
+    ⚛️
+  </div>
+
+  <h3>
+    Physics
+  </h3>
+
+  <p>
+    NCERT Class 12 Physics
+  </p>
+
+
+  <div class="chapter-list">
+
+    <div class="chapter">
+      <span class="number">1</span>
+      Electric Charges and Fields
+    </div>
+
+    <div class="chapter">
+      <span class="number">2</span>
+      Electrostatic Potential and Capacitance
+    </div>
+
+    <div class="chapter">
+      <span class="number">3</span>
+      Current Electricity
+    </div>
+
+    <div class="chapter">
+      <span class="number">4</span>
+      Moving Charges and Magnetism
+    </div>
+
+    <div class="chapter">
+      <span class="number">5</span>
+      Magnetism and Matter
+    </div>
+
+    <div class="chapter">
+      <span class="number">6</span>
+      Electromagnetic Induction
+    </div>
+
+    <div class="chapter">
+      <span class="number">7</span>
+      Alternating Current
+    </div>
+
+    <div class="chapter">
+      <span class="number">8</span>
+      Electromagnetic Waves
+    </div>
+
+    <div class="chapter">
+      <span class="number">9</span>
+      Ray Optics and Optical Instruments
+    </div>
+
+    <div class="chapter">
+      <span class="number">10</span>
+      Wave Optics
+    </div>
+
+    <div class="chapter">
+      <span class="number">11</span>
+      Dual Nature of Radiation and Matter
+    </div>
+
+    <div class="chapter">
+      <span class="number">12</span>
+      Atoms
+    </div>
+
+    <div class="chapter">
+      <span class="number">13</span>
+      Nuclei
+    </div>
+
+    <div class="chapter">
+      <span class="number">14</span>
+      Semiconductor Electronics
+    </div>
+
+  </div>
+
+
+  <div class="future">
+    💡 बाद में Formula, Derivation, Numericals,
+    Diagrams और MCQ जोड़ सकते हैं।
+  </div>
+
+</article>
+
+
+
+<!-- ================= CHEMISTRY ================= -->
+
+<article class="subject-card">
+
+  <div class="subject-icon">
+    🧪
+  </div>
+
+  <h3>
+    Chemistry
+  </h3>
+
+  <p>
+    NCERT Class 12 Chemistry
+  </p>
+
+
+  <div class="chapter-list">
+
+    <div class="chapter">
+      <span class="number">1</span>
+      Solutions
+    </div>
+
+    <div class="chapter">
+      <span class="number">2</span>
+      Electrochemistry
+    </div>
+
+    <div class="chapter">
+      <span class="number">3</span>
+      Chemical Kinetics
+    </div>
+
+    <div class="chapter">
+      <span class="number">4</span>
+      The d- and f-Block Elements
+    </div>
+
+    <div class="chapter">
+      <span class="number">5</span>
+      Coordination Compounds
+    </div>
+
+    <div class="chapter">
+      <span class="number">6</span>
+      Haloalkanes and Haloarenes
+    </div>
+
+    <div class="chapter">
+      <span class="number">7</span>
+      Alcohols, Phenols and Ethers
+    </div>
+
+    <div class="chapter">
+      <span class="number">8</span>
+      Aldehydes, Ketones and Carboxylic Acids
+    </div>
+
+    <div class="chapter">
+      <span class="number">9</span>
+      Amines
+    </div>
+
+    <div class="chapter">
+      <span class="number">10</span>
+      Biomolecules
+    </div>
+
+  </div>
+
+
+  <div class="future">
+    💡 बाद में Chemical Reactions, Formula,
+    Organic Reactions, Numericals और MCQ जोड़ेंगे।
+  </div>
+
+</article>
+
+
+
+<!-- ================= BIOLOGY ================= -->
+
+<article class="subject-card">
+
+  <div class="subject-icon">
+    🧬
+  </div>
+
+  <h3>
+    Biology
+  </h3>
+
+  <p>
+    NCERT Class 12 Biology
+  </p>
+
+
+  <div class="chapter-list">
+
+    <div class="chapter">
+      <span class="number">1</span>
+      Sexual Reproduction in Flowering Plants
+    </div>
+
+    <div class="chapter">
+      <span class="number">2</span>
+      Human Reproduction
+    </div>
+
+    <div class="chapter">
+      <span class="number">3</span>
+      Reproductive Health
+    </div>
+
+    <div class="chapter">
+      <span class="number">4</span>
+      Principles of Inheritance and Variation
+    </div>
+
+    <div class="chapter">
+      <span class="number">5</span>
+      Molecular Basis of Inheritance
+    </div>
+
+    <div class="chapter">
+      <span class="number">6</span>
+      Evolution
+    </div>
+
+    <div class="chapter">
+      <span class="number">7</span>
+      Human Health and Disease
+    </div>
+
+    <div class="chapter">
+      <span class="number">8</span>
+      Microbes in Human Welfare
+    </div>
+
+    <div class="chapter">
+      <span class="number">9</span>
+      Biotechnology: Principles and Processes
+    </div>
+
+    <div class="chapter">
+      <span class="number">10</span>
+      Biotechnology and its Applications
+    </div>
+
+    <div class="chapter">
+      <span class="number">11</span>
+      Organisms and Populations
+    </div>
+
+    <div class="chapter">
+      <span class="number">12</span>
+      Ecosystem
+    </div>
+
+    <div class="chapter">
+      <span class="number">13</span>
+      Biodiversity and Conservation
+    </div>
+
+  </div>
+
+
+  <div class="future">
+    💡 बाद में Diagrams, Definitions,
+    NCERT Questions और Biology MCQ जोड़ेंगे।
+  </div>
+
+</article>
+
+
+
+<!-- ================= HINDI ================= -->
+
+<article class="subject-card">
+
+  <div class="subject-icon">
+    📖
+  </div>
+
+  <h3>
+    Hindi Core
+  </h3>
+
+  <p>
+    आरोह भाग–2 • वितान भाग–2
+  </p>
+
+
+  <div class="chapter-list">
+
+    <div class="chapter">
+      <span class="number">1</span>
+      प्रेमघन की छाया-स्मृति
+    </div>
+
+    <div class="chapter">
+      <span class="number">2</span>
+      सुतमरनी के मनके
+    </div>
+
+    <div class="chapter">
+      <span class="number">3</span>
+      प्रेमघन की छाया
+    </div>
+
+    <div class="chapter">
+      <span class="number">4</span>
+      सिपाही की माँ
+    </div>
+
+    <div class="chapter">
+      <span class="number">5</span>
+      रचनाकार के आसपास
+    </div>
+
+    <div class="chapter">
+      <span class="number">6</span>
+      नमक
+    </div>
+
+    <div class="chapter">
+      <span class="number">7</span>
+      शिरीष के फूल
+    </div>
+
+    <div class="chapter">
+      <span class="number">8</span>
+      श्रम-विभाजन और जाति-प्रथा
+    </div>
+
+    <div class="chapter">
+      <span class="number">9</span>
+      मेरी कल्पना का आदर्श समाज
+    </div>
+
+  </div>
+
+
+  <div class="future">
+    📚 बाद में कविता, गद्य, वितान,
+    शब्दार्थ, प्रश्न-उत्तर और MCQ जोड़ेंगे।
+  </div>
+
+</article>
+
+
+
+<!-- ================= ENGLISH ================= -->
+
+<article class="subject-card">
+
+  <div class="subject-icon">
+    🇬🇧
+  </div>
+
+  <h3>
+    English Core
+  </h3>
+
+  <p>
+    Flamingo • Vistas
+  </p>
+
+
+  <div class="chapter-list">
+
+    <div class="chapter">
+      <span class="number">1</span>
+      The Last Lesson
+    </div>
+
+    <div class="chapter">
+      <span class="number">2</span>
+      Lost Spring
+    </div>
+
+    <div class="chapter">
+      <span class="number">3</span>
+      Deep Water
+    </div>
+
+    <div class="chapter">
+      <span class="number">4</span>
+      The Rattrap
+    </div>
+
+    <div class="chapter">
+      <span class="number">5</span>
+      Indigo
+    </div>
+
+    <div class="chapter">
+      <span class="number">6</span>
+      Poets and Pancakes
+    </div>
+
+    <div class="chapter">
+      <span class="number">7</span>
+      The Interview
+    </div>
+
+    <div class="chapter">
+      <span class="number">8</span>
+      Going Places
+    </div>
+
+    <div class="chapter">
+      <span class="number">P</span>
+      My Mother at Sixty-Six
+    </div>
+
+    <div class="chapter">
+      <span class="number">P</span>
+      An Elementary School Classroom in a Slum
+    </div>
+
+    <div class="chapter">
+      <span class="number">P</span>
+      Keeping Quiet
+    </div>
+
+    <div class="chapter">
+      <span class="number">P</span>
+      A Thing of Beauty
+    </div>
+
+    <div class="chapter">
+      <span class="number">P</span>
+      A Roadside Stand
+    </div>
+
+    <div class="chapter">
+      <span class="number">P</span>
+      Aunt Jennifer's Tigers
+    </div>
+
+    <div class="chapter">
+      <span class="number">S</span>
+      The Third Level
+    </div>
+
+    <div class="chapter">
+      <span class="number">S</span>
+      The Tiger King
+    </div>
+
+    <div class="chapter">
+      <span class="number">S</span>
+      Journey to the End of the Earth
+    </div>
+
+    <div class="chapter">
+      <span class="number">S</span>
+      The Enemy
+    </div>
+
+    <div class="chapter">
+      <span class="number">S</span>
+      On the Face of It
+    </div>
+
+    <div class="chapter">
+      <span class="number">S</span>
+      Memories of Childhood
+    </div>
+
+  </div>
+
+
+  <div class="future">
+    📚 बाद में Summary, Word Meaning,
+    Questions, Answers और MCQ जोड़ेंगे।
+  </div>
+
+</article>
+
+
+  </div>
+
+</div>
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <strong>
+    MAX COACHING CLASSES
+  </strong>
+
+  <span>
+    Odar • Pindra • Varanasi, Uttar Pradesh
+  </span>
+
+  <br>
+
+  <span>
+    Class 12 NCERT Study Zone
+  </span>
+
+</footer>
+
+
+</body>
+                               </html>
