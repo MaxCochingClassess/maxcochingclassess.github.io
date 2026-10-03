@@ -6,10 +6,6 @@
 
 <title>Test Series | MAX Coaching Classes</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
 <style>
 *{box-sizing:border-box}
 
@@ -17,7 +13,7 @@ html{scroll-behavior:smooth}
 
 body{
 margin:0;
-font-family:Inter,"Noto Sans Devanagari",sans-serif;
+font-family:Arial,"Noto Sans Devanagari",sans-serif;
 background:#080808;
 color:#fff;
 }
@@ -29,7 +25,6 @@ width:min(1150px,92%);
 margin:auto;
 }
 
-/* HEADER */
 .header{
 position:sticky;
 top:0;
@@ -78,12 +73,15 @@ text-decoration:none;
 font-weight:600;
 }
 
-.nav-links a:hover{color:#f4c542}
+.nav-links a:hover{
+color:#f4c542;
+}
 
 /* HERO */
+
 .hero{
 text-align:center;
-padding:65px 15px 45px;
+padding:60px 15px 40px;
 background:
 radial-gradient(circle at top right,rgba(244,197,66,.15),transparent 35%),
 #080808;
@@ -97,12 +95,13 @@ font-weight:800;
 }
 
 .hero h1{
-font-family:Georgia,serif;
 font-size:clamp(38px,7vw,68px);
 margin:15px 0;
 }
 
-.hero h1 span{color:#f4c542}
+.hero h1 span{
+color:#f4c542;
+}
 
 .hero p{
 max-width:720px;
@@ -112,6 +111,7 @@ line-height:1.8;
 }
 
 /* PANELS */
+
 .home-panel,
 .exam-panel,
 .language-panel,
@@ -136,6 +136,7 @@ display:block;
 }
 
 /* CATEGORY */
+
 .category-grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
@@ -167,6 +168,7 @@ line-height:1.6;
 }
 
 /* EXAM */
+
 .exam-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
@@ -189,6 +191,7 @@ color:#f4c542;
 }
 
 /* LANGUAGE */
+
 .language-buttons{
 display:flex;
 gap:12px;
@@ -205,15 +208,14 @@ cursor:pointer;
 font-weight:700;
 }
 
-.lang-btn:hover{border-color:#f4c542}
-
 .lang-btn.active{
 background:#f4c542;
 color:#111;
 border-color:#f4c542;
 }
 
-/* TEST CARDS */
+/* TEST LIST */
+
 .test-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
@@ -229,10 +231,12 @@ border-radius:15px;
 
 .test-card h3{
 margin-top:0;
-color:#fff;
+line-height:1.5;
 }
 
-.test-card p{color:#aaa}
+.test-card p{
+color:#aaa;
+}
 
 .start-btn{
 width:100%;
@@ -245,11 +249,13 @@ font-weight:800;
 cursor:pointer;
 }
 
-.start-btn:hover{background:#ffd75a}
+.start-btn:hover{
+background:#ffd75a;
+}
 
 /* TEST SCREEN */
-#testScreen,
-#resultScreen{
+
+#testScreen{
 display:none;
 }
 
@@ -293,6 +299,7 @@ transition:.2s;
 }
 
 /* QUESTION */
+
 .question-box{
 background:#111;
 border:1px solid #333;
@@ -307,7 +314,7 @@ font-weight:800;
 
 .question-text{
 font-size:21px;
-line-height:1.6;
+line-height:1.7;
 margin:15px 0 22px;
 }
 
@@ -344,30 +351,32 @@ margin-top:20px;
 flex-wrap:wrap;
 }
 
-.nav-btn,
-.submit-btn{
+.nav-btn{
 padding:13px 22px;
+border:1px solid #555;
+background:#191919;
+color:#fff;
 border-radius:10px;
 cursor:pointer;
 font-weight:700;
 }
 
-.nav-btn{
-border:1px solid #555;
-background:#191919;
-color:#fff;
+.nav-btn:hover{
+border-color:#f4c542;
 }
 
-.nav-btn:hover{border-color:#f4c542}
-
 .submit-btn{
+padding:13px 22px;
 border:0;
 background:#f4c542;
 color:#111;
+border-radius:10px;
+cursor:pointer;
 font-weight:800;
 }
 
 /* NAVIGATOR */
+
 .navigator{
 margin-top:20px;
 padding:18px;
@@ -403,6 +412,11 @@ outline:2px solid #f4c542;
 }
 
 /* RESULT */
+
+#resultScreen{
+display:none;
+}
+
 .result-box{
 margin:30px 0;
 padding:30px;
@@ -462,8 +476,13 @@ border-left:5px solid #e74c3c;
 border-left:5px solid #777;
 }
 
-.correct-text{color:#4bd463}
-.wrong-text{color:#ff6257}
+.correct-text{
+color:#4bd463;
+}
+
+.wrong-text{
+color:#ff6257;
+}
 
 .back-home{
 text-align:center;
@@ -477,6 +496,7 @@ font-weight:800;
 }
 
 /* MOBILE */
+
 @media(max-width:700px){
 
 .nav{
@@ -484,24 +504,28 @@ flex-direction:column;
 padding:12px 0;
 }
 
-.nav-links{display:none}
+.nav-links{
+display:none;
+}
 
 .category-grid{
 grid-template-columns:1fr;
 }
 
-.hero{padding-top:45px}
+.hero{
+padding-top:45px;
+}
 
-.question-text{font-size:18px}
+.question-text{
+font-size:18px;
+}
 
 .result-stats{
 grid-template-columns:1fr;
 }
 
-.test-header{top:0}
-
-.navigation button{
-flex:1;
+.test-header{
+top:0;
 }
 
 }
@@ -529,7 +553,6 @@ flex:1;
 </div>
 </header>
 
-
 <main>
 
 <section class="hero">
@@ -538,8 +561,7 @@ flex:1;
 <div class="label">MAX TEST SERIES</div>
 
 <h1>
-ONLINE
-<span>TEST SERIES</span>
+ONLINE <span>TEST SERIES</span>
 </h1>
 
 <p>
@@ -550,10 +572,10 @@ School विद्यार्थियों और Competitive Exam की �
 </div>
 </section>
 
-
 <div class="container">
 
 <!-- HOME -->
+
 <section id="homePanel" class="home-panel">
 
 <h2>📚 Test Series चुनें</h2>
@@ -574,7 +596,6 @@ Class 6–8, Class 9–10 और Class 11–12
 
 </div>
 
-
 <div class="category-card"
 onclick="selectCategory('competitive')">
 
@@ -582,7 +603,7 @@ onclick="selectCategory('competitive')">
 
 <p>
 SSC, Railway, Banking, State Exams,
-UPSC और Entrance Exams के लिए practice tests।
+UPSC और Entrance Exams।
 </p>
 
 </div>
@@ -592,6 +613,7 @@ UPSC और Entrance Exams के लिए practice tests।
 
 
 <!-- EXAM -->
+
 <section id="examPanel" class="exam-panel">
 
 <h2 id="examTitle">Exam चुनें</h2>
@@ -602,6 +624,7 @@ UPSC और Entrance Exams के लिए practice tests।
 
 
 <!-- LANGUAGE -->
+
 <section id="languagePanel" class="language-panel">
 
 <h2>🌐 Test Language</h2>
@@ -626,6 +649,7 @@ onclick="selectLanguage('en',this)">
 
 
 <!-- TEST LIST -->
+
 <section id="testPanel" class="test-panel">
 
 <h2>📝 Available Tests</h2>
@@ -636,6 +660,7 @@ onclick="selectLanguage('en',this)">
 
 
 <!-- TEST SCREEN -->
+
 <section id="testScreen">
 
 <div class="test-header">
@@ -648,8 +673,7 @@ onclick="selectLanguage('en',this)">
 </div>
 
 <div>
-⏱️
-<span class="timer" id="timer">10:00</span>
+⏱️ <span class="timer" id="timer">15:00</span>
 </div>
 
 </div>
@@ -704,6 +728,7 @@ Submit Test
 
 
 <!-- RESULT -->
+
 <section id="resultScreen">
 
 <div class="result-box">
@@ -741,7 +766,7 @@ Unattempted
 🔄 Retry Test
 </button>
 
-<button class="nav-btn" onclick="goHome()">
+<button class="nav-btn" onclick="location.reload()">
 🏠 Test Series Home
 </button>
 
@@ -766,26 +791,14 @@ Unattempted
 
 /* =========================================================
    TEST DATA
-   =========================================================
-
-   आगे नया test जोड़ना हो तो:
-
-   tests: [
-      {
-        name:"SSC Maths Test 3",
-        time:30,
-        questions:[ ... ]
-      }
-   ]
-
-   इसी structure में जोड़ें।
 ========================================================= */
 
 const testData = {
 
-school: {
+school:{
 
-"6-8": {
+"6-8":{
+
 title:"Class 6–8",
 
 tests:[
@@ -793,244 +806,90 @@ tests:[
 {
 name:"Maths Practice Test 1",
 time:10,
-
 questions:[
-
 {
 hi:"20% of 250 कितना है?",
 en:"What is 20% of 250?",
 options:["25","40","50","60"],
 answer:2
 },
-
 {
 hi:"एक त्रिभुज के कोणों का योग कितना होता है?",
 en:"What is the sum of angles of a triangle?",
 options:["90°","180°","270°","360°"],
 answer:1
 },
-
 {
 hi:"5 + (-2) = ?",
 en:"5 + (-2) = ?",
 options:["2","3","7","-3"],
 answer:1
 },
-
 {
 hi:"0.5 किसके बराबर है?",
 en:"0.5 is equal to?",
 options:["1/2","1/3","2/3","3/4"],
 answer:0
 },
-
 {
 hi:"Rectangle का area क्या है?",
 en:"What is the area of a rectangle?",
 options:["2(L+B)","L×B","4L","L+B"],
 answer:1
 }
-
 ]
 },
-
 
 {
 name:"Maths Practice Test 2 — 26 Questions",
 time:30,
-
 questions:[
-
-{
-hi:"1 + 1 = ?",
-en:"1 + 1 = ?",
-options:["1","2","3","4"],
-answer:1
+{hi:"1 + 1 = ?",en:"1 + 1 = ?",options:["1","2","3","4"],answer:1},
+{hi:"5 × 6 = ?",en:"5 × 6 = ?",options:["20","25","30","35"],answer:2},
+{hi:"100 ÷ 10 = ?",en:"100 ÷ 10 = ?",options:["5","10","20","100"],answer:1},
+{hi:"25 का 20% कितना है?",en:"What is 20% of 25?",options:["2","5","10","20"],answer:1},
+{hi:"3² का मान क्या है?",en:"What is the value of 3²?",options:["6","8","9","12"],answer:2},
+{hi:"√16 का मान क्या है?",en:"What is √16?",options:["2","4","6","8"],answer:1},
+{hi:"एक दर्जन में कितनी वस्तुएँ होती हैं?",en:"How many items are in a dozen?",options:["10","12","15","20"],answer:1},
+{hi:"1 किलोमीटर में कितने मीटर होते हैं?",en:"How many metres are in 1 kilometre?",options:["100","500","1000","1500"],answer:2},
+{hi:"1 घंटे में कितने मिनट होते हैं?",en:"How many minutes are in 1 hour?",options:["30","45","60","90"],answer:2},
+{hi:"समकोण कितने डिग्री का होता है?",en:"How many degrees is a right angle?",options:["45°","90°","180°","360°"],answer:1},
+{hi:"एक वर्ग की सभी भुजाएँ कैसी होती हैं?",en:"How are the sides of a square?",options:["समान","असमान","दो समान","कोई नहीं"],answer:0},
+{hi:"त्रिभुज में कितनी भुजाएँ होती हैं?",en:"How many sides does a triangle have?",options:["2","3","4","5"],answer:1},
+{hi:"वर्ग का perimeter का सूत्र क्या है?",en:"What is the formula for the perimeter of a square?",options:["side × side","4 × side","2 × side","side + 2"],answer:1},
+{hi:"यदि x + 5 = 10, तो x = ?",en:"If x + 5 = 10, then x = ?",options:["2","3","5","15"],answer:2},
+{hi:"2/4 को सरल रूप में क्या लिखेंगे?",en:"What is 2/4 in simplest form?",options:["1/2","1/3","2/3","3/4"],answer:0},
+{hi:"0.25 किसके बराबर है?",en:"0.25 is equal to?",options:["1/2","1/4","3/4","1/5"],answer:1},
+{hi:"10 का 50% कितना है?",en:"What is 50% of 10?",options:["2","5","10","15"],answer:1},
+{hi:"7 + 8 = ?",en:"7 + 8 = ?",options:["13","14","15","16"],answer:2},
+{hi:"20 - 7 = ?",en:"20 - 7 = ?",options:["11","12","13","14"],answer:2},
+{hi:"9 × 9 = ?",en:"9 × 9 = ?",options:["72","81","90","99"],answer:1},
+{hi:"81 का वर्गमूल क्या है?",en:"What is the square root of 81?",options:["7","8","9","10"],answer:2},
+{hi:"एक आयत की लंबाई 5 cm और चौड़ाई 3 cm है। क्षेत्रफल कितना होगा?",en:"A rectangle has length 5 cm and width 3 cm. What is its area?",options:["8 cm²","15 cm²","16 cm²","20 cm²"],answer:1},
+{hi:"2, 4, 6, 8 के बाद कौन सी संख्या आएगी?",en:"Which number comes after 2, 4, 6, 8?",options:["9","10","11","12"],answer:1},
+{hi:"15 और 20 का HCF क्या है?",en:"What is the HCF of 15 and 20?",options:["3","5","10","15"],answer:1},
+{hi:"2, 3 और 4 का LCM क्या है?",en:"What is the LCM of 2, 3 and 4?",options:["6","8","12","24"],answer:2},
+{hi:"यदि एक वस्तु की कीमत ₹100 है और 10% discount है, तो discount कितना होगा?",en:"If an item costs ₹100 and has a 10% discount, what is the discount?",options:["₹5","₹10","₹15","₹20"],answer:1}
+]
 },
 
 {
-hi:"5 × 6 = ?",
-en:"5 × 6 = ?",
-options:["20","25","30","35"],
-answer:2
-},
-
-{
-hi:"100 ÷ 10 = ?",
-en:"100 ÷ 10 = ?",
-options:["5","10","20","100"],
-answer:1
-},
-
-{
-hi:"25 का 20% कितना है?",
-en:"What is 20% of 25?",
-options:["2","5","10","20"],
-answer:1
-},
-
-{
-hi:"3² का मान क्या है?",
-en:"What is the value of 3²?",
-options:["6","8","9","12"],
-answer:2
-},
-
-{
-hi:"√16 का मान क्या है?",
-en:"What is √16?",
-options:["2","4","6","8"],
-answer:1
-},
-
-{
-hi:"एक दर्जन में कितनी वस्तुएँ होती हैं?",
-en:"How many items are in a dozen?",
-options:["10","12","15","20"],
-answer:1
-},
-
-{
-hi:"1 किलोमीटर में कितने मीटर होते हैं?",
-en:"How many metres are in 1 kilometre?",
-options:["100","500","1000","1500"],
-answer:2
-},
-
-{
-hi:"1 घंटे में कितने मिनट होते हैं?",
-en:"How many minutes are in 1 hour?",
-options:["30","45","60","90"],
-answer:2
-},
-
-{
-hi:"समकोण कितने डिग्री का होता है?",
-en:"How many degrees is a right angle?",
-options:["45°","90°","180°","360°"],
-answer:1
-},
-
-{
-hi:"एक वर्ग की सभी भुजाएँ कैसी होती हैं?",
-en:"How are the sides of a square?",
-options:["समान","असमान","दो समान","कोई नहीं"],
-answer:0
-},
-
-{
-hi:"त्रिभुज में कितनी भुजाएँ होती हैं?",
-en:"How many sides does a triangle have?",
-options:["2","3","4","5"],
-answer:1
-},
-
-{
-hi:"वर्ग का perimeter का सूत्र क्या है?",
-en:"What is the formula for the perimeter of a square?",
-options:["side × side","4 × side","2 × side","side + 2"],
-answer:1
-},
-
-{
-hi:"यदि x + 5 = 10, तो x = ?",
-en:"If x + 5 = 10, then x = ?",
-options:["2","3","5","15"],
-answer:2
-},
-
-{
-hi:"2/4 को सरल रूप में क्या लिखेंगे?",
-en:"What is 2/4 in simplest form?",
-options:["1/2","1/3","2/3","3/4"],
-answer:0
-},
-
-{
-hi:"0.25 किसके बराबर है?",
-en:"0.25 is equal to?",
-options:["1/2","1/4","3/4","1/5"],
-answer:1
-},
-
-{
-hi:"10 का 50% कितना है?",
-en:"What is 50% of 10?",
-options:["2","5","10","15"],
-answer:1
-},
-
-{
-hi:"7 + 8 = ?",
-en:"7 + 8 = ?",
-options:["13","14","15","16"],
-answer:2
-},
-
-{
-hi:"20 - 7 = ?",
-en:"20 - 7 = ?",
-options:["11","12","13","14"],
-answer:2
-},
-
-{
-hi:"9 × 9 = ?",
-en:"9 × 9 = ?",
-options:["72","81","90","99"],
-answer:1
-},
-
-{
-hi:"81 का वर्गमूल क्या है?",
-en:"What is the square root of 81?",
-options:["7","8","9","10"],
-answer:2
-},
-
-{
-hi:"एक आयत की लंबाई 5 cm और चौड़ाई 3 cm है। क्षेत्रफल कितना होगा?",
-en:"A rectangle has length 5 cm and width 3 cm. What is its area?",
-options:["8 cm²","15 cm²","16 cm²","20 cm²"],
-answer:1
-},
-
-{
-hi:"2, 4, 6, 8 के बाद कौन सी संख्या आएगी?",
-en:"Which number comes after 2, 4, 6, 8?",
-options:["9","10","11","12"],
-answer:1
-},
-
-{
-hi:"15 और 20 का HCF क्या है?",
-en:"What is the HCF of 15 and 20?",
-options:["3","5","10","15"],
-answer:1
-},
-
-{
-hi:"2, 3 और 4 का LCM क्या है?",
-en:"What is the LCM of 2, 3 and 4?",
-options:["6","8","12","24"],
-answer:2
-},
-
-{
-hi:"यदि एक वस्तु की कीमत ₹100 है और 10% discount है, तो discount कितना होगा?",
-en:"If an item costs ₹100 and has a 10% discount, what is the discount?",
-options:["₹5","₹10","₹15","₹20"],
-answer:1
-}
-
+name:"Science Practice Test 1",
+time:10,
+questions:[
+{hi:"जीवन की मूल इकाई क्या है?",en:"What is the basic unit of life?",options:["Tissue","Organ","Cell","Blood"],answer:2},
+{hi:"Oxygen का symbol क्या है?",en:"What is the symbol of Oxygen?",options:["O","Ox","Og","O2"],answer:0},
+{hi:"बल की SI unit क्या है?",en:"What is the SI unit of force?",options:["Joule","Newton","Watt","Pascal"],answer:1},
+{hi:"ध्वनि किससे उत्पन्न होती है?",en:"Sound is produced by?",options:["Light","Vibration","Heat","Pressure"],answer:1},
+{hi:"मानव शरीर में रक्त पंप करने वाला अंग कौन सा है?",en:"Which organ pumps blood in the human body?",options:["Lungs","Brain","Heart","Kidney"],answer:2}
 ]
 }
 
 ]
+
 },
 
-
-"9-10": {
+"9-10":{
 
 title:"Class 9–10",
 
@@ -1039,57 +898,20 @@ tests:[
 {
 name:"Mathematics Practice Test 1",
 time:15,
-
 questions:[
-
-{
-hi:"√5 का वर्ग क्या होगा?",
-en:"What is the square of √5?",
-options:["5","10","25","√25"],
-answer:0
-},
-
-{
-hi:"2x = 10 में x का मान क्या है?",
-en:"What is the value of x in 2x = 10?",
-options:["2","5","8","10"],
-answer:1
-},
-
-{
-hi:"त्रिभुज के तीनों कोणों का योग?",
-en:"Sum of angles of a triangle?",
-options:["90°","180°","270°","360°"],
-answer:1
-},
-
-{
-hi:"(a+b)² का विस्तार क्या है?",
-en:"Expansion of (a+b)²?",
-options:[
-"a²+b²",
-"a²+2ab+b²",
-"a²-ab+b²",
-"2a+2b"
-],
-answer:1
-},
-
-{
-hi:"यदि x=3, तो x² कितना होगा?",
-en:"If x=3, what is x²?",
-options:["6","9","12","15"],
-answer:1
-}
-
+{hi:"√5 का वर्ग क्या होगा?",en:"What is the square of √5?",options:["5","10","25","√25"],answer:0},
+{hi:"2x = 10 में x का मान क्या है?",en:"What is the value of x in 2x = 10?",options:["2","5","8","10"],answer:1},
+{hi:"त्रिभुज के तीनों कोणों का योग?",en:"Sum of angles of a triangle?",options:["90°","180°","270°","360°"],answer:1},
+{hi:"(a+b)² का विस्तार क्या है?",en:"Expansion of (a+b)²?",options:["a²+b²","a²+2ab+b²","a²-ab+b²","2a+2b"],answer:1},
+{hi:"यदि x=3, तो x² कितना होगा?",en:"If x=3, what is x²?",options:["6","9","12","15"],answer:1}
 ]
 }
 
 ]
+
 },
 
-
-"11-12": {
+"11-12":{
 
 title:"Class 11–12",
 
@@ -1098,115 +920,253 @@ tests:[
 {
 name:"General Practice Test 1",
 time:15,
-
 questions:[
-
-{
-hi:"यदि x=2, तो x³ कितना है?",
-en:"If x=2, what is x³?",
-options:["4","6","8","10"],
-answer:2
-},
-
-{
-hi:"गति की SI unit क्या है?",
-en:"What is the SI unit of speed?",
-options:["m/s","kg","N","J"],
-answer:0
-},
-
-{
-hi:"जल का chemical formula क्या है?",
-en:"What is the chemical formula of water?",
-options:["CO2","H2O","O2","NaCl"],
-answer:1
-},
-
-{
-hi:"मानव शरीर का सबसे बड़ा अंग?",
-en:"Largest organ of the human body?",
-options:["Heart","Skin","Liver","Brain"],
-answer:1
-},
-
-{
-hi:"2 + 3 × 4 का मान?",
-en:"Value of 2 + 3 × 4?",
-options:["20","14","24","9"],
-answer:1
-}
-
+{hi:"यदि x=2, तो x³ कितना है?",en:"If x=2, what is x³?",options:["4","6","8","10"],answer:2},
+{hi:"गति की SI unit क्या है?",en:"What is the SI unit of speed?",options:["m/s","kg","N","J"],answer:0},
+{hi:"जल का chemical formula क्या है?",en:"What is the chemical formula of water?",options:["CO2","H2O","O2","NaCl"],answer:1},
+{hi:"मानव शरीर का सबसे बड़ा अंग?",en:"Largest organ of the human body?",options:["Heart","Skin","Liver","Brain"],answer:1},
+{hi:"2 + 3 × 4 का मान?",en:"Value of 2 + 3 × 4?",options:["20","14","24","9"],answer:1}
 ]
 }
 
 ]
+
 }
 
 },
 
 
 /* =========================================================
-   COMPETITIVE EXAMS
+   COMPETITIVE
 ========================================================= */
 
-competitive: {
+competitive:{
 
-/* ================= SSC ================= */
-
-"SSC": {
+"SSC":{
 
 title:"SSC",
 
 tests:[
 
+/* SSC GENERAL TEST */
+
 {
-name:"SSC General Practice Test 1",
+name:"SSC General Knowledge Test — 26 Questions",
 time:15,
 
 questions:[
 
 {
-hi:"भारत की राजधानी क्या है?",
-en:"What is the capital of India?",
-options:["Mumbai","New Delhi","Kolkata","Chennai"],
+hi:"(History) हड़प्पा सभ्यता (सिंधु घाटी सभ्यता) की खोज किस वर्ष हुई थी?",
+en:"(History) In which year was the Harappan Civilization discovered?",
+options:["1921","1922","1935","1942"],
+answer:0
+},
+
+{
+hi:"(Polity) भारतीय संविधान के किस अनुच्छेद के तहत 'समानता का अधिकार' (Right to Equality) का प्रावधान है?",
+en:"(Polity) Which Articles of the Indian Constitution provide the Right to Equality?",
+options:["अनुच्छेद 12-35","अनुच्छेद 14-18","अनुच्छेद 19-22","अनुच्छेद 23-24"],
 answer:1
 },
 
 {
-hi:"15 × 4 = ?",
-en:"15 × 4 = ?",
-options:["40","50","60","70"],
+hi:"(Geography) कर्क रेखा (Tropic of Cancer) भारत के कितने राज्यों से होकर गुजरती है?",
+en:"(Geography) Through how many Indian states does the Tropic of Cancer pass?",
+options:["6","7","8","9"],
 answer:2
 },
 
 {
-hi:"भारत का राष्ट्रीय पशु कौन है?",
-en:"What is the national animal of India?",
-options:["Lion","Tiger","Elephant","Peacock"],
+hi:"(History) तराइन का प्रथम युद्ध (1191 ई.) किसके बीच लड़ा गया था?",
+en:"(History) The First Battle of Tarain (1191 CE) was fought between whom?",
+options:[
+"मुहम्मद गोरी और जयचंद",
+"मुहम्मद गोरी और पृथ्वीराज चौहान",
+"बाबर और इब्राहिम लोदी",
+"अकबर और हेमू"
+],
 answer:1
 },
 
 {
-hi:"100 का 25% कितना है?",
-en:"What is 25% of 100?",
-options:["20","25","30","40"],
-answer:1
-},
-
-{
-hi:"यदि 2+3=5 तो 5+7=?",
-en:"If 2+3=5, then 5+7=?",
-options:["10","11","12","13"],
+hi:"(Polity) भारतीय संविधान का कौन सा अनुच्छेद 'संवैधानिक उपचारों का अधिकार' प्रदान करता है, जिसे डॉ. बी.आर. अंबेडकर ने 'संविधान की आत्मा' कहा था?",
+en:"(Polity) Which Article provides the Right to Constitutional Remedies?",
+options:["अनुच्छेद 19","अनुच्छेद 21","अनुच्छेद 32","अनुच्छेद 40"],
 answer:2
+},
+
+{
+hi:"(Geography) भारत की सबसे पुरानी पर्वत श्रृंखला कौन सी है?",
+en:"(Geography) Which is the oldest mountain range in India?",
+options:["हिमालय","पश्चिमी घाट","अरावली","विंध्याचल"],
+answer:2
+},
+
+{
+hi:"(History) 1857 के विद्रोह के समय भारत का गवर्नर जनरल कौन था?",
+en:"(History) Who was the Governor-General of India during the Revolt of 1857?",
+options:["लॉर्ड डलहौजी","लॉर्ड कैनिंग","लॉर्ड विलियम बेंटिक","लॉर्ड कर्जन"],
+answer:1
+},
+
+{
+hi:"(Polity) राष्ट्रपति पर महाभियोग (Impeachment) चलाने की प्रक्रिया संविधान के किस अनुच्छेद में दी गई है?",
+en:"(Polity) Which Article deals with impeachment of the President?",
+options:["अनुच्छेद 52","अनुच्छेद 61","अनुच्छेद 72","अनुच्छेद 123"],
+answer:1
+},
+
+{
+hi:"(Geography) हीराकुंड बांध किस नदी पर बनाया गया है?",
+en:"(Geography) Hirakud Dam is built on which river?",
+options:["गंगा","महानदी","गोदावरी","कावेरी"],
+answer:1
+},
+
+{
+hi:"(Science) मानव शरीर की सबसे बड़ी ग्रंथि (Largest Gland) कौन सी है?",
+en:"(Science) Which is the largest gland in the human body?",
+options:["अग्न्याशय (Pancreas)","थायरॉयड (Thyroid)","यकृत (Liver)","पीयूष ग्रंथि (Pituitary Gland)"],
+answer:2
+},
+
+{
+hi:"(History) बौद्ध धर्म की चौथी संगीति किस शासक के शासनकाल में आयोजित की गई थी?",
+en:"(History) The Fourth Buddhist Council was held during the reign of which ruler?",
+options:["अजातशत्रु","कालाशोक","अशोक","कनिष्क"],
+answer:3
+},
+
+{
+hi:"(Polity) संविधान की किस अनुसूची में दलबदल विरोधी कानून (Anti-Defection Law) से संबंधित प्रावधान हैं?",
+en:"(Polity) Which Schedule contains provisions related to the Anti-Defection Law?",
+options:["8वीं अनुसूची","9वीं अनुसूची","10वीं अनुसूची","11वीं अनुसूची"],
+answer:2
+},
+
+{
+hi:"(Geography) 'साइलेंट वैली' (शांत घाटी) राष्ट्रीय उद्यान किस राज्य में स्थित है?",
+en:"(Geography) Silent Valley National Park is located in which state?",
+options:["तमिलनाडु","केरल","कर्नाटक","असम"],
+answer:1
+},
+
+{
+hi:"(Science) रक्त का थक्का जमने (Blood Clotting) में कौन सा विटामिन सहायक होता है?",
+en:"(Science) Which vitamin helps in blood clotting?",
+options:["विटामिन A","विटामिन C","विटामिन D","विटामिन K"],
+answer:3
+},
+
+{
+hi:"(History) 'सत्यार्थ प्रकाश' पुस्तक के लेखक कौन थे?",
+en:"(History) Who wrote Satyarth Prakash?",
+options:["स्वामी विवेकानंद","स्वामी दयानंद सरस्वती","राजा राममोहन राय","ईश्वर चंद्र विद्यासागर"],
+answer:1
+},
+
+{
+hi:"(Polity) नीति आयोग के पदेन अध्यक्ष (Ex-officio Chairman) कौन होते हैं?",
+en:"(Polity) Who is the ex-officio Chairman of NITI Aayog?",
+options:["राष्ट्रपति","प्रधानमंत्री","वित्त मंत्री","वाणिज्य मंत्री"],
+answer:1
+},
+
+{
+hi:"(Geography) किस महाद्वीप को 'अंध महाद्वीप' (Dark Continent) के नाम से भी जाना जाता है?",
+en:"(Geography) Which continent was historically called the Dark Continent?",
+options:["एशिया","अफ्रीका","दक्षिण अमेरिका","ऑस्ट्रेलिया"],
+answer:1
+},
+
+{
+hi:"(Economy) 'भारत में हरित क्रांति' का जनक किसे माना जाता है?",
+en:"(Economy) Who is considered the father of India's Green Revolution?",
+options:["डॉ. वर्गीज कुरियन","एम.एस. स्वामीनाथन","सुंदरलाल बहुगुणा","अमर्त्य सेन"],
+answer:1
+},
+
+{
+hi:"(History) पानीपत का तीसरा युद्ध (1761 ई.) किनके मध्य लड़ा गया था?",
+en:"(History) The Third Battle of Panipat (1761) was fought between whom?",
+options:[
+"मराठा और अहमद शाह अब्दाली",
+"बाबर और राणा सांगा",
+"शेरशाह और हुमायूं",
+"अकबर और हेमू"
+],
+answer:0
+},
+
+{
+hi:"(Polity) किस संविधान संशोधन द्वारा मतदान की न्यूनतम आयु 21 वर्ष से घटाकर 18 वर्ष की गई थी?",
+en:"(Polity) Which Constitutional Amendment lowered the voting age from 21 to 18?",
+options:["42वां संशोधन","44वां संशोधन","61वां संशोधन","73वां संशोधन"],
+answer:2
+},
+
+{
+hi:"(Science) निकट दृष्टि दोष (Myopia) के निवारण के लिए किस लेंस का उपयोग किया जाता है?",
+en:"(Science) Which lens is used to correct myopia?",
+options:[
+"उत्तल लेंस (Convex lens)",
+"अवतल लेंस (Concave lens)",
+"द्विफोकसी लेंस (Bifocal lens)",
+"बेलनाकार लेंस (Cylindrical lens)"
+],
+answer:1
+},
+
+{
+hi:"(Geography) पाक जलडमरूमध्य (Palk Strait) किन दो देशों को अलग करता है?",
+en:"(Geography) Palk Strait separates which two countries?",
+options:[
+"भारत और पाकिस्तान",
+"भारत और बांग्लादेश",
+"भारत और श्रीलंका",
+"भारत और मालदीव"
+],
+answer:2
+},
+
+{
+hi:"(Current Affairs) 33वें ग्रीष्मकालीन ओलंपिक खेल (Summer Olympics 2024) का आयोजन किस शहर में किया गया?",
+en:"(Current Affairs) Which city hosted the 2024 Summer Olympics?",
+options:["टोक्यो","पेरिस","लॉस एंजिल्स","लंदन"],
+answer:1
+},
+
+{
+hi:"(Current Affairs) भारत का पहला मानवयुक्त अंतरिक्ष मिशन कौन सा है?",
+en:"(Current Affairs) What is India's first human spaceflight mission?",
+options:["चंद्रयान-3","आदित्य-L1","गगनयान","शुक्रयान"],
+answer:2
+},
+
+{
+hi:"(Current Affairs) वर्ष 2024 का 'आईसीसी पुरुष टी20 विश्व कप' किस देश ने जीता?",
+en:"(Current Affairs) Which country won the 2024 ICC Men's T20 World Cup?",
+options:["दक्षिण अफ्रीका","ऑस्ट्रेलिया","भारत","इंग्लैंड"],
+answer:2
+},
+
+{
+hi:"(Current Affairs) भारत के 50वें मुख्य न्यायाधीश (CJI) कौन रहे?",
+en:"(Current Affairs) Who was the 50th Chief Justice of India?",
+options:[
+"जस्टिस यू.यू. ललित",
+"जस्टिस डी.वाई. चंद्रचूड़",
+"जस्टिस एन.वी. रमना",
+"जस्टिस रंजन गोगोई"
+],
+answer:1
 }
 
 ]
 },
 
-
-/* =========================================================
-   SSC MATHS TEST 2 — 26 QUESTIONS
-========================================================= */
+/* SSC MATHS */
 
 {
 name:"SSC Maths Practice Test 2 — 26 Questions",
@@ -1217,12 +1177,7 @@ questions:[
 {
 hi:"यदि a ∝ b, b ∝ 1/c और c ∝ d है, तो a और d के बीच क्या संबंध है?",
 en:"If a ∝ b, b ∝ 1/c and c ∝ d, what is the relationship between a and d?",
-options:[
-"a ∝ √d",
-"a ∝ d²",
-"a ∝ 1/d",
-"a ∝ d"
-],
+options:["a ∝ √d","a ∝ d²","a ∝ 1/d","a ∝ d"],
 answer:2
 },
 
@@ -1235,20 +1190,20 @@ answer:1
 
 {
 hi:"चार वर्ष पूर्व, रवि की आयु, काव्या की आयु की चार गुनी थी। अब से सात वर्ष बाद, रवि की आयु, काव्या की आयु की तीन गुनी होगी। उनकी वर्तमान आयु का योग ज्ञात कीजिए।",
-en:"Four years ago Ravi was four times as old as Kavya. Seven years from now Ravi will be three times as old as Kavya. Find the sum of their present ages.",
+en:"Four years ago, Ravi was four times as old as Kavya. Seven years from now, Ravi will be three times as old as Kavya. Find the sum of their present ages.",
 options:["118 वर्ष","122 वर्ष","117 वर्ष","115 वर्ष"],
 answer:0
 },
 
 {
 hi:"A और B ने क्रमशः ₹48,000 और ₹72,000 का निवेश करके एक व्यवसाय शुरू किया। 6 महीने बाद, A ने अपनी आधी पूंजी निकाल ली, जबकि B ने अपनी पूंजी में ₹24,000 की वृद्धि की। वर्ष के अंत में कुल ₹55,000 का लाभ हुआ। लाभ में B का हिस्सा क्या है?",
-en:"A and B started a business with investments of ₹48,000 and ₹72,000 respectively. After 6 months A withdrew half his capital while B increased his capital by ₹24,000. If total profit was ₹55,000, find B's share.",
+en:"A and B started a business with investments of ₹48,000 and ₹72,000 respectively. After 6 months, A withdrew half of his capital while B increased his capital by ₹24,000. If the total profit was ₹55,000, find B's share.",
 options:["₹20,000","₹24,582","₹30,000","₹35,000"],
 answer:3
 },
 
 {
-hi:"₹2000 पर 6.5% वार्षिक ब्याज दर पर 13 फरवरी 2023 से 27 अप्रैल 2023 की अवधि के लिए साधारण ब्याज (₹ में) की गणना करें।",
+hi:"₹2000 पर 6.5% वार्षिक ब्याज दर पर 13 फरवरी 2023 से 27 अप्रैल 2023 की अवधि के लिए साधारण ब्याज की गणना करें।",
 en:"Calculate the simple interest on ₹2000 at 6.5% per annum from 13 February 2023 to 27 April 2023.",
 options:["₹27","₹25","₹26","₹24"],
 answer:2
@@ -1256,28 +1211,28 @@ answer:2
 
 {
 hi:"यदि x : y = 3 : 2 है, तो (2x + 5y)/(3x + 7y) का मान ज्ञात करें।",
-en:"If x:y = 3:2, find (2x + 5y)/(3x + 7y).",
+en:"If x:y = 3:2, find the value of (2x + 5y)/(3x + 7y).",
 options:["13/17","14/25","17/24","16/23"],
-answer:0
+answer:3
 },
 
 {
 hi:"कौन सी साधारण ब्याज दर से कोई धनराशि 15 वर्षों में दोगुनी हो जाएगी?",
-en:"At what simple interest rate will a sum double itself in 15 years?",
+en:"At what simple interest rate will a sum of money double itself in 15 years?",
 options:["6.67%","7.67%","5.16%","4.19%"],
 answer:0
 },
 
 {
 hi:"₹37,500 की धनराशि पर 1⅓ वर्ष के लिए 12% प्रतिवर्ष की दर से प्रत्येक 8 माह पर संयोजित होने वाला चक्रवृद्धि ब्याज क्या है?",
-en:"Find the compound interest on ₹37,500 for 1⅓ years at 12% per annum compounded every 8 months.",
+en:"Find the compound interest on ₹37,500 for 1⅓ years at 12% per annum, compounded every 8 months.",
 options:["₹6,500","₹6,000","₹6,240","₹7,000"],
 answer:2
 },
 
 {
 hi:"एक परीक्षा में उत्तीर्ण और अनुत्तीर्ण छात्रों की संख्या का अनुपात 25 : 4 था। यदि एक और छात्र उपस्थित होकर उत्तीर्ण होता और अनुत्तीर्ण छात्रों की संख्या 3 कम होती, तो अनुपात 22 : 3 हो जाता।",
-en:"In an examination, the ratio of passed to failed students was 25:4. If one more student passed and the number of failed students decreased by 3, the ratio became 22:3.",
+en:"In an examination, the ratio of passed to failed students was 25:4. If one more student passed and failed students decreased by 3, the ratio was stated to become 22:3.",
 options:["132","126","174","150"],
 answer:0
 },
@@ -1286,7 +1241,7 @@ answer:0
 hi:"यदि ₹5,000 की राशि 3 वर्षों के लिए 15% वार्षिक साधारण ब्याज दर पर ली जाती है और ₹8,000 की अन्य राशि 4 वर्षों के लिए 12% वार्षिक साधारण ब्याज पर ली जाती है, तो भुगतान किए गए ब्याज का धनात्मक अंतर ज्ञात करें।",
 en:"If ₹5,000 is borrowed for 3 years at 15% simple interest and ₹8,000 for 4 years at 12%, find the positive difference between the interests.",
 options:["₹1,643","₹1,590","₹1,286","₹1,378"],
-answer:3
+answer:1
 },
 
 {
@@ -1312,14 +1267,14 @@ answer:3
 
 {
 hi:"यदि किसी गोले का पृष्ठीय क्षेत्रफल 44% बढ़ जाता है, तो त्रिज्या में लगभग कितने प्रतिशत की वृद्धि होती है?",
-en:"If the surface area of a sphere increases by 44%, approximately what is the percentage increase in radius?",
+en:"If the surface area of a sphere increases by 44%, approximately what is the percentage increase in its radius?",
 options:["20%","21%","22%","24%"],
 answer:0
 },
 
 {
 hi:"एक आयताकार लॉन की चौड़ाई 8% कम की जाती है और इसकी लंबाई में 15% की वृद्धि की जाती है। लॉन के क्षेत्रफल में प्रतिशत परिवर्तन ज्ञात कीजिए।",
-en:"The width of a rectangular lawn decreases by 8% and length increases by 15%. Find the percentage change in area.",
+en:"The width of a rectangular lawn is decreased by 8% and length increased by 15%. Find the percentage change in area.",
 options:["8.5% वृद्धि","8.5% कमी","5.8% कमी","5.8% वृद्धि"],
 answer:3
 },
@@ -1340,7 +1295,7 @@ answer:0
 
 {
 hi:"प्रति किलोग्राम टमाटर के मूल्य में 300% की वृद्धि होती है, तो एक गृहिणी टमाटर का उपभोग 70% कम कर देती है। इस प्रकार टमाटर पर उसका व्यय कितने प्रतिशत बढ़ा या घटा है?",
-en:"The price of tomatoes increases by 300% and consumption decreases by 70%. What is the percentage change in expenditure?",
+en:"The price of tomatoes increases by 300%, and consumption is reduced by 70%. What is the percentage change in expenditure?",
 options:["30% कमी","20% कमी","30% वृद्धि","20% वृद्धि"],
 answer:2
 },
@@ -1353,15 +1308,15 @@ answer:1
 },
 
 {
-hi:"दो उम्मीदवारों के चुनाव में, 10% मतदाताओं ने अपना मत नहीं दिया। दिए गए मतों में से 10% अवैध मत पाए गए। विजेता उम्मीदवार को वैध मतों का 54% प्राप्त हुआ और वह 1620 मतों से विजयी हुआ। पंजीकृत मतदाताओं की संख्या ज्ञात कीजिए।",
-en:"In an election, 10% voters did not vote and 10% votes cast were invalid. Winner received 54% of valid votes and won by 1620 votes. Find registered voters.",
+hi:"दो उम्मीदवारों के चुनाव में, 10% मतदाताओं ने अपना मत नहीं दिया। दिए गए मतों में से 10% अवैध मत पाए गए। विजेता उम्मीदवार को वैध मतों का 54% प्राप्त हुआ और वह 1620 मतों से विजयी हुआ। मतदाता सूची में पंजीकृत मतदाताओं की संख्या ज्ञात कीजिए।",
+en:"In an election, 10% did not vote and 10% of votes cast were invalid. Winner received 54% of valid votes and won by 1620 votes. Find registered voters.",
 options:["25000","26000","24500","25500"],
 answer:0
 },
 
 {
-hi:"एक विधानसभा चुनाव में, एक उम्मीदवार को कुल वैध मतों का 60% प्राप्त हुआ। कुल मतों का 2% अवैध घोषित किया गया। कुल मतदाता 1,50,000 हैं। उम्मीदवार को मिले वैध मत ज्ञात कीजिए।",
-en:"A candidate received 60% of valid votes. 2% of total votes were invalid. Total voters were 1,50,000. Find valid votes received by the candidate.",
+hi:"एक विधानसभा चुनाव में, एक उम्मीदवार को कुल वैध मतों का 60% प्राप्त हुआ। कुल मतों का 2% अवैध घोषित किया गया। यदि मतदाताओं की कुल संख्या 1,50,000 है तो उस उम्मीदवार के पक्ष में डाले गए वैध मतों की संख्या ज्ञात कीजिए।",
+en:"A candidate received 60% of valid votes. If 2% of total votes were invalid and total voters were 150,000, find valid votes received.",
 options:["90,000","78,000","86,400","88,200"],
 answer:3
 },
@@ -1374,14 +1329,9 @@ answer:0
 },
 
 {
-hi:"कोई दुकानदार दो वस्तुएं बेचता है। पहली वस्तु का विक्रय मूल्य दूसरी वस्तु के क्रय मूल्य के बराबर है। पहली वस्तु 20% लाभ और दूसरी 10% हानि पर बेची जाती है। कुल प्रतिशत लाभ/हानि ज्ञात करें।",
-en:"A shopkeeper sells two articles. The selling price of first equals the cost price of second. First is sold at 20% profit and second at 10% loss. Find overall profit/loss.",
-options:[
-"4 6/11% हानि",
-"3 7/11% लाभ",
-"4 6/11% लाभ",
-"8 1/3% हानि"
-],
+hi:"कोई दुकानदार दो वस्तुएं बेचता है। पहली वस्तु का विक्रय मूल्य दूसरी वस्तु के क्रय मूल्य के बराबर है। वह पहली वस्तु को 20% लाभ पर बेचता है और दूसरी वस्तु को 10% हानि पर बेचता है। उसका कुल प्रतिशत लाभ/हानि ज्ञात करें।",
+en:"A shopkeeper sells two articles. The selling price of the first equals the cost price of the second. First is sold at 20% profit and second at 10% loss. Find overall profit/loss.",
+options:["4 6/11% हानि","3 7/11% लाभ","4 6/11% लाभ","8 1/3% हानि"],
 answer:1
 },
 
@@ -1393,29 +1343,65 @@ answer:1
 },
 
 {
-hi:"एक वस्तु की लागत मूल्य और अंकित मूल्य का अनुपात 4 : 7 है। वस्तु पर 20% की छूट दी गई है और दुकानदार ने ₹80 का लाभ कमाया है। लागत मूल्य ज्ञात करें।",
-en:"The ratio of cost price to marked price is 4:7. A 20% discount is given and profit is ₹80. Find cost price.",
+hi:"एक वस्तु की लागत मूल्य और अंकित मूल्य का अनुपात 4 : 7 है। वस्तु पर 20% की छूट दी गई है और दुकानदार ने ₹80 का लाभ कमाया है। वस्तु का लागत मूल्य ज्ञात करें।",
+en:"The ratio of cost price to marked price is 4:7. A discount of 20% is given and profit is ₹80. Find cost price.",
 options:["₹190","₹170","₹200","₹180"],
 answer:2
 },
 
 {
-hi:"किसी वस्तु के अंकित मूल्य पर x% की दो क्रमागत छूट ₹331.20 की एकल छूट के बराबर है। अंकित मूल्य ₹920 है। x का मान ज्ञात करें।",
-en:"Two successive discounts of x% are equivalent to a single discount of ₹331.20. Marked price is ₹920. Find x.",
+hi:"किसी वस्तु के अंकित मूल्य पर प्राप्त प्रत्येक x% की दो क्रमागत छूट, ₹331.20 की एकल छूट के बराबर है। यदि वस्तु का अंकित मूल्य ₹920 है, तो x का मान ज्ञात करें।",
+en:"Two successive discounts of x% each are equivalent to a single discount of ₹331.20 on marked price ₹920. Find x.",
 options:["20","18","15","25"],
 answer:0
 }
 
 ]
+},
+
+{
+name:"SSC General Practice 1",
+time:15,
+questions:[
+{
+hi:"भारत की राजधानी क्या है?",
+en:"What is the capital of India?",
+options:["Mumbai","New Delhi","Kolkata","Chennai"],
+answer:1
+},
+{
+hi:"15 × 4 = ?",
+en:"15 × 4 = ?",
+options:["40","50","60","70"],
+answer:2
+},
+{
+hi:"भारत का राष्ट्रीय पशु कौन है?",
+en:"What is the national animal of India?",
+options:["Lion","Tiger","Elephant","Peacock"],
+answer:1
+},
+{
+hi:"100 का 25% कितना है?",
+en:"What is 25% of 100?",
+options:["20","25","30","40"],
+answer:1
+},
+{
+hi:"यदि 2+3=5 तो 5+7=?",
+en:"If 2+3=5, then 5+7=?",
+options:["10","11","12","13"],
+answer:2
+}
+]
 }
 
 ]
+
 },
 
 
-/* ================= RAILWAY ================= */
-
-"Railway": {
+"Railway":{
 
 title:"Railway",
 
@@ -1424,54 +1410,21 @@ tests:[
 {
 name:"Railway Practice Test 1",
 time:15,
-
 questions:[
-
-{
-hi:"भारत में पहली रेल कब चली?",
-en:"When did the first railway run in India?",
-options:["1853","1947","1950","1885"],
-answer:0
-},
-
-{
-hi:"60 km/h की speed से 2 घंटे में दूरी?",
-en:"Distance covered at 60 km/h in 2 hours?",
-options:["60 km","100 km","120 km","150 km"],
-answer:2
-},
-
-{
-hi:"भारत का राष्ट्रीय पशु?",
-en:"National animal of India?",
-options:["Lion","Tiger","Elephant","Horse"],
-answer:1
-},
-
-{
-hi:"10 का square?",
-en:"Square of 10?",
-options:["20","50","100","1000"],
-answer:2
-},
-
-{
-hi:"भारत में कुल कितने केंद्र शासित प्रदेश हैं?",
-en:"How many Union Territories are there in India?",
-options:["6","8","10","12"],
-answer:1
-}
-
+{hi:"भारत में पहली रेल कब चली?",en:"When did the first railway run in India?",options:["1853","1947","1950","1885"],answer:0},
+{hi:"60 km/h की speed से 2 घंटे में दूरी?",en:"Distance covered at 60 km/h in 2 hours?",options:["60 km","100 km","120 km","150 km"],answer:2},
+{hi:"भारत का राष्ट्रीय पशु?",en:"National animal of India?",options:["Lion","Tiger","Elephant","Horse"],answer:1},
+{hi:"10 का square?",en:"Square of 10?",options:["20","50","100","1000"],answer:2},
+{hi:"भारत में कुल कितने केंद्र शासित प्रदेश हैं?",en:"How many Union Territories are there in India?",options:["6","8","10","12"],answer:1}
 ]
 }
 
 ]
+
 },
 
 
-/* ================= BANKING ================= */
-
-"Banking": {
+"Banking":{
 
 title:"Banking",
 
@@ -1480,64 +1433,21 @@ tests:[
 {
 name:"Banking Practice Test 1",
 time:15,
-
 questions:[
-
-{
-hi:"RBI का full form क्या है?",
-en:"What is the full form of RBI?",
-options:[
-"Reserve Bank of India",
-"Royal Bank of India",
-"Regional Bank of India",
-"Reserve Banking Institution"
-],
-answer:0
-},
-
-{
-hi:"1000 का 10%?",
-en:"10% of 1000?",
-options:["10","50","100","200"],
-answer:2
-},
-
-{
-hi:"भारत की currency?",
-en:"Currency of India?",
-options:["Dollar","Rupee","Euro","Pound"],
-answer:1
-},
-
-{
-hi:"1 lakh में कितने होते हैं?",
-en:"How much is 1 lakh?",
-options:["10,000","50,000","1,00,000","10,00,000"],
-answer:2
-},
-
-{
-hi:"ATM का full form?",
-en:"Full form of ATM?",
-options:[
-"Automatic Teller Machine",
-"Auto Transfer Money",
-"Any Time Money",
-"Automatic Transfer Machine"
-],
-answer:0
-}
-
+{hi:"RBI का full form क्या है?",en:"What is the full form of RBI?",options:["Reserve Bank of India","Royal Bank of India","Regional Bank of India","Reserve Banking Institution"],answer:0},
+{hi:"1000 का 10%?",en:"10% of 1000?",options:["10","50","100","200"],answer:2},
+{hi:"भारत की currency?",en:"Currency of India?",options:["Dollar","Rupee","Euro","Pound"],answer:1},
+{hi:"1 lakh में कितने होते हैं?",en:"How much is 1 lakh?",options:["10,000","50,000","1,00,000","10,00,000"],answer:2},
+{hi:"ATM का full form?",en:"Full form of ATM?",options:["Automatic Teller Machine","Auto Transfer Money","Any Time Money","Automatic Transfer Machine"],answer:0}
 ]
 }
 
 ]
+
 },
 
 
-/* ================= STATE EXAMS ================= */
-
-"State Exams": {
+"State Exams":{
 
 title:"State Exams",
 
@@ -1546,69 +1456,21 @@ tests:[
 {
 name:"State Exam Practice 1",
 time:15,
-
 questions:[
-
-{
-hi:"भारत का संविधान कब लागू हुआ?",
-en:"When did the Constitution of India come into effect?",
-options:[
-"15 August 1947",
-"26 January 1950",
-"26 November 1949",
-"2 October 1950"
-],
-answer:1
-},
-
-{
-hi:"भारत का राष्ट्रीय फूल?",
-en:"National flower of India?",
-options:["Rose","Lotus","Lily","Sunflower"],
-answer:1
-},
-
-{
-hi:"गंगा नदी का उद्गम किस क्षेत्र से माना जाता है?",
-en:"Where is the source of the Ganga traditionally identified?",
-options:[
-"Himalayas",
-"Aravalli",
-"Western Ghats",
-"Vindhya"
-],
-answer:0
-},
-
-{
-hi:"भारत का सबसे बड़ा राज्य क्षेत्रफल से?",
-en:"Largest Indian state by area?",
-options:["UP","Rajasthan","Maharashtra","MP"],
-answer:1
-},
-
-{
-hi:"भारत में लोकतंत्र का आधार क्या है?",
-en:"What is a foundation of democracy in India?",
-options:[
-"Elections",
-"Monarchy",
-"Dictatorship",
-"Hereditary rule"
-],
-answer:0
-}
-
+{hi:"भारत का संविधान कब लागू हुआ?",en:"When did the Constitution of India come into effect?",options:["15 August 1947","26 January 1950","26 November 1949","2 October 1950"],answer:1},
+{hi:"भारत का राष्ट्रीय फूल?",en:"National flower of India?",options:["Rose","Lotus","Lily","Sunflower"],answer:1},
+{hi:"गंगा नदी का उद्गम किस क्षेत्र से माना जाता है?",en:"Where is the source of the Ganga traditionally identified?",options:["Himalayas","Aravalli","Western Ghats","Vindhya"],answer:0},
+{hi:"भारत का सबसे बड़ा राज्य क्षेत्रफल से?",en:"Largest Indian state by area?",options:["UP","Rajasthan","Maharashtra","MP"],answer:1},
+{hi:"भारत में लोकतंत्र का आधार क्या है?",en:"What is a foundation of democracy in India?",options:["Elections","Monarchy","Dictatorship","Hereditary rule"],answer:0}
 ]
 }
 
 ]
+
 },
 
 
-/* ================= UPSC ================= */
-
-"UPSC": {
+"UPSC":{
 
 title:"UPSC",
 
@@ -1616,65 +1478,22 @@ tests:[
 
 {
 name:"UPSC Foundation Practice 1",
-time:20,
-
+time:15,
 questions:[
-
-{
-hi:"भारतीय संविधान की प्रस्तावना किससे शुरू होती है?",
-en:"How does the Preamble of the Indian Constitution begin?",
-options:[
-"We, the People of India",
-"India is a Republic",
-"Government of India",
-"People's Government"
-],
-answer:0
-},
-
-{
-hi:"भारत का सर्वोच्च न्यायालय कहाँ है?",
-en:"Where is the Supreme Court of India located?",
-options:["Mumbai","New Delhi","Kolkata","Lucknow"],
-answer:1
-},
-
-{
-hi:"मौलिक अधिकार संविधान के किस भाग में हैं?",
-en:"Fundamental Rights are in which Part of the Constitution?",
-options:["Part I","Part II","Part III","Part IV"],
-answer:2
-},
-
-{
-hi:"भारत का राष्ट्रीय ध्वज किस रंगों से बना है?",
-en:"The Indian national flag consists of which main colours?",
-options:[
-"Three main colours",
-"Two colours",
-"Four colours",
-"Five colours"
-],
-answer:0
-},
-
-{
-hi:"लोकसभा का सामान्य कार्यकाल कितना है?",
-en:"What is the normal term of the Lok Sabha?",
-options:["3 years","4 years","5 years","6 years"],
-answer:2
-}
-
+{hi:"भारतीय संविधान की प्रस्तावना किससे शुरू होती है?",en:"How does the Preamble begin?",options:["We, the People of India","India is a Republic","Government of India","People's Government"],answer:0},
+{hi:"भारत का सर्वोच्च न्यायालय कहाँ है?",en:"Where is the Supreme Court of India located?",options:["Mumbai","New Delhi","Kolkata","Lucknow"],answer:1},
+{hi:"मौलिक अधिकार संविधान के किस भाग में हैं?",en:"Fundamental Rights are in which Part?",options:["Part I","Part II","Part III","Part IV"],answer:2},
+{hi:"भारत का राष्ट्रीय ध्वज किस रंगों से बना है?",en:"The Indian national flag consists of which main colours?",options:["Three main colours","Two colours","Four colours","Five colours"],answer:0},
+{hi:"लोकसभा का सामान्य कार्यकाल कितना है?",en:"What is the normal term of the Lok Sabha?",options:["3 years","4 years","5 years","6 years"],answer:2}
 ]
 }
 
 ]
+
 },
 
 
-/* ================= ENTRANCE ================= */
-
-"Entrance Exams": {
+"Entrance Exams":{
 
 title:"Entrance Exams",
 
@@ -1683,53 +1502,17 @@ tests:[
 {
 name:"Entrance Practice 1",
 time:15,
-
 questions:[
-
-{
-hi:"2² + 3² = ?",
-en:"2² + 3² = ?",
-options:["10","11","12","13"],
-answer:3
-},
-
-{
-hi:"H2O किसका formula है?",
-en:"H2O is the formula of?",
-options:["Oxygen","Water","Hydrogen","Salt"],
-answer:1
-},
-
-{
-hi:"भारत की राजधानी?",
-en:"Capital of India?",
-options:["Delhi","Mumbai","Kolkata","Chennai"],
-answer:0
-},
-
-{
-hi:"यदि x+5=10 तो x=?",
-en:"If x+5=10, then x=?",
-options:["2","3","5","10"],
-answer:2
-},
-
-{
-hi:"पौधे भोजन किस प्रक्रिया से बनाते हैं?",
-en:"Plants make food through which process?",
-options:[
-"Respiration",
-"Photosynthesis",
-"Digestion",
-"Transpiration"
-],
-answer:1
-}
-
+{hi:"2² + 3² = ?",en:"2² + 3² = ?",options:["10","11","12","13"],answer:3},
+{hi:"H2O किसका formula है?",en:"H2O is the formula of?",options:["Oxygen","Water","Hydrogen","Salt"],answer:1},
+{hi:"भारत की राजधानी?",en:"Capital of India?",options:["Delhi","Mumbai","Kolkata","Chennai"],answer:0},
+{hi:"यदि x+5=10 तो x=?",en:"If x+5=10, then x=?",options:["2","3","5","10"],answer:2},
+{hi:"पौधे भोजन किस प्रक्रिया से बनाते हैं?",en:"Plants make food through which process?",options:["Respiration","Photosynthesis","Digestion","Transpiration"],answer:1}
 ]
 }
 
 ]
+
 }
 
 }
@@ -1876,25 +1659,23 @@ card.className="test-card";
 
 card.innerHTML=`
 
-<h3>📝 ${escapeHTML(test.name)}</h3>
+<h3>📝 ${test.name}</h3>
 
 <p>⏱️ Time: ${test.time} Minutes</p>
 
 <p>❓ Questions: ${test.questions.length}</p>
 
-<p>🌐 Language:
+<p>
+🌐 Language:
 ${currentLanguage==="hi"?"Hindi":"English"}
 </p>
 
-<button class="start-btn">
+<button class="start-btn"
+onclick="startTest(${index})">
 Start Test
 </button>
-`;
 
-card.querySelector(".start-btn")
-.addEventListener("click",function(){
-startTest(index);
-});
+`;
 
 grid.appendChild(card);
 
@@ -1912,12 +1693,19 @@ panel.classList.add("active");
 function startTest(index){
 
 currentTest=
-testData[currentCategory][currentExam].tests[index];
+testData[currentCategory][currentExam]
+.tests[index];
+
+if(!currentTest || !currentTest.questions.length){
+alert("Test में questions नहीं हैं।");
+return;
+}
 
 currentQuestion=0;
 
 userAnswers=
-new Array(currentTest.questions.length).fill(null);
+new Array(currentTest.questions.length)
+.fill(null);
 
 timeLeft=currentTest.time*60;
 
@@ -1990,6 +1778,7 @@ submitTest(true);
 function updateTimer(){
 
 let minutes=Math.floor(timeLeft/60);
+
 let seconds=timeLeft%60;
 
 document.getElementById("timer")
@@ -2075,7 +1864,7 @@ document.getElementById("progressBar")
 
 
 /* =========================================================
-   QUESTION NAVIGATOR
+   NAVIGATOR
 ========================================================= */
 
 function renderQuestionButtons(){
@@ -2170,7 +1959,9 @@ if(!autoSubmit){
 const confirmSubmit=
 confirm("क्या आप test submit करना चाहते हैं?");
 
-if(!confirmSubmit)return;
+if(!confirmSubmit){
+return;
+}
 
 }
 
@@ -2264,17 +2055,13 @@ const item=document.createElement("div");
 let className="";
 
 if(user===null){
-
 className="unattempted";
-
-}else if(user===correct){
-
+}
+else if(user===correct){
 className="correct";
-
-}else{
-
+}
+else{
 className="wrong";
-
 }
 
 item.className=
@@ -2295,7 +2082,9 @@ question.options[correct];
 
 item.innerHTML=`
 
-<strong>Q${index+1}. ${escapeHTML(questionText)}</strong>
+<strong>
+Q${index+1}. ${questionText}
+</strong>
 
 <p>
 Your Answer:
@@ -2304,14 +2093,14 @@ user===correct
 ?"correct-text"
 :"wrong-text"
 }">
-${escapeHTML(userText)}
+${userText}
 </span>
 </p>
 
 <p>
 Correct Answer:
 <strong class="correct-text">
-${escapeHTML(correctText)}
+${correctText}
 </strong>
 </p>
 
@@ -2334,6 +2123,8 @@ behavior:"smooth"
 
 function retryTest(){
 
+clearInterval(timerInterval);
+
 document.getElementById("resultScreen")
 .style.display="none";
 
@@ -2343,7 +2134,8 @@ document.getElementById("testScreen")
 currentQuestion=0;
 
 userAnswers=
-new Array(currentTest.questions.length).fill(null);
+new Array(currentTest.questions.length)
+.fill(null);
 
 timeLeft=currentTest.time*60;
 
@@ -2360,59 +2152,7 @@ behavior:"smooth"
 
 }
 
-
-/* =========================================================
-   HOME
-========================================================= */
-
-function goHome(){
-
-clearInterval(timerInterval);
-
-currentTest=null;
-
-document.getElementById("testScreen")
-.style.display="none";
-
-document.getElementById("resultScreen")
-.style.display="none";
-
-document.getElementById("homePanel")
-.style.display="block";
-
-document.getElementById("examPanel")
-.classList.remove("active");
-
-document.getElementById("languagePanel")
-.classList.remove("active");
-
-document.getElementById("testPanel")
-.classList.remove("active");
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-}
-
-
-/* =========================================================
-   SECURITY / HTML DISPLAY
-========================================================= */
-
-function escapeHTML(value){
-
-return String(value)
-.replace(/&/g,"&amp;")
-.replace(/</g,"&lt;")
-.replace(/>/g,"&gt;")
-.replace(/"/g,"&quot;")
-.replace(/'/g,"&#039;");
-
-}
-
 </script>
 
 </body>
-   </html>
+</html>
