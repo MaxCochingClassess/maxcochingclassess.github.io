@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="MAX Coaching Classes - Class 9 Study Material - Hindi, English, Mathematics, Science and Social Science">
+
+<title>Class 9 | MAX Coaching Classes</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* =====================================================
+   CLASS 9 PAGE
+   ===================================================== */
+
+.class9-page{
+  min-height:100vh;
+  background:#080808;
+  color:#fff;
+}
+
+.class9-hero{
+  padding:90px 20px 55px;
+  text-align:center;
+  background:
+    radial-gradient(circle at top right,rgba(244,197,66,.15),transparent 35%),
+    #080808;
+}
+
+.class9-hero .label{
+  color:#f4c542;
+  font-size:13px;
+  letter-spacing:3px;
+  font-weight:800;
+}
+
+.class9-hero h1{
+  margin:15px 0;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(38px,7vw,70px);
+  color:#fff;
+}
+
+.class9-hero h1 span{
+  color:#f4c542;
+}
+
+.class9-hero p{
+  max-width:750px;
+  margin:auto;
+  line-height:1.8;
+  color:#cfcfcf;
+}
+
+.class9-container{
+  width:min(1150px,92%);
+  margin:auto;
+}
+
+.subject-menu{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:14px;
+  margin:30px 0;
+}
+
+.subject-menu a{
+  display:block;
+  padding:17px;
+  text-align:center;
+  border:1px solid #393939;
+  border-radius:14px;
+  text-decoration:none;
+  background:#141414;
+  color:#fff;
+  font-weight:700;
+}
+
+.subject-menu a:hover{
+  border-color:#f4c542;
+  color:#f4c542;
+}
+
+.subject-section{
+  margin:35px 0;
+  padding:25px;
+  border:1px solid #303030;
+  border-radius:22px;
+  background:#101010;
+}
+
+.subject-title{
+  margin-bottom:20px;
+}
+
+.subject-title small{
+  color:#f4c542;
+  letter-spacing:2px;
+  font-weight:800;
+}
+
+.subject-title h2{
+  margin:7px 0;
+  font-family:"Playfair Display",serif;
+  color:#fff;
+}
+
+.subject-title p{
+  color:#bdbdbd;
+}
+
+.lang-buttons{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:18px;
+}
+
+.lang-buttons button{
+  border:1px solid #555;
+  background:#191919;
+  color:#fff;
+  padding:10px 17px;
+  border-radius:9px;
+  cursor:pointer;
+  font-weight:700;
+}
+
+.lang-buttons button.active{
+  background:#f4c542;
+  color:#111;
+  border-color:#f4c542;
+}
+
+.lang-content{
+  display:none;
+}
+
+.lang-content.active{
+  display:block;
+}
+
+.chapter-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:14px;
+}
+
+.chapter{
+  padding:18px;
+  border:1px solid #373737;
+  border-radius:15px;
+  background:#171717;
+}
+
+.chapter-number{
+  color:#f4c542;
+  font-size:13px;
+  font-weight:800;
+}
+
+.chapter h3{
+  margin:8px 0;
+  color:#fff;
+  font-size:18px;
+}
+
+.chapter p{
+  color:#c5c5c5;
+  line-height:1.6;
+  margin:0;
+}
+
+.topic-list{
+  display:grid;
+  gap:12px;
+}
+
+.topic{
+  padding:16px 18px;
+  border-radius:12px;
+  border-left:4px solid #f4c542;
+  background:#181818;
+}
+
+.topic strong{
+  color:#fff;
+}
+
+.topic span{
+  color:#c8c8c8;
+}
+
+.notice{
+  padding:18px;
+  margin-top:18px;
+  border-radius:14px;
+  background:#19160c;
+  border:1px solid #5b4b1c;
+  color:#ddd;
+  line-height:1.7;
+}
+
+.grammar-box{
+  text-align:center;
+  padding:35px 20px;
+  border:1px dashed #555;
+  border-radius:15px;
+}
+
+.grammar-box h3{
+  color:#f4c542;
+}
+
+.grammar-box p{
+  color:#bbb;
+}
+
+.back-home{
+  text-align:center;
+  padding:45px 20px;
+}
+
+.back-home a{
+  display:inline-block;
+  padding:13px 22px;
+  border-radius:10px;
+  background:#f4c542;
+  color:#111;
+  text-decoration:none;
+  font-weight:800;
+}
+
+
+/* =====================================================
+   LIGHT MODE
+   ===================================================== */
+
+@media(prefers-color-scheme:light){
+
+  .class9-page{
+    background:#f6f6f6;
+    color:#171717;
+  }
+
+  .class9-hero{
+    background:#f6f6f6;
+  }
+
+  .class9-hero h1{
+    color:#171717;
+  }
+
+  .class9-hero p{
+    color:#555;
+  }
+
+  .subject-menu a{
+    background:#fff;
+    color:#171717;
+    border-color:#ddd;
+  }
+
+  .subject-menu a:hover{
+    color:#9b6c00;
+    border-color:#c99b20;
+  }
+
+  .subject-section{
+    background:#fff;
+    border-color:#ddd;
+  }
+
+  .subject-title h2{
+    color:#171717;
+  }
+
+  .subject-title p{
+    color:#555;
+  }
+
+  .lang-buttons button{
+    background:#fff;
+    color:#222;
+    border-color:#ccc;
+  }
+
+  .lang-buttons button.active{
+    background:#e0af25;
+    color:#111;
+  }
+
+  .chapter{
+    background:#fafafa;
+    border-color:#ddd;
+  }
+
+  .chapter h3{
+    color:#171717;
+  }
+
+  .chapter p{
+    color:#555;
+  }
+
+  .topic{
+    background:#fafafa;
+  }
+
+  .topic strong{
+    color:#171717;
+  }
+
+  .topic span{
+    color:#555;
+  }
+
+  .notice{
+    background:#fff9e8;
+    border-color:#e4c96d;
+    color:#444;
+  }
+
+  .grammar-box{
+    border-color:#ccc;
+  }
+
+  .grammar-box p{
+    color:#555;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .class9-hero{
+    padding:65px 15px 35px;
+  }
+
+  .subject-section{
+    padding:18px;
+  }
+
+  .chapter-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="class9-page">
+
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<section class="class9-hero">
+
+  <div class="class9-container">
+
+    <div class="label">
+      MAX COACHING CLASSES
+    </div>
+
+    <h1>
+      CLASS 9
+      <span>STUDY ZONE</span>
+    </h1>
+
+    <p>
+      कक्षा 9 के लिए Hindi, English, Mathematics,
+      Science और अन्य विषयों का अध्ययन सामग्री।
+      हर subject को अलग-अलग खोलकर पढ़ें।
+    </p>
+
+  </div>
+
+</section>
+
+
+<div class="class9-container">
+
+
+<!-- =====================================================
+     SUBJECT MENU
+     ===================================================== -->
+
+<div class="subject-menu">
+
+  <a href="#hindi">📖 हिंदी</a>
+
+  <a href="#english">🔤 English</a>
+
+  <a href="#math">➗ गणित / Mathematics</a>
+
+  <a href="#science">🔬 विज्ञान / Science</a>
+
+  <a href="#grammar">📝 English Grammar</a>
+
+  <a href="#social">🌍 Social Science</a>
+
+</div>
+
+
+<!-- =====================================================
+     HINDI
+     ===================================================== -->
+
+<section id="hindi" class="subject-section">
+
+  <div class="subject-title">
+
+    <small>CLASS 9 • LANGUAGE</small>
+
+    <h2>📖 हिंदी</h2>
+
+    <p>
+      हिंदी साहित्य और भाषा-अध्ययन के लिए अलग section।
+    </p>
+
+  </div>
+
+
+  <div class="chapter-grid">
+
+    <div class="chapter">
+      <div class="chapter-number">HINDI • 01</div>
+      <h3>पाठ / गद्य</h3>
+      <p>
+        गद्य-पाठों का पाठ, सरल व्याख्या,
+        शब्दार्थ, प्रश्न-उत्तर और अभ्यास।
+      </p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-number">HINDI • 02</div>
+      <h3>काव्य</h3>
+      <p>
+        कविताओं का भावार्थ, कठिन शब्द,
+        काव्य-सौंदर्य और प्रश्न-उत्तर।
+      </p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-number">HINDI • 03</div>
+      <h3>साहित्यिक समझ</h3>
+      <p>
+        लेखक/कवि परिचय, विषय-वस्तु,
+        संदेश और महत्वपूर्ण प्रश्न।
+      </p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-number">HINDI • 04</div>
+      <h3>लेखन</h3>
+      <p>
+        अनुच्छेद, पत्र, संवाद, सूचना,
+        कहानी तथा अन्य लेखन अभ्यास।
+      </p>
+    </div>
+
+  </div>
+
+  <div class="notice">
+    📌 यहाँ आगे NCERT के अनुसार पाठ-दर-पाठ notes,
+    व्याख्या और प्रश्न-उत्तर जोड़ते रहेंगे।
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     ENGLISH
+     ===================================================== -->
+
+<section id="english" class="subject-section">
+
+  <div class="subject-title">
+
+    <small>CLASS 9 • ENGLISH</small>
+
+    <h2>🔤 English Literature</h2>
+
+    <p>
+      English literature और reading section।
+      Grammar को अलग page पर रखा जाएगा।
+    </p>
+
+  </div>
+
+
+  <div class="chapter-grid">
+
+    <div class="chapter">
+      <div class="chapter-number">BEEHIVE</div>
+      <h3>The Fun They Had</h3>
+      <p>
+        Future schools, technology और learning
+        पर आधारित कहानी।
+      </p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-number">BEEHIVE</div>
+      <h3>The Sound of Music</h3>
+      <p>
+        संगीत और determination से जुड़ी
+        दो biographical pieces।
+      </p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-number">BEEHIVE</div>
+      <h3>Poetry</h3>
+      <p>
+        Poems की reading, meaning,
+        poetic devices और questions।
+      </p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-number">MOMENTS</div>
+      <h3>Supplementary Reader</h3>
+      <p>
+        Supplementary stories के लिए
+        summary, vocabulary और questions।
+      </p>
+    </div>
+
+  </div>
+
+  <div class="notice">
+    📌 NCERT के current Grade 9 framework में language learning
+    comprehension, expression, interpretation और critical engagement
+    पर भी जोर देता है। इसलिए यहाँ Reading, Writing, Speaking और
+    Literature के notes अलग-अलग जोड़े जा सकते हैं।
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     MATHEMATICS
+     ===================================================== -->
+
+<section id="math" class="subject-section">
+
+  <div class="subject-title">
+
+    <small>CLASS 9 • MATHEMATICS</small>
+
+    <h2>➗ गणित / Mathematics</h2>
+
+    <p>
+      नीचे Hindi और English दोनों माध्यमों में
+      एक ही Mathematics content रखा गया है।
+    </p>
+
+  </div>
+
+
+  <div class="lang-buttons">
+
+    <button class="math-lang active"
+    onclick="showLang('mathHindi',this)">
+      🇮🇳 हिंदी माध्यम
+    </button>
+
+    <button class="math-lang"
+    onclick="showLang('mathEnglish',this)">
+      🇬🇧 English Medium
+    </button>
+
+  </div>
+
+
+  <!-- HINDI MATH -->
+
+  <div id="mathHindi" class="lang-content active">
+
+    <div class="chapter-grid">
+
+      <div class="chapter">
+        <div class="chapter-number">अध्याय 1</div>
+        <h3>संख्या पद्धतियाँ</h3>
+        <p>
+          वास्तविक संख्याएँ, परिमेय और अपरिमेय संख्याएँ,
+          संख्या रेखा तथा संख्याओं के गुण।
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">अध्याय 2</div>
+        <h3>बहुपद</h3>
+        <p>
+          बहुपद, घात, गुणांक, शून्यक और
+          बीजीय व्यंजकों के आधारभूत विचार।
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">अध्याय 3</div>
+        <h3>निर्देशांक ज्यामिति</h3>
+        <p>
+          Cartesian plane, coordinates,
+          quadrants और graphical representation।
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">अध्याय 4</div>
+        <h3>दो चरों वाले रैखिक समीकरण</h3>
+        <p>
+          रैखिक समीकरण और उनके ग्राफ।
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">अध्याय 5</div>
+        <h3>यूक्लिड की ज्यामिति</h3>
+        <p>
+          परिभाषाएँ, अभिगृहीत, स्वयंसिद्ध और
+          ज्यामितीय तर्क।
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">अध्याय 6</div>
+        <h3>रेखाएँ और कोण</h3>
+        <p>
+          कोण, समानांतर रेखाएँ तथा transversal
+          से जुड़े गुण।
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">अध्याय 7</div>
+        <h3>त्रिभुज</h3>
+        <p>
+          त्रिभुजों की सर्वांगसमता,
+          गुण और प्रमेय।
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">अध्याय 8</div>
+        <h3>चतुर्भुज</h3>
+        <p>
+          चतुर्भुजों के प्रकार और उनके
+          प्रमुख गुण।
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">अध्याय 9</div>
+        <h3>समांतर चतुर्भुज और त्रिभुजों के क्षेत्रफल</h3>
+        <p>
+          क्षेत्रफल से जुड़े प्रमेय और
+          उनके अनुप्रयोग।
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">अध्याय 10</div>
+        <h3>वृत्त</h3>
+        <p>
+          वृत्त, जीवा, चाप, कोण और
+          संबंधित प्रमेय।
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">अध्याय 11</div>
+        <h3>रचनाएँ</h3>
+        <p>
+          ज्यामितीय construction और
+          उनके steps।
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">अध्याय 12</div>
+        <h3>हीरोन का सूत्र</h3>
+        <p>
+          त्रिभुज का क्षेत्रफल और
+          Heron's formula।
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">अध्याय 13</div>
+        <h3>पृष्ठीय क्षेत्रफल और आयतन</h3>
+        <p>
+          ठोस आकृतियों के क्षेत्रफल और
+          आयतन से जुड़े प्रश्न।
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">अध्याय 14</div>
+        <h3>सांख्यिकी और प्रायिकता</h3>
+        <p>
+          आँकड़े, तालिका, ग्राफ और
+          probability की आधारभूत समझ।
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ENGLISH MATH -->
+
+  <div id="mathEnglish" class="lang-content">
+
+    <div class="chapter-grid">
+
+      <div class="chapter">
+        <div class="chapter-number">CHAPTER 1</div>
+        <h3>Number Systems</h3>
+        <p>
+          Real numbers, rational and irrational numbers,
+          number line and properties.
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">CHAPTER 2</div>
+        <h3>Polynomials</h3>
+        <p>
+          Polynomials, degree, coefficients,
+          zeroes and algebraic expressions.
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">CHAPTER 3</div>
+        <h3>Coordinate Geometry</h3>
+        <p>
+          Cartesian plane, coordinates,
+          quadrants and graphical representation.
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">CHAPTER 4</div>
+        <h3>Linear Equations in Two Variables</h3>
+        <p>
+          Linear equations and their graphs.
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">CHAPTER 5</div>
+        <h3>Introduction to Euclid's Geometry</h3>
+        <p>
+          Definitions, axioms, postulates and
+          geometric reasoning.
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">CHAPTER 6</div>
+        <h3>Lines and Angles</h3>
+        <p>
+          Angles, parallel lines and
+          transversal properties.
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">CHAPTER 7</div>
+        <h3>Triangles</h3>
+        <p>
+          Congruence, properties and
+          important theorems.
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">CHAPTER 8</div>
+        <h3>Quadrilaterals</h3>
+        <p>
+          Types and properties of quadrilaterals.
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">CHAPTER 9</div>
+        <h3>Areas of Parallelograms and Triangles</h3>
+        <p>
+          Area theorems and applications.
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">CHAPTER 10</div>
+        <h3>Circles</h3>
+        <p>
+          Circles, chords, arcs, angles
+          and related theorems.
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">CHAPTER 11</div>
+        <h3>Constructions</h3>
+        <p>
+          Geometrical constructions and steps.
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">CHAPTER 12</div>
+        <h3>Heron's Formula</h3>
+        <p>
+          Area of a triangle using
+          Heron's formula.
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">CHAPTER 13</div>
+        <h3>Surface Areas and Volumes</h3>
+        <p>
+          Surface area and volume of
+          solid shapes.
+        </p>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-number">CHAPTER 14</div>
+        <h3>Statistics and Probability</h3>
+        <p>
+          Data, tables, graphs and
+          basic probability.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     SCIENCE
+     ===================================================== -->
+
+<section id="science" class="subject-section">
+
+  <div class="subject-title">
+
+    <small>CLASS 9 • SCIENCE</small>
+
+    <h2>🔬 विज्ञान / Science</h2>
+
+    <p>
+      Physics, Chemistry और Biology को एक ही section में
+      Hindi और English दोनों माध्यमों के लिए रखा गया है।
+    </p>
+
+  </div>
+
+
+  <div class="lang-buttons">
+
+    <button class="science-lang active"
+    onclick="showLang('scienceHindi',this)">
+      🇮🇳 हिंदी माध्यम
+    </button>
+
+    <button class="science-lang"
+    onclick="showLang('scienceEnglish',this)">
+      🇬🇧 English Medium
+    </button>
+
+  </div>
+
+
+  <!-- SCIENCE HINDI -->
+
+  <div id="scienceHindi" class="lang-content active">
+
+    <div class="topic-list">
+
+      <div class="topic">
+        <strong>⚗️ रसायन विज्ञान — पदार्थ</strong><br>
+        <span>
+          पदार्थ की प्रकृति, कणों का व्यवहार,
+          अवस्था परिवर्तन और दैनिक जीवन में पदार्थ।
+        </span>
+      </div>
+
+      <div class="topic">
+        <strong>⚛️ रसायन विज्ञान — परमाणु और अणु</strong><br>
+        <span>
+          परमाणु, अणु, रासायनिक सूत्र और
+          रासायनिक संयोजन की आधारभूत समझ।
+        </span>
+      </div>
+
+      <div class="topic">
+        <strong>🧪 रसायन विज्ञान — परमाणु की संरचना</strong><br>
+        <span>
+          इलेक्ट्रॉन, प्रोटॉन, न्यूट्रॉन,
+          नाभिक और परमाणु की संरचना।
+        </span>
+      </div>
+
+      <div class="topic">
+        <strong>🌱 जीव विज्ञान — जीवन की मौलिक इकाई</strong><br>
+        <span>
+          कोशिका, कोशिका झिल्ली, केन्द्रक,
+          कोशिकांग और पादप/जंतु कोशिका।
+        </span>
+      </div>
+
+      <div class="topic">
+        <strong>🌿 जीव विज्ञान — ऊतक</strong><br>
+        <span>
+          पादप और जंतु ऊतकों की
+          संरचना तथा कार्य।
+        </span>
+      </div>
+
+      <div class="topic">
+        <strong>🚶 भौतिक विज्ञान — गति</strong><br>
+        <span>
+          दूरी, विस्थापन, चाल, वेग,
+          त्वरण और गति के ग्राफ।
+        </span>
+      </div>
+
+      <div class="topic">
+        <strong>💪 भौतिक विज्ञान — बल तथा गति के नियम</strong><br>
+        <span>
+          बल, जड़त्व, संवेग और
+          न्यूटन के गति के नियम।
+        </span>
+      </div>
+
+      <div class="topic">
+        <strong>🌍 भौतिक विज्ञान — गुरुत्वाकर्षण</strong><br>
+        <span>
+          गुरुत्वाकर्षण, द्रव्यमान, भार,
+          मुक्त पतन और दाब की आधारभूत समझ।
+        </span>
+      </div>
+
+      <div class="topic">
+        <strong>⚡ कार्य और ऊर्जा</strong><br>
+        <span>
+          कार्य, ऊर्जा, गतिज ऊर्जा,
+          स्थितिज ऊर्जा और शक्ति।
+        </span>
+      </div>
+
+      <div class="topic">
+        <strong>🔊 ध्वनि</strong><br>
+        <span>
+          ध्वनि का उत्पादन, संचरण,
+          तरंग, आवृत्ति और ध्वनि के गुण।
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- SCIENCE ENGLISH -->
+
+  <div id="scienceEnglish" class="lang-content">
+
+    <div class="topic-list">
+
+      <div class="topic">
+        <strong>⚗️ Chemistry — Matter</strong><br>
+        <span>
+          Nature of matter, behaviour of particles,
+          states of matter and changes of state.
+        </span>
+      </div>
+
+      <div class="topic">
+        <strong>⚛️ Chemistry — Atoms and Molecules</strong><br>
+        <span>
+          Atoms, molecules, chemical formulae
+          and basic laws of chemical combination.
+        </span>
+      </div>
+
+      <div class="topic">
+        <strong>🧪 Chemistry — Structure of the Atom</strong><br>
+        <span>
+          Electrons, protons, neutrons,
+          nucleus and atomic structure.
+        </span>
+      </div>
+
+      <div class="topic">
+        <strong>🌱 Biology — The Fundamental Unit of Life</strong><br>
+        <span>
+          Cell, cell membrane, nucleus,
+          cell organelles and plant/animal cells.
+        </span>
+      </div>
+
+      <div class="topic">
+        <strong>🌿 Biology — Tissues</strong><br>
+        <span>
+          Plant and animal tissues,
+          their structure and functions.
+        </span>
+      </div>
+
+      <div class="topic">
+        <strong>🚶 Physics — Motion</strong><br>
+        <span>
+          Distance, displacement, speed,
+          velocity, acceleration and graphs.
+        </span>
+      </div>
+
+      <div class="topic">
+        <strong>💪 Physics — Force and Laws of Motion</strong><br>
+        <span>
+          Force, inertia, momentum and
+          Newton's laws of motion.
+        </span>
+      </div>
+
+      <div class="topic">
+        <strong>🌍 Physics — Gravitation</strong><br>
+        <span>
+          Gravitation, mass, weight,
+          free fall and pressure basics.
+        </span>
+      </div>
+
+      <div class="topic">
+        <strong>⚡ Work and Energy</strong><br>
+        <span>
+          Work, energy, kinetic energy,
+          potential energy and power.
+        </span>
+      </div>
+
+      <div class="topic">
+        <strong>🔊 Sound</strong><br>
+        <span>
+          Production and propagation of sound,
+          waves, frequency and characteristics.
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="notice">
+    📌 Science के प्रत्येक chapter के अंदर आगे
+    <b>Notes → Definitions → Formula → Diagram →
+    Examples → Questions → MCQ → Test</b>
+    जोड़ सकते हैं।
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     ENGLISH GRAMMAR
+     ===================================================== -->
+
+<section id="grammar" class="subject-section">
+
+  <div class="subject-title">
+
+    <small>SEPARATE SECTION</small>
+
+    <h2>📝 English Grammar</h2>
+
+    <p>
+      Grammar को अभी खाली रखा गया है।
+    </p>
+
+  </div>
+
+  <div class="grammar-box">
+
+    <h3>
+      English Grammar — Coming Soon
+    </h3>
+
+    <p>
+      बाद में यहाँ अलग
+      <b>english-grammar.html</b>
+      का link लगाया जाएगा।
+    </p>
+
+    <p>
+      Tense • Parts of Speech • Modal Verbs •
+      Voice • Narration • Articles • Prepositions
+      • Conjunction • Sentence आदि।
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     SOCIAL SCIENCE PLACEHOLDER
+     ===================================================== -->
+
+<section id="social" class="subject-section">
+
+  <div class="subject-title">
+
+    <small>CLASS 9 • SOCIAL SCIENCE</small>
+
+    <h2>🌍 Social Science</h2>
+
+    <p>
+      History, Geography, Political Science और Economics
+      के लिए अलग-अलग chapters बाद में जोड़े जा सकते हैं।
+    </p>
+
+  </div>
+
+  <div class="chapter-grid">
+
+    <div class="chapter">
+      <div class="chapter-number">HISTORY</div>
+      <h3>इतिहास / History</h3>
+      <p>
+        Chapter-wise notes और questions यहाँ जोड़े जाएंगे।
+      </p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-number">GEOGRAPHY</div>
+      <h3>भूगोल / Geography</h3>
+      <p>
+        Maps, concepts, definitions और questions।
+      </p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-number">POLITICAL SCIENCE</div>
+      <h3>नागरिक शास्त्र / Civics</h3>
+      <p>
+        लोकतंत्र और नागरिक जीवन से जुड़े topics।
+      </p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-number">ECONOMICS</div>
+      <h3>अर्थशास्त्र / Economics</h3>
+      <p>
+        आर्थिक concepts और real-life examples।
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     BACK
+     ===================================================== -->
+
+<div class="back-home">
+
+  <a href="index.html">
+    ← MAX Coaching Classes पर वापस जाएँ
+  </a>
+
+</div>
+
+
+</div>
+</div>
+
+
+<script>
+
+/* =====================================================
+   LANGUAGE SWITCHER
+   ===================================================== */
+
+function showLang(id,button){
+
+  const parent = button.closest(".subject-section");
+
+  parent.querySelectorAll(".lang-content")
+    .forEach(function(box){
+      box.classList.remove("active");
+    });
+
+  parent.querySelectorAll(".lang-buttons button")
+    .forEach(function(btn){
+      btn.classList.remove("active");
+    });
+
+  document.getElementById(id)
+    .classList.add("active");
+
+  button.classList.add("active");
+}
+
+</script>
+
+</body>
+  </html>
