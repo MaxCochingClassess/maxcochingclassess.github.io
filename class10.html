@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="MAX Coaching Classes - Class 10 Study Material for Maths, Science, Hindi and English.">
+
+  <title>Class 10 Study | MAX Coaching Classes</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    /* =====================================================
+       CLASS 10 PAGE
+       ===================================================== */
+
+    .class10-page {
+      min-height: 100vh;
+      padding-bottom: 60px;
+      font-family: Inter, "Noto Sans Devanagari", sans-serif;
+    }
+
+    .class10-hero {
+      padding: 75px 20px 55px;
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(212,175,55,.16), transparent 45%),
+        var(--bg, #080808);
+    }
+
+    .class10-hero .section-label {
+      margin-bottom: 12px;
+    }
+
+    .class10-hero h1 {
+      margin: 0 auto 15px;
+      max-width: 850px;
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.05;
+    }
+
+    .class10-hero h1 span {
+      color: #d9ad3d;
+    }
+
+    .class10-hero p {
+      max-width: 700px;
+      margin: 0 auto 25px;
+      line-height: 1.8;
+      opacity: .85;
+    }
+
+    .class10-back {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 11px 18px;
+      border: 1px solid #d9ad3d;
+      border-radius: 8px;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .class10-back:hover {
+      background: #d9ad3d;
+      color: #111;
+    }
+
+    /* SUBJECT MENU */
+
+    .subject-menu {
+      max-width: 1100px;
+      margin: 35px auto;
+      padding: 0 20px;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .subject-link {
+      display: block;
+      padding: 22px 15px;
+      text-align: center;
+
+      border: 1px solid rgba(212,175,55,.35);
+      border-radius: 14px;
+
+      text-decoration: none;
+      color: inherit;
+
+      background: rgba(255,255,255,.035);
+
+      transition: .25s ease;
+    }
+
+    .subject-link:hover {
+      transform: translateY(-4px);
+      border-color: #d9ad3d;
+      background: rgba(212,175,55,.10);
+    }
+
+    .subject-link .subject-icon {
+      display: block;
+      font-size: 35px;
+      margin-bottom: 8px;
+    }
+
+    .subject-link strong {
+      display: block;
+      font-size: 18px;
+    }
+
+    .subject-link small {
+      display: block;
+      margin-top: 5px;
+      opacity: .65;
+    }
+
+    /* CONTENT */
+
+    .class10-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .subject-section {
+      margin: 55px 0;
+      scroll-margin-top: 80px;
+    }
+
+    .subject-header {
+      padding: 28px;
+      margin-bottom: 18px;
+
+      border-radius: 18px;
+      border: 1px solid rgba(212,175,55,.30);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(212,175,55,.10),
+          rgba(255,255,255,.025)
+        );
+    }
+
+    .subject-header .subject-number {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #d9ad3d;
+      font-weight: 700;
+    }
+
+    .subject-header h2 {
+      margin: 7px 0;
+      font-size: clamp(28px, 4vw, 42px);
+    }
+
+    .subject-header p {
+      margin: 0;
+      line-height: 1.7;
+      opacity: .75;
+    }
+
+    /* CHAPTER GRID */
+
+    .chapter-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .chapter-card {
+      border: 1px solid rgba(128,128,128,.25);
+      border-radius: 14px;
+      overflow: hidden;
+
+      background: rgba(128,128,128,.055);
+    }
+
+    .chapter-card summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 19px 20px;
+
+      font-weight: 700;
+      font-size: 17px;
+    }
+
+    .chapter-card summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .chapter-card summary::after {
+      content: "+";
+      float: right;
+      font-size: 22px;
+      color: #d9ad3d;
+    }
+
+    .chapter-card[open] summary::after {
+      content: "−";
+    }
+
+    .chapter-card summary:hover {
+      background: rgba(212,175,55,.07);
+    }
+
+    .chapter-content {
+      padding: 0 20px 20px;
+      line-height: 1.75;
+      border-top: 1px solid rgba(128,128,128,.18);
+    }
+
+    .chapter-content h4 {
+      color: #d9ad3d;
+      margin-bottom: 6px;
+    }
+
+    .chapter-content ul {
+      padding-left: 20px;
+    }
+
+    .chapter-content li {
+      margin-bottom: 7px;
+    }
+
+    .formula {
+      padding: 14px;
+      margin: 12px 0;
+
+      border-radius: 10px;
+      background: rgba(212,175,55,.08);
+
+      font-weight: 700;
+      overflow-x: auto;
+    }
+
+    .example {
+      padding: 14px;
+      margin-top: 12px;
+
+      border-left: 3px solid #d9ad3d;
+      background: rgba(128,128,128,.08);
+    }
+
+    /* ENGLISH / HINDI */
+
+    .language-box {
+      padding: 18px;
+      border-radius: 12px;
+      background: rgba(128,128,128,.06);
+      line-height: 1.8;
+    }
+
+    .language-box strong {
+      color: #d9ad3d;
+    }
+
+    /* TOP BUTTON */
+
+    .top-button {
+      display: block;
+      width: max-content;
+      margin: 25px auto 0;
+
+      padding: 10px 18px;
+      border-radius: 8px;
+
+      text-decoration: none;
+      color: inherit;
+
+      border: 1px solid rgba(212,175,55,.45);
+    }
+
+    .top-button:hover {
+      background: #d9ad3d;
+      color: #111;
+    }
+
+    /* LIGHT MODE SUPPORT */
+
+    @media (prefers-color-scheme: light) {
+
+      .class10-hero {
+        background:
+          radial-gradient(circle at 50% 0%, rgba(212,175,55,.18), transparent 45%),
+          #f7f7f7;
+      }
+
+      .subject-link,
+      .chapter-card,
+      .language-box {
+        background: #ffffff;
+      }
+
+      .subject-header {
+        background: #fffaf0;
+      }
+
+      .chapter-content {
+        background: #ffffff;
+      }
+
+    }
+
+    /* TABLET */
+
+    @media (max-width: 800px) {
+
+      .subject-menu {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .chapter-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 520px) {
+
+      .class10-hero {
+        padding-top: 55px;
+      }
+
+      .subject-menu {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .subject-link {
+        padding: 18px 8px;
+      }
+
+      .subject-link .subject-icon {
+        font-size: 28px;
+      }
+
+      .subject-link strong {
+        font-size: 15px;
+      }
+
+      .subject-header {
+        padding: 20px;
+      }
+
+      .chapter-card summary {
+        font-size: 15px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body id="top">
+
+
+<div class="class10-page">
+
+
+  <!-- =====================================================
+       HEADER / HERO
+       ===================================================== -->
+
+  <section class="class10-hero">
+
+    <div class="section-label">
+      MAX COACHING CLASSES
+    </div>
+
+    <h1>
+      CLASS 10
+      <span>STUDY ZONE</span>
+    </h1>
+
+    <p>
+      कक्षा 10 के विद्यार्थियों के लिए Maths, Science,
+      Hindi और English की विषयवार अध्ययन सामग्री।
+      किसी भी subject पर click करके chapter खोलें।
+    </p>
+
+    <a class="class10-back" href="index.html">
+      ← Main Website पर वापस जाएँ
+    </a>
+
+  </section>
+
+
+  <!-- =====================================================
+       SUBJECT MENU
+       ===================================================== -->
+
+  <div class="subject-menu">
+
+    <a class="subject-link" href="#maths">
+
+      <span class="subject-icon">📐</span>
+
+      <strong>Mathematics</strong>
+
+      <small>गणित</small>
+
+    </a>
+
+
+    <a class="subject-link" href="#science">
+
+      <span class="subject-icon">🔬</span>
+
+      <strong>Science</strong>
+
+      <small>विज्ञान</small>
+
+    </a>
+
+
+    <a class="subject-link" href="#hindi">
+
+      <span class="subject-icon">📖</span>
+
+      <strong>Hindi</strong>
+
+      <small>हिंदी</small>
+
+    </a>
+
+
+    <a class="subject-link" href="#english">
+
+      <span class="subject-icon">🔤</span>
+
+      <strong>English</strong>
+
+      <small>अंग्रेज़ी</small>
+
+    </a>
+
+  </div>
+
+
+  <main class="class10-content">
+
+
+    <!-- ===================================================
+         MATHEMATICS
+         =================================================== -->
+
+    <section id="maths" class="subject-section">
+
+      <div class="subject-header">
+
+        <div class="subject-number">
+          Subject 01
+        </div>
+
+        <h2>📐 Mathematics — गणित</h2>
+
+        <p>
+          Class 10 Maths के important chapters,
+          concepts, formulas और examples.
+        </p>
+
+      </div>
+
+
+      <div class="chapter-grid">
+
+
+        <details class="chapter-card">
+
+          <summary>
+            1. Real Numbers — वास्तविक संख्याएँ
+          </summary>
+
+          <div class="chapter-content">
+
+            <h4>मुख्य बातें</h4>
+
+            <ul>
+              <li>Euclid's Division Algorithm</li>
+              <li>HCF और LCM</li>
+              <li>Prime Factorisation</li>
+              <li>Irrational Numbers</li>
+              <li>Decimal Expansion</li>
+            </ul>
+
+            <div class="formula">
+              a = bq + r
+              <br>
+              जहाँ 0 ≤ r &lt; b
+            </div>
+
+            <div class="example">
+              <b>Example:</b>
+              135 और 225 का HCF निकालने के लिए
+              Euclid Algorithm का प्रयोग करें।
+            </div>
+
+          </div>
+
+        </details>
+
+
+        <details class="chapter-card">
+
+          <summary>
+            2. Polynomials — बहुपद
+          </summary>
+
+          <div class="chapter-content">
+
+            <h4>मुख्य बातें</h4>
+
+            <ul>
+              <li>Polynomial की degree</li>
+              <li>Zeroes of polynomial</li>
+              <li>Relationship between zeroes and coefficients</li>
+              <li>Quadratic polynomial</li>
+            </ul>
+
+            <div class="formula">
+              For ax² + bx + c:
+              <br>
+              Sum of zeroes = −b/a
+              <br>
+              Product of zeroes = c/a
+            </div>
+
+          </div>
+
+        </details>
+
+
+        <details class="chapter-card">
+
+          <summary>
+            3. Pair of Linear Equations
+          </summary>
+
+          <div class="chapter-content">
+
+            <h4>मुख्य बातें</h4>
+
+            <ul>
+              <li>Linear equations in two variables</li>
+              <li>Graphical method</li>
+              <li>Substitution method</li>
+              <li>Elimination method</li>
+              <li>Cross multiplication method</li>
+            </ul>
+
+            <div class="example">
+              <b>Example:</b><br>
+              x + y = 10<br>
+              x − y = 2
+              <br><br>
+              दोनों equations को solve करके x और y ज्ञात करें।
+            </div>
+
+          </div>
+
+        </details>
+
+
+        <details class="chapter-card">
+
+          <summary>
+            4. Quadratic Equations
+          </summary>
+
+          <div class="chapter-content">
+
+            <h4>मुख्य बातें</h4>
+
+            <ul>
+              <li>Standard form</li>
+              <li>Factorisation</li>
+              <li>Quadratic formula</li>
+              <li>Nature of roots</li>
+            </ul>
+
+            <div class="formula">
+              ax² + bx + c = 0
+              <br><br>
+              x = (−b ± √(b² − 4ac)) / 2a
+            </div>
+
+          </div>
+
+        </details>
+
+
+        <details class="chapter-card">
+
+          <summary>
+            5. Arithmetic Progressions
+          </summary>
+
+          <div class="chapter-content">
+
+            <h4>मुख्य बातें</h4>
+
+            <ul>
+              <li>AP का अर्थ</li>
+              <li>Common Difference</li>
+              <li>nth term</li>
+              <li>Sum of n terms</li>
+            </ul>
+
+            <div class="formula">
+              aₙ = a + (n − 1)d
+              <br><br>
+              Sₙ = n/2 [2a + (n − 1)d]
+            </div>
+
+          </div>
+
+        </details>
+
+
+        <details class="chapter-card">
+
+          <summary>
+            6. Triangles — त्रिभुज
+          </summary>
+
+          <div class="chapter-content">
+
+            <h4>मुख्य बातें</h4>
+
+            <ul>
+              <li>Similarity of triangles</li>
+              <li>Basic Proportionality Theorem</li>
+              <li>Criteria for similarity</li>
+              <li>Pythagoras theorem</li>
+            </ul>
+
+            <div class="formula">
+              Pythagoras:
+              <br>
+              Hypotenuse² = Base² + Perpendicular²
+            </div>
+
+          </div>
+
+        </details>
+
+
+        <details class="chapter-card">
+
+          <summary>
+            7. Coordinate Geometry
+          </summary>
+
+          <div class="chapter-content">
+
+            <h4>मुख्य बातें</h4>
+
+            <ul>
+              <li>Distance formula</li>
+              <li>Section formula</li>
+              <li>Coordinates</li>
+              <li>Area of triangle</li>
+            </ul>
+
+            <div class="formula">
+              Distance =
+              √[(x₂−x₁)² + (y₂−y₁)²]
+            </div>
+
+          </div>
+
+        </details>
+
+
+        <details class="chapter-card">
+
+          <summary>
+            8. Introduction to Trigon
