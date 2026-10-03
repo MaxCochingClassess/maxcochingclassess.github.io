@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MAX Kids Study Zone</title>
+
+<style>
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:Arial,"Noto Sans Devanagari",sans-serif;
+  background:#080808;
+  color:#fff;
+}
+
+.container{
+  width:min(1100px,92%);
+  margin:auto;
+}
+
+header{
+  background:#111;
+  border-bottom:1px solid #3b3015;
+  padding:15px 0;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.header-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+}
+
+.logo{
+  color:#f5c84b;
+  font-size:23px;
+  font-weight:900;
+}
+
+.logo small{
+  display:block;
+  color:#aaa;
+  font-size:10px;
+  letter-spacing:2px;
+}
+
+.back{
+  text-decoration:none;
+  color:#111;
+  background:#f5c84b;
+  padding:10px 15px;
+  border-radius:10px;
+  font-weight:bold;
+}
+
+.hero{
+  text-align:center;
+  padding:45px 15px 30px;
+  background:
+    radial-gradient(circle at center,#30250c 0,#080808 55%);
+}
+
+.hero h1{
+  margin:5px 0;
+  font-size:38px;
+  color:#f5c84b;
+}
+
+.hero p{
+  color:#ddd;
+  font-size:17px;
+}
+
+.badge{
+  display:inline-block;
+  background:#f5c84b;
+  color:#111;
+  padding:7px 14px;
+  border-radius:30px;
+  font-weight:bold;
+}
+
+.menu{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin:25px 0;
+}
+
+.menu a{
+  text-decoration:none;
+  color:#fff;
+  background:#151515;
+  border:1px solid #514219;
+  padding:18px 10px;
+  border-radius:14px;
+  text-align:center;
+  font-weight:bold;
+}
+
+.menu a:hover{
+  background:#2a230e;
+}
+
+.lesson{
+  margin:18px 0;
+  background:#111;
+  border:1px solid #3c3219;
+  border-radius:16px;
+  overflow:hidden;
+}
+
+.lesson summary{
+  cursor:pointer;
+  padding:20px;
+  font-size:21px;
+  font-weight:bold;
+  color:#f5c84b;
+  background:#151515;
+}
+
+.lesson-content{
+  padding:20px;
+}
+
+h2{
+  color:#f5c84b;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+
+.box{
+  background:#191919;
+  border:1px solid #3c3219;
+  border-radius:12px;
+  padding:13px;
+  text-align:center;
+}
+
+.number{
+  font-size:30px;
+  color:#f5c84b;
+  font-weight:bold;
+}
+
+.big-letter{
+  font-size:38px;
+  color:#f5c84b;
+  font-weight:bold;
+}
+
+.small-letter{
+  font-size:25px;
+  color:#fff;
+}
+
+.word{
+  color:#ddd;
+  margin-top:5px;
+}
+
+.math-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.math{
+  background:#191919;
+  border-radius:12px;
+  padding:15px;
+  border:1px solid #3c3219;
+}
+
+.math h3{
+  color:#f5c84b;
+}
+
+.example{
+  background:#080808;
+  padding:9px;
+  margin:6px 0;
+  border-radius:8px;
+  font-size:18px;
+}
+
+.count-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+}
+
+.count{
+  text-align:center;
+  background:#191919;
+  padding:14px 5px;
+  border-radius:12px;
+  border:1px solid #3c3219;
+}
+
+.count .num{
+  font-size:32px;
+  color:#f5c84b;
+  font-weight:bold;
+}
+
+.finger{
+  font-size:30px;
+}
+
+.pictures{
+  font-size:22px;
+  min-height:35px;
+}
+
+.table-card{
+  background:#191919;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #3c3219;
+  line-height:1.8;
+}
+
+.table-title{
+  color:#f5c84b;
+  font-weight:bold;
+  font-size:18px;
+}
+
+.matra{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+
+.matra div{
+  background:#191919;
+  padding:15px;
+  border-radius:10px;
+  text-align:center;
+  font-size:22px;
+}
+
+.barah{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:8px;
+}
+
+.barah div{
+  background:#191919;
+  padding:12px 5px;
+  text-align:center;
+  border-radius:8px;
+  color:#fff;
+}
+
+.note{
+  background:#251e0b;
+  border-left:4px solid #f5c84b;
+  padding:13px;
+  border-radius:8px;
+  margin:15px 0;
+}
+
+footer{
+  margin-top:40px;
+  padding:25px;
+  text-align:center;
+  background:#111;
+  color:#aaa;
+}
+
+@media(max-width:700px){
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  .menu{
+    grid-template-columns:1fr;
+  }
+
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .count-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .math-grid{
+    grid-template-columns:1fr;
+  }
+
+  .matra{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .barah{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="container header-inner">
+
+<div class="logo">
+MAX
+<small>COACHING CLASSES • ODAR</small>
+</div>
+
+<a class="back" href="index.html">
+← Home
+</a>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="container">
+
+<span class="badge">
+📚 MAX KIDS LEARNING ZONE
+</span>
+
+<h1>LKG • UKG • CLASS 1</h1>
+
+<p>
+खेल-खेल में पढ़ें और आसानी से सीखें 😊
+</p>
+
+</div>
+
+</section>
+
+
+<main class="container">
+
+
+<!-- MENU -->
+
+<div class="menu">
+
+<a href="#counting">
+🔢 गिनती
+</a>
+
+<a href="#tables">
+✖️ Tables
+</a>
+
+<a href="#maths">
+➕ Maths
+</a>
+
+<a href="#hindi">
+🇮🇳 Hindi
+</a>
+
+<a href="#matra">
+🔤 मात्राएँ
+</a>
+
+<a href="#barahkhadi">
+📖 बारहखड़ी
+</a>
+
+<a href="#english">
+🇬🇧 English
+</a>
+
+<a href="#reading">
+📚 पढ़ना
+</a>
+
+</div>
+
+
+<!-- COUNTING -->
+
+<details class="lesson" id="counting">
+
+<summary>
+🔢 1 से 100 तक गिनती
+</summary>
+
+<div class="lesson-content">
+
+<p class="note">
+बच्चे रोज 1 से 100 तक गिनती बोलकर और देखकर अभ्यास करें।
+</p>
+
+<div class="grid" id="counting100"></div>
+
+</div>
+
+</details>
+
+
+<!-- TABLES -->
+
+<details class="lesson" id="tables">
+
+<summary>
+✖️ 1 से 100 तक पहाड़े
+</summary>
+
+<div class="lesson-content">
+
+<p class="note">
+पहले 1 से 10 तक पहाड़े अच्छी तरह याद करें।
+बाद में 11 से 100 तक अभ्यास करें।
+</p>
+
+<div class="grid" id="tables100"></div>
+
+</div>
+
+</details>
+
+
+<!-- EASY MATH -->
+
+<details class="lesson" id="maths">
+
+<summary>
+➕➖✖️➗ आसान Maths
+</summary>
+
+<div class="lesson-content">
+
+<div class="math-grid">
+
+<div class="math">
+
+<h3>➕ जोड़</h3>
+
+<div class="example">2 + 3 = 5</div>
+<div class="example">12 + 5 = 17</div>
+<div class="example">25 + 14 = 39</div>
+<div class="example">125 + 234 = 359</div>
+
+</div>
+
+
+<div class="math">
+
+<h3>➖ घटाना</h3>
+
+<div class="example">5 − 2 = 3</div>
+<div class="example">18 − 6 = 12</div>
+<div class="example">45 − 23 = 22</div>
+<div class="example">1459 − 1245 = 214</div>
+
+</div>
+
+
+<div class="math">
+
+<h3>✖️ गुणा</h3>
+
+<div class="example">5 × 4 = 20</div>
+<div class="example">25 × 4 = 100</div>
+<div class="example">249 × 5 = 1245</div>
+<div class="example">1245 × 12 = 14940</div>
+
+</div>
+
+
+<div class="math">
+
+<h3>➗ भाग</h3>
+
+<div class="example">10 ÷ 2 = 5</div>
+<div class="example">20 ÷ 4 = 5</div>
+<div class="example">100 ÷ 5 = 20</div>
+<div class="example">125 ÷ 3 = 41 शेष 2</div>
+
+</div>
+
+</div>
+
+</div>
+
+</details>
+
+
+<!-- HINDI -->
+
+<details class="lesson" id="hindi">
+
+<summary>
+🇮🇳 हिंदी — अ से ज्ञ
+</summary>
+
+<div class="lesson-content">
+
+<div class="grid">
+
+<div class="box"><div class="big-letter">अ</div>अनार 🍎</div>
+<div class="box"><div class="big-letter">आ</div>आम 🥭</div>
+<div class="box"><div class="big-letter">इ</div>इमली</div>
+<div class="box"><div class="big-letter">ई</div>ईख</div>
+
+<div class="box"><div class="big-letter">उ</div>उल्लू 🦉</div>
+<div class="box"><div class="big-letter">ऊ</div>ऊन</div>
+<div class="box"><div class="big-letter">ए</div>एड़ी</div>
+<div class="box"><div class="big-letter">ऐ</div>ऐनक 👓</div>
+
+<div class="box"><div class="big-letter">ओ</div>ओखली</div>
+<div class="box"><div class="big-letter">औ</div>औरत</div>
+<div class="box"><div class="big-letter">क</div>कमल 🌸</div>
+<div class="box"><div class="big-letter">ख</div>खरगोश 🐇</div>
+
+<div class="box"><div class="big-letter">ग</div>गमला</div>
+<div class="box"><div class="big-letter">घ</div>घर 🏠</div>
+<div class="box"><div class="big-letter">च</div>चम्मच</div>
+<div class="box"><div class="big-letter">छ</div>छाता ☂️</div>
+
+<div class="box"><div class="big-letter">ज</div>जहाज ✈️</div>
+<div class="box"><div class="big-letter">झ</div>झंडा</div>
+<div class="box"><div class="big-letter">ट</div>टमाटर 🍅</div>
+<div class="box"><div class="big-letter">ठ</div>ठेला</div>
+
+<div class="box"><div class="big-letter">ड</div>डमरू</div>
+<div class="box"><div class="big-letter">ढ</div>ढक्कन</div>
+<div class="box"><div class="big-letter">त</div>तरबूज 🍉</div>
+<div class="box"><div class="big-letter">थ</div>थैला</div>
+
+<div class="box"><div class="big-letter">द</div>दवात</div>
+<div class="box"><div class="big-letter">ध</div>धनुष</div>
+<div class="box"><div class="big-letter">न</div>नल</div>
+<div class="box"><div class="big-letter">प</div>पतंग 🪁</div>
+
+<div class="box"><div class="big-letter">फ</div>फल</div>
+<div class="box"><div class="big-letter">ब</div>बतख 🦆</div>
+<div class="box"><div class="big-letter">भ</div>भालू 🐻</div>
+<div class="box"><div class="big-letter">म</div>मछली 🐟</div>
+
+<div class="box"><div class="big-letter">य</div>योग</div>
+<div class="box"><div class="big-letter">र</div>रथ</div>
+<div class="box"><div class="big-letter">ल</div>लट्टू</div>
+<div class="box"><div class="big-letter">व</div>वन</div>
+
+<div class="box"><div class="big-letter">श</div>शेर 🦁</div>
+<div class="box"><div class="big-letter">ष</div>षट्कोण</div>
+<div class="box"><div class="big-letter">स</div>सूरज ☀️</div>
+<div class="box"><div class="big-letter">ह</div>हाथी 🐘</div>
+
+<div class="box"><div class="big-letter">क्ष</div>क्षमा</div>
+<div class="box"><div class="big-letter">त्र</div>त्रिशूल</div>
+<div class="box"><div class="big-letter">ज्ञ</div>ज्ञान 📚</div>
+
+</div>
+
+</div>
+
+</details>
+
+
+<!-- MATRA -->
+
+<details class="lesson" id="matra">
+
+<summary>
+🔤 हिंदी की मात्राएँ
+</summary>
+
+<div class="lesson-content">
+
+<div class="matra">
+
+<div>क</div>
+<div>का</div>
+<div>कि</div>
+<div>की</div>
+<div>कु</div>
+<div>कू</div>
+<div>के</div>
+<div>कै</div>
+<div>को</div>
+<div>कौ</div>
+<div>कं</div>
+<div>कः</div>
+
+</div>
+
+</div>
+
+</details>
+
+
+<!-- BARAH KHADI -->
+
+<details class="lesson" id="barahkhadi">
+
+<summary>
+📖 बारहखड़ी
+</summary>
+
+<div class="lesson-content">
+
+<p class="note">
+क से शुरू करके मात्राओं के साथ पढ़ना सीखें।
+</p>
+
+<div class="barah">
+
+<div>क</div>
+<div>का</div>
+<div>कि</div>
+<div>की</div>
+<div>कु</div>
+<div>कू</div>
+<div>के</div>
+<div>कै</div>
+<div>को</div>
+<div>कौ</div>
+<div>कं</div>
+<div>कः</div>
+
+</div>
+
+<br>
+
+<div class="barah">
+
+<div>ग</div>
+<div>गा</div>
+<div>गि</div>
+<div>गी</div>
+<div>गु</div>
+<div>गू</div>
+<div>गे</div>
+<div>गै</div>
+<div>गो</div>
+<div>गौ</div>
+<div>गं</div>
+<div>गः</div>
+
+</div>
+
+<br>
+
+<div class="barah">
+
+<div>म</div>
+<div>मा</div>
+<div>मि</div>
+<div>मी</div>
+<div>मु</div>
+<div>मू</div>
+<div>मे</div>
+<div>मै</div>
+<div>मो</div>
+<div>मौ</div>
+<div>मं</div>
+<div>मः</div>
+
+</div>
+
+</div>
+
+</details>
+
+
+<!-- ENGLISH -->
+
+<details class="lesson" id="english">
+
+<summary>
+🇬🇧 English — A to Z & Small ABC
+</summary>
+
+<div class="lesson-content">
+
+<div class="grid">
+
+<div class="box">
+<div class="big-letter">A</div>
+<div class="small-letter">a</div>
+Apple 🍎
+</div>
+
+<div class="box">
+<div class="big-letter">B</div>
+<div class="small-letter">b</div>
+Ball ⚽
+</div>
+
+<div class="box">
+<div class="big-letter">C</div>
+<div class="small-letter">c</div>
+Cat 🐱
+</div>
+
+<div class="box">
+<div class="big-letter">D</div>
+<div class="small-letter">d</div>
+Dog 🐶
+</div>
+
+<div class="box">
+<div class="big-letter">E</div>
+<div class="small-letter">e</div>
+Elephant 🐘
+</div>
+
+<div class="box">
+<div class="big-letter">F</div>
+<div class="small-letter">f</div>
+Fish 🐟
+</div>
+
+<div class="box">
+<div class="big-letter">G</div>
+<div class="small-letter">g</div>
+Goat 🐐
+</div>
+
+<div class="box">
+<div class="big-letter">H</div>
+<div class="small-letter">h</div>
+Hen 🐔
+</div>
+
+<div class="box">
+<div class="big-letter">I</div>
+<div class="small-letter">i</div>
+Ice Cream 🍦
+</div>
+
+<div class="box">
+<div class="big-letter">J</div>
+<div class="small-letter">j</div>
+Jug
+</div>
+
+<div class="box">
+<div class="big-letter">K</div>
+<div class="small-letter">k</div>
+Kite 🪁
+</div>
+
+<div class="box">
+<div class="big-letter">L</div>
+<div class="small-letter">l</div>
+Lion 🦁
+</div>
+
+<div class="box">
+<div class="big-letter">M</div>
+<div class="small-letter">m</div>
+Mango 🥭
+</div>
+
+<div class="box">
+<div class="big-letter">N</div>
+<div class="small-letter">n</div>
+Nest
+</div>
+
+<div class="box">
+<div class="big-letter">O</div>
+<div class="small-letter">o</div>
+Orange 🍊
+</div>
+
+<div class="box">
+<div class="big-letter">P</div>
+<div class="small-letter">p</div>
+Parrot 🦜
+</div>
+
+<div class="box">
+<div class="big-letter">Q</div>
+<div class="small-letter">q</div>
+Queen 👑
+</div>
+
+<div class="box">
+<div class="big-letter">R</div>
+<div class="small-letter">r</div>
+Rabbit 🐇
+</div>
+
+<div class="box">
+<div class="big-letter">S</div>
+<div class="small-letter">s</div>
+Sun ☀️
+</div>
+
+<div class="box">
+<div class="big-letter">T</div>
+<div class="small-letter">t</div>
+Tiger 🐯
+</div>
+
+<div class="box">
+<div class="big-letter">U</div>
+<div class="small-letter">u</div>
+Umbrella ☂️
+</div>
+
+<div class="box">
+<div class="big-letter">V</div>
+<div class="small-letter">v</div>
+Van 🚐
+</div>
+
+<div class="box">
+<div class="big-letter">W</div>
+<div class="small-letter">w</div>
+Watch ⌚
+</div>
+
+<div class="box">
+<div class="big-letter">X</div>
+<div class="small-letter">x</div>
+X-ray
+</div>
+
+<div class="box">
+<div class="big-letter">Y</div>
+<div class="small-letter">y</div>
+Yak
+</div>
+
+<div class="box">
+<div class="big-letter">Z</div>
+<div class="small-letter">z</div>
+Zebra 🦓
+</div>
+
+</div>
+
+</div>
+
+</details>
+
+
+<!-- READING -->
+
+<details class="lesson" id="reading">
+
+<summary>
+📚 हिंदी पढ़ना और नाम बनाना
+</summary>
+
+<div class="lesson-content">
+
+<h2>Hindi → English</h2>
+
+<div class="grid">
+
+<div class="box">
+<div class="big-letter">राम</div>
+<div class="small-letter">Ram</div>
+</div>
+
+<div class="box">
+<div class="big-letter">सीता</div>
+<div class="small-letter">Sita</div>
+</div>
+
+<div class="box">
+<div class="big-letter">मोहन</div>
+<div class="small-letter">Mohan</div>
+</div>
+
+<div class="box">
+<div class="big-letter">रीना</div>
+<div class="small-letter">Reena</div>
+</div>
+
+<div class="box">
+<div class="big-letter">कमल</div>
+<div class="small-letter">Kamal</div>
+</div>
+
+<div class="box">
+<div class="big-letter">आम</div>
+<div class="small-letter">Aam</div>
+</div>
+
+</div>
+
+
+<h2>आसान शब्द पढ़ें</h2>
+
+<div class="grid">
+
+<div class="box">कमल</div>
+<div class="box">कलम</div>
+<div class="box">घर</div>
+<div class="box">जल</div>
+<div class="box">फल</div>
+<div class="box">नल</div>
+<div class="box">राम</div>
+<div class="box">आम</div>
+
+</div>
+
+</div>
+
+</details>
+
+
+</main>
+
+
+<footer>
+
+MAX Coaching Classes • Odar, Pindra, Varanasi
+
+<br><br>
+
+📞 7268807285
+
+</footer>
+
+
+<script>
+
+/* ================= COUNTING 1-100 ================= */
+
+const countingBox =
+document.getElementById("counting100");
+
+for(let i=1;i<=100;i++){
+
+  const box=document.createElement("div");
+
+  box.className="box";
+
+  box.innerHTML=
+  `<div class="number">${i}</div>`;
+
+  countingBox.appendChild(box);
+
+}
+
+
+/* ================= TABLES 1-100 ================= */
+
+const tableBox =
+document.getElementById("tables100");
+
+for(let n=1;n<=100;n++){
+
+  const card=document.createElement("div");
+
+  card.className="table-card";
+
+  let html=
+  `<div class="table-title">${n} का पहाड़ा</div>`;
+
+  for(let i=1;i<=10;i++){
+
+    html +=
+    `${n} × ${i} = ${n*i}<br>`;
+
+  }
+
+  card.innerHTML=html;
+
+  tableBox.appendChild(card);
+
+}
+
+</script>
+
+</body>
+  </html>
