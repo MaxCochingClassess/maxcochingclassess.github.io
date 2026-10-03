@@ -1,0 +1,998 @@
+:root{
+  --black:#070707; --black2:#11100d; --gold:#f4c64d; --gold2:#ffd873;
+  --white:#f8f6ef; --muted:#b8b4aa; --line:rgba(244,198,77,.22);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--white);font-family:Inter,Arial,sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}.container{width:min(1160px,92%);margin:auto}
+.header{position:sticky;top:0;z-index:50;background:rgba(7,7,7,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;flex-direction:column;line-height:1}.brand-max{font-family:"Playfair Display",serif;font-size:25px;letter-spacing:5px;color:var(--gold);font-weight:800}.brand span:not(.brand-max){font-size:9px;letter-spacing:2px;font-weight:800;margin-top:5px}.brand small{color:#a99c7b;font-size:8px;letter-spacing:3px;margin-top:6px}
+.nav-links{display:flex;gap:28px;align-items:center;font-size:13px;font-weight:600}.nav-links a{opacity:.85}.nav-links a:hover{color:var(--gold);opacity:1}.nav-cta{border:1px solid var(--gold);padding:10px 16px;border-radius:30px;color:var(--gold)!important}.menu-btn{display:none;background:none;border:0;color:white;font-size:25px}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 75% 35%,rgba(244,198,77,.13),transparent 32%),linear-gradient(135deg,#070707,#12100b 55%,#070707);min-height:720px;display:flex;align-items:center}.hero:before,.hero:after{content:"";position:absolute;width:220px;height:1px;background:var(--gold);opacity:.7;transform:rotate(-45deg)}.hero:before{top:90px;left:-50px}.hero:after{right:-50px;bottom:100px}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}.eyebrow,.section-label{color:var(--gold);letter-spacing:3px;font-size:12px;font-weight:800}.hero h1{font-family:"Playfair Display",serif;font-size:clamp(52px,7vw,86px);line-height:.98;margin:18px 0}.hero h1 span,h2 span{color:var(--gold)}.hero-text{max-width:590px;color:#c7c2b6;font-size:18px}.hero-buttons{display:flex;gap:13px;margin:30px 0}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border-radius:6px;font-weight:800;font-size:13px;transition:.25s}.btn-gold{background:var(--gold);color:#111}.btn-gold:hover{background:var(--gold2);transform:translateY(-2px)}.btn-outline{border:1px solid #6e633f;color:var(--white)}.btn-outline:hover{border-color:var(--gold);color:var(--gold)}.quick-info{display:flex;gap:20px;flex-wrap:wrap;color:#aaa69b;font-size:12px}.quick-info div{display:flex;gap:8px;align-items:center}.quick-info b{color:var(--gold)}
+.hero-card{position:relative;max-width:500px;margin:auto}.hero-card img{display:block;width:100%;border-radius:18px;position:relative;z-index:2;box-shadow:0 20px 80px rgba(0,0,0,.75);border:1px solid rgba(244,198,77,.3)}.gold-ring{position:absolute;inset:7%;border:1px solid rgba(244,198,77,.8);border-radius:50%;transform:rotate(15deg);box-shadow:0 0 45px rgba(244,198,77,.15)}.owner-badge{position:absolute;z-index:3;bottom:18px;left:18px;right:18px;padding:14px 16px;border-radius:10px;background:rgba(5,5,5,.82);backdrop-filter:blur(10px);border:1px solid var(--line);display:flex;flex-direction:column}.owner-badge strong{color:var(--gold);letter-spacing:2px}.owner-badge span{font-size:9px;color:#c8c1ae;letter-spacing:2px}
+.section{padding:105px 0}.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px}.section h2{font-family:"Playfair Display",serif;font-size:clamp(38px,5vw,58px);line-height:1.1;margin:15px 0 0}.section p{color:#bcb8ad}.stats{display:flex;gap:12px;margin-top:35px}.stats div{border:1px solid var(--line);padding:18px 22px;min-width:130px;border-radius:8px;background:#0e0d0a}.stats strong{display:block;color:var(--gold);font-size:18px}.stats small{color:#88847a}
+.dark-section{background:#0c0b09;border-top:1px solid #1c1913;border-bottom:1px solid #1c1913}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:45px}.card{padding:26px;border:1px solid #27231b;background:linear-gradient(160deg,#12110e,#0b0b09);border-radius:10px;min-height:280px}.card:hover{border-color:rgba(244,198,77,.55);transform:translateY(-4px);transition:.25s}.icon{font-size:28px}.card h3{margin:18px 0 8px}.card p{font-size:13px}.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}.tags span{font-size:10px;padding:5px 8px;border-radius:20px;background:#201c13;color:#d7c58f}
+.faculty-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:45px}.faculty{text-align:center;border:1px solid #27231b;padding:35px;background:#0d0c0a;border-radius:12px}.avatar{width:78px;height:78px;border-radius:50%;display:grid;place-items:center;margin:auto;background:linear-gradient(145deg,#f4c64d,#6e5420);color:#111;font-weight:900;font-size:21px}.faculty h3{margin-bottom:3px}.faculty p{margin-top:0;color:var(--gold);font-size:13px}
+.online-section{background:radial-gradient(circle at 20% 50%,rgba(244,198,77,.08),transparent 35%)}.online-box{border:1px solid var(--line);padding:55px;border-radius:16px;display:grid;grid-template-columns:1fr 1fr;gap:50px;background:rgba(18,16,12,.7)}.online-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:center}.online-list span{padding:14px;border:1px solid #29251c;border-radius:7px;color:#d5cfbf;background:#0c0b09}
+.contact-section{padding-bottom:115px}.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:80px;align-items:center}.big-phone{display:inline-block;color:var(--gold);font-size:28px;font-weight:800;margin:22px 0}.address{font-size:14px}.contact-card{border:1px solid var(--line);padding:35px;border-radius:14px;background:linear-gradient(160deg,#17140e,#0d0c0a)}.contact-card h3{font-family:"Playfair Display",serif;font-size:30px;margin-top:0}.full{width:100%;margin-top:12px}
+footer{border-top:1px solid #211e17;padding:25px 0;color:#77736a;font-size:11px}.footer{display:flex;justify-content:space-between;gap:20px}.footer strong{color:#c4a75d;margin-right:10px}
+@media(max-width:850px){.nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:#090908;padding:20px;flex-direction:column;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.menu-btn{display:block}.hero{padding:75px 0}.hero-grid,.split,.online-box,.contact-grid{grid-template-columns:1fr}.hero-card{order:-1;max-width:430px}.cards{grid-template-columns:1fr 1fr}.faculty-grid{grid-template-columns:1fr}.section{padding:75px 0}.split{gap:30px}.footer{flex-direction:column}}
+@media(max-width:520px){.cards{grid-template-columns:1fr}.hero h1{font-size:52px}.stats{display:grid;grid-template-columns:1fr 1fr}.online-box{padding:28px}.hero-buttons{flex-direction:column}.btn{width:100%}}
+
+/* =================================================
+   MAX KIDS STUDY SECTION
+================================================= */
+
+.study-section{
+  background:#090807;
+  padding:90px 20px;
+  border-top:1px solid #282218;
+}
+
+.study-container{
+  max-width:1200px;
+  margin:auto;
+}
+
+.study-title{
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.study-title p{
+  color:#d8ad43;
+  letter-spacing:4px;
+  font-size:11px;
+  font-weight:800;
+}
+
+.study-title h2{
+  color:#fff;
+  font-family:"Playfair Display",serif;
+  font-size:42px;
+  margin:10px 0;
+}
+
+.study-title span{
+  color:#aaa49a;
+  font-size:15px;
+}
+
+.study-menu{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:60px;
+}
+
+.study-menu a{
+  color:#e9d18c;
+  background:#12100c;
+  border:1px solid #3a3120;
+  padding:11px 17px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.study-menu a:hover{
+  background:#d8ad43;
+  color:#080706;
+}
+
+.study-box{
+  margin:70px 0;
+}
+
+.study-heading{
+  margin-bottom:28px;
+}
+
+.study-heading small{
+  color:#d8ad43;
+  letter-spacing:3px;
+  font-weight:bold;
+  font-size:10px;
+}
+
+.study-heading h3{
+  color:white;
+  font-family:"Playfair Display",serif;
+  font-size:32px;
+  margin:7px 0;
+}
+
+.study-heading p{
+  color:#99948a;
+  font-size:14px;
+}
+
+
+/* TABLES */
+
+.table-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+}
+
+.table-card{
+  background:#12100c;
+  border:1px solid #30291d;
+  border-radius:10px;
+  padding:15px 8px;
+  text-align:center;
+}
+
+.table-card strong{
+  display:block;
+  color:#e2b84d;
+  margin-bottom:7px;
+}
+
+.table-card span{
+  color:#c4beb1;
+  font-size:11px;
+  line-height:1.7;
+}
+
+
+/* MATH */
+
+.math-cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.math-card{
+  background:#12100c;
+  border:1px solid #30291d;
+  border-radius:12px;
+  padding:25px;
+  text-align:center;
+}
+
+.math-card div{
+  font-size:35px;
+}
+
+.math-card h4{
+  color:#e2b84d;
+  font-size:20px;
+}
+
+.math-card p{
+  color:#d0cabd;
+  margin:7px;
+}
+
+.small-table-box{
+  margin-top:35px;
+  background:#0e0d0a;
+  border:1px solid #30291d;
+  border-radius:12px;
+  padding:25px;
+}
+
+.small-table-box h3{
+  color:#e2b84d;
+}
+
+.small-table-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+}
+
+.small-table{
+  background:#15130f;
+  border:1px solid #30291d;
+  border-radius:8px;
+  padding:12px;
+  color:#d0cabd;
+  text-align:center;
+  font-size:12px;
+  line-height:1.7;
+}
+
+.small-table b{
+  color:#e2b84d;
+  display:block;
+  margin-bottom:5px;
+}
+
+
+/* HINDI */
+
+.hindi-grid{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:10px;
+}
+
+.hindi-card{
+  min-height:105px;
+  background:#12100c;
+  border:1px solid #30291d;
+  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:10px;
+}
+
+.hindi-card b{
+  color:#e2b84d;
+  font-family:"Noto Sans Devanagari","Nirmala UI",sans-serif;
+  font-size:30px;
+}
+
+.hindi-card span{
+  color:#c8c1b2;
+  font-size:11px;
+  margin-top:8px;
+}
+
+
+/* MATRAYEN */
+
+.matra-section{
+  background:#11100c;
+  border:1px solid #30291d;
+  border-radius:12px;
+  padding:25px;
+  margin-top:25px;
+}
+
+.matra-section h3{
+  color:#e2b84d;
+}
+
+.matra-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.matra-grid span{
+  color:white;
+  background:#1b1811;
+  border:1px solid #3b321f;
+  padding:10px 15px;
+  border-radius:8px;
+  font-family:"Noto Sans Devanagari","Nirmala UI",sans-serif;
+  font-size:20px;
+}
+
+
+/* COUNTING */
+
+.counting-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:13px;
+}
+
+.count-card{
+  background:#12100c;
+  border:1px solid #30291d;
+  border-radius:12px;
+  min-height:190px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:15px;
+}
+
+.count-card strong{
+  color:#e2b84d;
+  font-size:32px;
+}
+
+.count-card span{
+  font-size:32px;
+  margin:5px;
+}
+
+.count-card p{
+  font-size:22px;
+  margin:4px;
+}
+
+.count-card b{
+  color:#fff;
+  font-family:"Noto Sans Devanagari","Nirmala UI",sans-serif;
+}
+
+
+/* ENGLISH */
+
+.alphabet-grid{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:10px;
+}
+
+.alpha-card{
+  background:#12100c;
+  border:1px solid #30291d;
+  border-radius:10px;
+  padding:15px;
+  text-align:center;
+}
+
+.alpha-card strong{
+  display:block;
+  color:#e2b84d;
+  font-size:30px;
+}
+
+.alpha-card small{
+  display:block;
+  color:white;
+  font-size:23px;
+  margin-top:4px;
+}
+
+.alpha-card span{
+  color:#8e897e;
+  font-size:9px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+  .table-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .math-cards{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .hindi-grid{
+    grid-template-columns:repeat(5,1fr);
+  }
+
+  .counting-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .alphabet-grid{
+    grid-template-columns:repeat(5,1fr);
+  }
+
+}
+
+@media(max-width:550px){
+
+  .study-section{
+    padding:60px 12px;
+  }
+
+  .study-title h2{
+    font-size:30px;
+  }
+
+  .table-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .math-cards{
+    grid-template-columns:1fr;
+  }
+
+  .small-table-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .hindi-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .counting-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .alphabet-grid{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .study-heading h3{
+    font-size:25px;
+  }
+
+}
+.study-link-card{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  text-decoration:none;
+  background:#12100c;
+  border:1px solid #4a3a20;
+  padding:18px;
+  border-radius:14px;
+  color:white;
+  transition:.3s;
+}
+
+.study-link-card > span{
+  font-size:32px;
+}
+
+.study-link-card div{
+  flex:1;
+}
+
+.study-link-card strong{
+  display:block;
+  color:#e4b844;
+  font-size:18px;
+}
+
+.study-link-card small{
+  display:block;
+  color:#aaa;
+  margin-top:3px;
+}
+
+.study-link-card b{
+  color:#e4b844;
+  font-size:25px;
+}
+
+.study-link-card:hover{
+  transform:translateY(-3px);
+  border-color:#e4b844;
+}
+/* =========================================================
+   MAX COACHING CLASSES
+   LIGHT + DARK MODE FIX
+   इसे style.css के सबसे नीचे रखें
+   ========================================================= */
+
+/* ---------- BASIC THEME VARIABLES ---------- */
+
+:root {
+  color-scheme: light dark;
+
+  --page-bg: #080808;
+  --section-bg: #0d0d0d;
+  --card-bg: #151515;
+  --card-bg-2: #1b1b1b;
+
+  --text-main: #ffffff;
+  --text-heading: #ffffff;
+  --text-muted: #c9c9c9;
+
+  --gold: #f4c542;
+  --gold-dark: #d9a91f;
+
+  --border: #343434;
+  --soft-border: #444444;
+
+  --input-bg: #ffffff;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+@media (prefers-color-scheme: dark) {
+
+  body {
+    background: var(--page-bg);
+    color: var(--text-main);
+  }
+
+  .section,
+  .study-section {
+    background: var(--section-bg);
+    color: var(--text-main);
+  }
+
+  .dark-section {
+    background: #080808;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: var(--text-heading);
+  }
+
+  p,
+  li,
+  span {
+    color: var(--text-muted);
+  }
+
+  .card,
+  .study-box,
+  .math-card,
+  .hindi-card,
+  .count-card,
+  .alphabet-card,
+  .faculty,
+  .contact-card {
+    background: var(--card-bg);
+    color: var(--text-main);
+    border-color: var(--border);
+  }
+
+}
+
+
+/* =========================================================
+   LIGHT MODE
+   ========================================================= */
+
+@media (prefers-color-scheme: light) {
+
+  body {
+    background: #f7f7f7 !important;
+    color: #171717 !important;
+  }
+
+  .header {
+    background: #ffffff !important;
+    color: #171717 !important;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .section,
+  .study-section {
+    background: #f7f7f7 !important;
+    color: #171717 !important;
+  }
+
+  .dark-section {
+    background: #eeeeee !important;
+    color: #171717 !important;
+  }
+
+
+  /* ---------- ALL HEADINGS ---------- */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #171717 !important;
+  }
+
+  .hero h1 {
+    color: #171717 !important;
+  }
+
+  .hero h1 span,
+  h2 span {
+    color: #c28d00 !important;
+  }
+
+
+  /* ---------- NORMAL TEXT ---------- */
+
+  p {
+    color: #444444 !important;
+  }
+
+  .section-label,
+  .eyebrow {
+    color: #a87500 !important;
+  }
+
+
+  /* ---------- NAVIGATION ---------- */
+
+  .nav-links a {
+    color: #222222 !important;
+  }
+
+  .nav-links a:hover {
+    color: #b27b00 !important;
+  }
+
+  .brand {
+    color: #222222 !important;
+  }
+
+  .brand small {
+    color: #777777 !important;
+  }
+
+
+  /* =====================================================
+     STUDY CARDS
+     ===================================================== */
+
+  .card,
+  .study-box,
+  .math-card,
+  .hindi-card,
+  .count-card,
+  .alphabet-card,
+  .faculty,
+  .contact-card {
+
+    background: #ffffff !important;
+
+    color: #171717 !important;
+
+    border: 1px solid #d8d8d8 !important;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  }
+
+
+  /* ---------- CARD HEADINGS ---------- */
+
+  .card h3,
+  .study-box h3,
+  .math-card h4,
+  .hindi-card b,
+  .count-card strong,
+  .count-card b,
+  .alphabet-card .capital,
+  .alphabet-card .small,
+  .faculty h3,
+  .contact-card h3 {
+
+    color: #171717 !important;
+  }
+
+
+  /* ---------- CARD TEXT ---------- */
+
+  .card p,
+  .study-box p,
+  .math-card p,
+  .hindi-card span,
+  .count-card p,
+  .count-card span,
+  .faculty p,
+  .contact-card p {
+
+    color: #444444 !important;
+  }
+
+
+  /* =====================================================
+     STUDY HEADING
+     ===================================================== */
+
+  .study-heading small {
+    color: #b27b00 !important;
+  }
+
+  .study-heading h3 {
+    color: #171717 !important;
+  }
+
+  .study-heading p {
+    color: #555555 !important;
+  }
+
+
+  /* =====================================================
+     TABLE CARDS
+     ===================================================== */
+
+  .table-card,
+  .table-item {
+
+    background: #ffffff !important;
+
+    color: #171717 !important;
+
+    border: 1px solid #d5d5d5 !important;
+  }
+
+  .table-card h4,
+  .table-item h4 {
+
+    color: #171717 !important;
+  }
+
+  .table-card p,
+  .table-item p {
+
+    color: #444444 !important;
+  }
+
+
+  /* =====================================================
+     MATH
+     ===================================================== */
+
+  .math-card {
+    background: #ffffff !important;
+  }
+
+  .math-card > div:first-child {
+    color: #b27b00 !important;
+  }
+
+
+  /* =====================================================
+     HINDI
+     ===================================================== */
+
+  .hindi-card {
+    background: #ffffff !important;
+  }
+
+  .hindi-card b {
+    color: #b27b00 !important;
+    font-size: 30px;
+  }
+
+  .hindi-card span {
+    color: #333333 !important;
+  }
+
+
+  /* =====================================================
+     MATRA
+     ===================================================== */
+
+  .matra-section {
+    background: #f4f4f4 !important;
+    border: 1px solid #dddddd !important;
+  }
+
+  .matra-section h3 {
+    color: #171717 !important;
+  }
+
+  .matra-grid span {
+    background: #ffffff !important;
+    color: #171717 !important;
+    border: 1px solid #dddddd !important;
+  }
+
+
+  /* =====================================================
+     COUNTING
+     ===================================================== */
+
+  .count-card {
+    background: #ffffff !important;
+  }
+
+  .count-card strong {
+    color: #b27b00 !important;
+    font-size: 32px;
+  }
+
+  .count-card b {
+    color: #171717 !important;
+  }
+
+
+  /* =====================================================
+     ENGLISH ALPHABET
+     ===================================================== */
+
+  .alphabet-card {
+    background: #ffffff !important;
+  }
+
+  .alphabet-card .capital {
+    color: #b27b00 !important;
+    font-size: 32px;
+    font-weight: 800;
+  }
+
+  .alphabet-card .small {
+    color: #222222 !important;
+  }
+
+  .alphabet-card .picture {
+    color: #333333 !important;
+  }
+
+
+  /* =====================================================
+     TAGS
+     ===================================================== */
+
+  .tags span {
+    background: #f3e8c3 !important;
+    color: #6b4b00 !important;
+    border: 1px solid #dfc77d !important;
+  }
+
+
+  /* =====================================================
+     BUTTONS
+     ===================================================== */
+
+  .btn-outline {
+    color: #222222 !important;
+    border-color: #777777 !important;
+    background: #ffffff !important;
+  }
+
+  .btn-outline:hover {
+    color: #000000 !important;
+    border-color: #b27b00 !important;
+  }
+
+
+  /* =====================================================
+     FACULTY
+     ===================================================== */
+
+  .avatar {
+    background: #f0dfad !important;
+    color: #704d00 !important;
+  }
+
+
+  /* =====================================================
+     FOOTER
+     ===================================================== */
+
+  footer {
+    background: #111111 !important;
+    color: #eeeeee !important;
+  }
+
+  footer strong {
+    color: #ffffff !important;
+  }
+
+  footer span {
+    color: #cccccc !important;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE SAFETY
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .card,
+  .study-box,
+  .math-card,
+  .hindi-card,
+  .count-card,
+  .alphabet-card {
+    color: #171717;
+  }
+
+  .study-box {
+    overflow: hidden;
+  }
+
+  .study-box p {
+    line-height: 1.7;
+  }
+
+}
+
+
+/* =========================================================
+   IMPORTANT:
+   किसी भी पुरानी WHITE TEXT rule को override करने के लिए
+   ========================================================= */
+
+@media (prefers-color-scheme: light) {
+
+  .study-section *,
+  .study-box *,
+  .math-card *,
+  .hindi-card *,
+  .count-card *,
+  .alphabet-card * {
+    text-shadow: none;
+  }
+
+  .study-section h1,
+  .study-section h2,
+  .study-section h3,
+  .study-section h4,
+  .study-section p,
+  .study-section span,
+  .study-section b,
+  .study-section strong {
+    opacity: 1 !important;
+  }
+
+}
+/* ================= OWNER PHOTO FIX ================= */
+
+.hero-card {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-card .owner-photo {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  min-height: 300px;
+  object-fit: cover;
+  border-radius: 18px;
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(244,198,77,.3);
+  box-shadow: 0 20px 80px rgba(0,0,0,.75);
+}
+
+.owner-fallback {
+  display: none;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  min-height: 300px;
+  border: 1px solid rgba(244,198,77,.3);
+  border-radius: 18px;
+  background: #11100d;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.owner-fallback span {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #f4c64d;
+  color: #111;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.owner-fallback strong {
+  color: #f4c64d;
+  letter-spacing: 2px;
+}
+
+.owner-fallback small {
+  color: #c8c1ae;
+  letter-spacing: 2px;
+}
+
+@media(max-width:850px) {
+  .hero-card {
+    order: -1;
+    max-width: 430px;
+    min-height: 300px;
+  }
+
+  .hero-card .owner-photo {
+    max-width: 430px;
+  }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
