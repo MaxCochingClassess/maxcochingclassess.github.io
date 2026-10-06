@@ -995,4 +995,18 @@ footer{border-top:1px solid #211e17;padding:25px 0;color:#77736a;font-size:11px}
   .hero-card .owner-photo {
     max-width: 430px;
   }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+      .pdf-btn{
+    display:inline-block;
+    padding:12px 20px;
+    background:#f4c542;
+    color:#111;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:800;
+    margin:8px 0;
+}
+
+.pdf-btn:hover{
+    background:#ffd75a;
+    transform:translateY(-2px);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  }
